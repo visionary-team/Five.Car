@@ -1,0 +1,4 @@
+<!--pages/Vehicle_system/Vehicle_system.wxml-->
+<view class="Subject">
+  <text class="text">奔驰</text>
+</view>

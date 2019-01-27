@@ -13,30 +13,59 @@
 
 
     <view class="workbench">
-    <text class="title">我的订单</text>
-    <view class="list">
+      <text class="title">我的订单</text>
+      <view class="list">
 
-      <view class="items">
-        <image src="/Img/显示图片/tab_home_sel@2x.png"></image>
-        <text>全部訂單</text>
+        <view class="items">
+          <image src="/Img/显示图片/tab_home_sel@2x.png"></image>
+          <text>全部訂單</text>
+        </view>
+
+        <view class="items">
+          <image src="/Img/显示图片/tab_user_sel@2x.png"></image>
+          <text>未付款</text>
+        </view>
+
+        <view class="items">
+          <image src="/Img/显示图片/tab_car_source_sel@2x.png"></image>
+          <text>已付款</text>
+        </view>
+
       </view>
-
-      <view class="items">
-        <image src="/Img/显示图片/tab_user_sel@2x.png"></image>
-        <text>未付款</text>
-      </view>
-
-      <view class="items">
-        <image src="/Img/显示图片/tab_car_source_sel@2x.png"></image>
-        <text>已付款</text>
-      </view>
-
     </view>
   </view>
-  </view>
-<view>
-<text>我的評價  </text>    
-<text>     我的收藏</text>
-</view>
+
+
+    <view class="workbenchs">
+      <text class="titles">評價收藏</text>
+      <view class="lists">
+
+        <view class="itemss">
+          <image src="/Img/显示图片/tab_home_sel@2x.png"></image>
+          <text>我的評價</text>
+        </view>
+
+        <view class="itemss">
+          <image src="/Img/显示图片/tab_user_sel@2x.png"></image>
+          <text>我的收藏</text>
+        </view>
+      </view>
+    </view>
+
+
+
+
+ 
+    <view class="workbenchss">
+      <text class="titless">地址管理</text>
+      <view class="listss">
+
+        <view class="itemsss">
+          <image src="/Img/显示图片/tab_home_sel@2x.png"></image>
+          <text>地址管理</text>
+        </view>
+        
+      </view>
+    </view>
 
 </view>

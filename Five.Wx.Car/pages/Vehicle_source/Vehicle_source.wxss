@@ -3,7 +3,6 @@
   background: #f2f2f2;
 }
 .search_bar{
-  position: fixed;
   background: #fff;
   padding: 10rpx 0;
   border-top:1px #f8f8f8 solid;
@@ -17,7 +16,7 @@
   margin: 0 50rpx;
 }
 .source_title{
-  font-size: 20rpx;
+  font-size: 25rpx;
   color: #333;
   display: block;
   padding: 20rpx 30rpx;
