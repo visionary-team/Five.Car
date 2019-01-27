@@ -22,5 +22,11 @@
         <text>我的订单</text>
       </view>
     </view>
-</view>
+  </view>
+  <view class="ImgShow">
+    <image src="/Img/大众/大众4.jpg"></image>
+    <image src="/Img/法拉利/法拉利3.jpg"></image>
+    <image src="/Img/迈凯伦/迈凯伦5.jpg"></image>
+    <image src="/Img/宾利/宾利3.jpg"></image>
+  </view>
 </view>
