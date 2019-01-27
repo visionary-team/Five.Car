@@ -1,2 +1,4 @@
 <!--pages/Car searching/Car searching.wxml-->
-<text></text>
+<view class='car'>
+  gawg
+</view>
