@@ -12,5 +12,6 @@ namespace Five.Car.Model
         public int id { get; set; }//主键
         public int carbrand { get; set; }//车辆品牌或型号
         public int Pid { get; set; }//父级id
+        public string ImageUrl { get; set; }//品牌logo
     }
 }

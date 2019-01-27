@@ -1,0 +1,7 @@
+/* pages/Vehicle_system/Vehicle_system.wxss */
+.Subject{
+  background: #f2f2f2;
+}
+.Subject .text{
+  font-size: 20px;
+}
