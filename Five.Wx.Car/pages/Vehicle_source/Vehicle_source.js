@@ -41,6 +41,11 @@ Page({
       },
     ]
   },
+  jump:function(){
+      wx.navigateTo({
+        url: '../Vehicle_system/Vehicle_system',
+      })
+  },
 
   /**
    * 生命周期函数--监听页面加载

@@ -5,7 +5,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/Personal_Center/Personal_Center",
-    "pages/Vehicle_source/Vehicle_source"
+    "pages/Vehicle_source/Vehicle_source",
+    "pages/Vehicle_system/Vehicle_system"
   ],
   "window": {
     "backgroundTextStyle": "light",

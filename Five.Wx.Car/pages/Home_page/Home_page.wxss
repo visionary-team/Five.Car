@@ -4,7 +4,6 @@
 }
 .banner{
   width:100%;
-  height: 300rpx;
 }
 .workbench{
   font-size:20rpx;
@@ -16,7 +15,7 @@
 .workbench .title{
   font-size:20rpx;
   padding: 20rpx 20rpx;
-  margin-bottom: 40rpx;
+  
   display: block;
 }
 .workbench .list{
@@ -25,13 +24,13 @@
   flex:1;
 }
 .workbench .items{
-  width:100rpx;
+  width:90rpx;
   flex:1;
   text-align: center;
 }
 .workbench .items image{
-  width:100rpx;
-  height:100rpx;
+  width:90rpx;
+  height:90rpx;
 }
 .workbench .items image.service-icon{
   width: 50rpx;
@@ -43,6 +42,9 @@
   margin-top: 10rpx;
 }
 .ImgShow image{
-  width:375rpx;
-  height: 200rpx;
+  width:48%;
+  height: 240rpx;
+}
+.img{
+  margin-right:12px;
 }
