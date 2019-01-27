@@ -1,22 +1,14 @@
 {
   "pages": [
-    "pages/Carissue/Carissue",
     "pages/Home_page/Home_page",
+    "pages/Carissue/Carissue",   
     "pages/Car_searching/Car_searching",
     "pages/index/index",
     "pages/logs/logs",
     "pages/Personal_Center/Personal_Center",
-<<<<<<< HEAD
     "pages/Vehicle_source/Vehicle_source",
-    "pages/Vehicle_system/Vehicle_system"
-=======
-<<<<<<< HEAD
-    "pages/Vehicle_source/Vehicle_source",
+    "pages/Vehicle_system/Vehicle_system",
     "pages/CarOrder/CarOrder"
-    
-=======
->>>>>>> 15aff9894c2137b4c5c615b68504ef6e69d778a5
->>>>>>> 0fd3e04eb550ccc7f5990d13dc7727b7172f3ed2
   ],
   "window": {
     "backgroundTextStyle": "light",
