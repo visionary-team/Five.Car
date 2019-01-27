@@ -4,7 +4,7 @@
     <view wx:for="{{lunbo}}" wx:key="1">
       <swiper-item>
         <view>
-          <image src="{{item.image}}" mode="scaleToFill center" class="banner"></image>
+          <image src="{{item.image}}" mode="scaleToFill center" class="banner" style="height:180px"></image>
         </view>
       </swiper-item>
     </view>
