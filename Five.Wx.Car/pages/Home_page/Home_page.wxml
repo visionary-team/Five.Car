@@ -1,0 +1,12 @@
+<!--pages/Home page/Home page.wxml-->
+<view class="home/warp">
+  <swiper indicator-dots="true" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}">
+    <view wx:for="{{lunbo}}" wx:key="1">
+      <swiper-item>
+        <view>
+          <image src="{{item.image}}" mode="scaleToFill center" class="banner"></image>
+        </view>
+      </swiper-item>
+    </view>
+  </swiper>
+</view>
