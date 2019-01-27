@@ -6,15 +6,19 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/Personal_Center/Personal_Center",
+<<<<<<< HEAD
     "pages/Vehicle_source/Vehicle_source",
     "pages/CarOrder/CarOrder"
     
+=======
+    "pages/Vehicle_source/Vehicle_source"
+>>>>>>> 15aff9894c2137b4c5c615b68504ef6e69d778a5
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "hhh",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#37383c",
+    "navigationBarTitleText": "车源宝微信版",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#a0a0a0",

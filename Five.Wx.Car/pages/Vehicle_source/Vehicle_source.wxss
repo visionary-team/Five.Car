@@ -1,1 +1,70 @@
 /* pages/Vehicle_source/Vehicle_source.wxss */
+.car{
+  background: #f2f2f2;
+}
+.search_bar{
+  position: fixed;
+  background: #fff;
+  padding: 10rpx 0;
+  border-top:1px #f8f8f8 solid;
+  width: 100%;
+}
+.search_bar_txt{
+  background: #f2f2f2;
+  border-radius: 30px;
+  font-size: 20rpx;
+  padding: 10rpx 30rpx;
+  margin: 0 50rpx;
+}
+.source_title{
+  font-size: 20rpx;
+  color: #333;
+  display: block;
+  padding: 20rpx 30rpx;
+}
+.hot-item{
+  /*flex:1;*/
+  text-align: center;
+  border:1px #f2f2f2 solid;
+  background: #fff;
+  margin-left: -1px;
+  margin-top: -1px;
+  width: 185rpx;
+}
+.hot-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex:1;
+}
+.hot-item image{
+  width: 130rpx;
+  height:90rpx;
+  margin: 20rpx 0;
+}
+.hot-item text{
+  font-size: 25rpx;
+  display: block;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+.brand-list-item{
+  background: #fff;
+}
+.brand-items{
+  display: block;
+  flex: 1;
+  flex-direction: row;
+  border-bottom: 1px #f2f2f2 solid;
+  padding: 20rpx 0;
+}
+.brand-items image{
+  width: 130rpx;
+  height: 90rpx;
+  vertical-align: middle;
+  margin: 0 30rpx;
+}
+.brand-items text{
+  font-size: 25rpx; 
+  color: #333;
+}

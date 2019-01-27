@@ -1,2 +1,24 @@
 <!--pages/Vehicle_source/Vehicle_source.wxml-->
-<text></text>
+<view class="car">
+  <view class="search_bar">
+    <input placeholder="搜索品牌/车系" auto-focus class="search_bar_txt" />
+  </view>
+  <view class="hot-brand">
+    <text class="source_title">热门品牌</text>
+    <view class="hot-list">
+      <view class="hot-item" wx:for="{{hotCar}}" wx:key="imgUrl">
+        <image src="{{item.imgUrl}}" mode="scaleToFill center"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="brand-list">
+    <text class="source_title">所有品牌</text>
+    <view class="brand-list-item">
+      <view wx:for="{{allCar}}" wx:key="unique" wx:for-item="brand" class="brand-items">
+        <image src="{{brand.imgUrl}}" mode="scaleToFill center"></image>
+        <text>{{brand.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

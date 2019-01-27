@@ -1,12 +1,32 @@
 <!--pages/Home page/Home page.wxml-->
-<view class="home/warp">
+<view class="home-wrap">
   <swiper indicator-dots="true" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}">
     <view wx:for="{{lunbo}}" wx:key="1">
       <swiper-item>
         <view>
-          <image src="{{item.image}}" mode="scaleToFill center" class="banner"></image>
+          <image src="{{item.image}}" mode="scaleToFill center" class="banner" style="height:180px"></image>
         </view>
       </swiper-item>
     </view>
   </swiper>
+
+  <view class="workbench">
+    <text class="title">工作台</text>
+    <view class="list">
+      <view class="items">
+        <image src="/Img/显示图片/desk_publish@2x.png"></image>
+        <text>发布车源</text>
+      </view>
+      <view class="items">
+        <image src="/Img/显示图片/desk_order@2x.png"></image>
+        <text>我的订单</text>
+      </view>
+    </view>
+  </view>
+  <view class="ImgShow">
+    <image src="/Img/大众/大众4.jpg"></image>
+    <image src="/Img/法拉利/法拉利3.jpg"></image>
+    <image src="/Img/迈凯伦/迈凯伦5.jpg"></image>
+    <image src="/Img/宾利/宾利3.jpg"></image>
+  </view>
 </view>
