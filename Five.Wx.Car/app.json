@@ -6,7 +6,6 @@
     "pages/logs/logs",
     "pages/Personal_Center/Personal_Center",
     "pages/Vehicle_source/Vehicle_source"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
