@@ -21,6 +21,24 @@ Page({
         imgUrl: "/Img/红旗/红旗.jpg",
         name: "红旗",
       },
+    ],
+    allCar:[
+      {
+        imgUrl: "/Img/大众/大众1.jpg",
+        name: "大众",
+      },
+      {
+        imgUrl: "/Img/宾利/宾利1.jpg",
+        name: "宾利",
+      },
+      {
+        imgUrl: "/Img/法拉利/法拉利1.jpg",
+        name: "法拉利",
+      },
+      {
+        imgUrl: "/Img/红旗/红旗.jpg",
+        name: "红旗",
+      },
     ]
   },
 

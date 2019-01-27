@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Api", "Five.Api\Five.Api.csproj", "{77D86BCB-D9E3-4747-BC2C-300BE76E65B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Model", "Five.Car.Model\Five.Car.Model.csproj", "{D6B350C3-2B2C-4C81-BA0B-4CA14BB5F642}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{77D86BCB-D9E3-4747-BC2C-300BE76E65B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77D86BCB-D9E3-4747-BC2C-300BE76E65B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77D86BCB-D9E3-4747-BC2C-300BE76E65B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B350C3-2B2C-4C81-BA0B-4CA14BB5F642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B350C3-2B2C-4C81-BA0B-4CA14BB5F642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B350C3-2B2C-4C81-BA0B-4CA14BB5F642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B350C3-2B2C-4C81-BA0B-4CA14BB5F642}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
