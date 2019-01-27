@@ -1,5 +1,5 @@
 <!--pages/Home page/Home page.wxml-->
-<view class="home/warp">
+<view class="home-wrap">
   <swiper indicator-dots="true" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}">
     <view wx:for="{{lunbo}}" wx:key="1">
       <swiper-item>
@@ -9,4 +9,18 @@
       </swiper-item>
     </view>
   </swiper>
+
+  <view class="workbench">
+    <text class="title">工作台</text>
+    <view class="list">
+      <view class="items">
+        <image src="/Img/显示图片/desk_publish@2x.png"></image>
+        <text>发布车源</text>
+      </view>
+      <view class="items">
+        <image src="/Img/显示图片/desk_order@2x.png"></image>
+        <text>我的订单</text>
+      </view>
+    </view>
+</view>
 </view>

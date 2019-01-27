@@ -11,8 +11,7 @@ Page({
       image: "/Img/法拉利/法拉利6.jpg",
       },{
         image: "/Img/迈凯伦/迈凯伦7.jpg",
-      },],
-    
+      },],   
     autoplay: true,
     interval: 2000,
     duration: 1000
