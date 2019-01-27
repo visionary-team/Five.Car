@@ -1,11 +1,13 @@
 {
   "pages": [
+    "pages/Carissue/Carissue",
     "pages/Home_page/Home_page",
     "pages/Car_searching/Car_searching",
     "pages/index/index",
     "pages/logs/logs",
     "pages/Personal_Center/Personal_Center",
-    "pages/Vehicle_source/Vehicle_source"
+    "pages/Vehicle_source/Vehicle_source",
+    "pages/CarOrder/CarOrder"
     
   ],
   "window": {
