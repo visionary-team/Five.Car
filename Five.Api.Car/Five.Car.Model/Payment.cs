@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Five.Car.Model
 {
-    //轮播图表
-    public class RotationchartModel
+    //支付方式
+    public class Payment
     {
         public int Id { get; set; }//主键
-        public string Url { get; set; }//路径
-        public int CarDetailsid { get; set; }//汽车详细ID
+
+        public string Method { get; set; }//支付方式
     }
 }

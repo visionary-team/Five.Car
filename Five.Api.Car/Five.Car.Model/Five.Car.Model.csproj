@@ -40,19 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddresModel.cs" />
-    <Compile Include="CarColorModel.cs" />
-    <Compile Include="CarDetailsModel.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="CarColor.cs" />
+    <Compile Include="CarDetails.cs" />
     <Compile Include="CarImgModel.cs" />
     <Compile Include="CarModel.cs" />
-    <Compile Include="CollectionModel.cs" />
-    <Compile Include="EvaluateModel.cs" />
-    <Compile Include="OrderModel.cs" />
-    <Compile Include="PaymentModel.cs" />
+    <Compile Include="Collection.cs" />
+    <Compile Include="Evaluate.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProvincesModel.cs" />
-    <Compile Include="RotationchartModel.cs" />
-    <Compile Include="UserdetailsModel.cs" />
+    <Compile Include="Provinces.cs" />
+    <Compile Include="Rotationchart.cs" />
+    <Compile Include="Userdetails.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
