@@ -2,7 +2,7 @@
 page{
   background: #f2f2f2;
 }
-.container {
+.car {
   font-size: 30rpx;
   color:#333;
 }
@@ -42,6 +42,7 @@ page{
 .font-type-1{
   position: absolute;
   right:0;
+  margin-right: 10%;
   text-align: right;
 }
 .channel{
