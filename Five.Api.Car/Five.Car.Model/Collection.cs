@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Five.Car.Model
 {
-    //支付方式
-    public class PaymentModel
+    //收藏表
+    public class Collection
     {
         public int Id { get; set; }//主键
-        public string Method { get; set; }//支付方式
+        public int Carid { get; set; }//汽车外键
+        public int Userid { get; set; }//用户外键
+        public int Number1 { get; set; }//数量
     }
 }
