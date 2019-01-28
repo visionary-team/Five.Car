@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Five.Car.Model
 {
-    //省事县表
-    public class ProvincesModel
+    //轮播图表
+    public class Rotationchart
     {
         public int Id { get; set; }//主键
-        public string Provinname { get; set; }//省市县
-        public int Pid { get; set; }//父级id
+
+        public string Url { get; set; }//路径
+
+        public int CarDetailsid { get; set; }//汽车详细ID
     }
 }

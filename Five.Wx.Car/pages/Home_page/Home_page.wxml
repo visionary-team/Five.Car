@@ -1,7 +1,7 @@
 <!--pages/Home page/Home page.wxml-->
 <view class="home-wrap">
   <swiper style="height:190px" indicator-dots="true" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}">
-    <view wx:for="{{lunbo}}" wx:key="1">
+    <view wx:for="{{lunbo}}" wx:key="1" bindtap="jump">
       <swiper-item>
         <view>
           <image src="{{item.image}}" mode="scaleToFill center" class="banner" style="height:200px"></image>
@@ -9,11 +9,10 @@
       </swiper-item>
     </view>
   </swiper>
-
   <view class="workbench">
     <text class="title">工作台</text>
     <view class="list">
-      <view class="items">
+      <view class="items" bindtap='jumppage'>
         <image src="/Img/显示图片/desk_publish@2x.png"></image>
         <text>发布车源</text>
       </view>
@@ -24,9 +23,9 @@
     </view>
   </view>
   <view class="ImgShow">
-    <image class="img" src="/Img/大众/大众4.jpg"></image>
-    <image src="/Img/法拉利/法拉利3.jpg"></image>
-    <image class="img" src="/Img/迈凯伦/迈凯伦5.jpg"></image>
-    <image src="/Img/宾利/宾利3.jpg"></image>
+    <image class="img" src="/Img/大众/大众4.jpg" bindtap="jump"></image>
+    <image src="/Img/法拉利/法拉利3.jpg" bindtap="jump"></image>
+    <image class="img" src="/Img/迈凯伦/迈凯伦5.jpg" bindtap="jump"></image>
+    <image src="/Img/宾利/宾利3.jpg" bindtap="jump"></image>
   </view>
 </view>
