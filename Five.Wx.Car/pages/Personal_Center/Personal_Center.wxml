@@ -16,17 +16,17 @@
       <text class="title">我的订单</text>
       <view class="list">
 
-        <view class="items">
+        <view class="items" bindtap='OrderAll'>
           <image src="/Img/显示图片/tab_home_sel@2x.png"></image>
           <text>全部訂單</text>
         </view>
 
-        <view class="items">
+        <view class="items" bindtap='OrderWei'>
           <image src="/Img/显示图片/tab_user_sel@2x.png"></image>
           <text>未付款</text>
         </view>
 
-        <view class="items">
+        <view class="items" bindtap='OrderYi'>
           <image src="/Img/显示图片/tab_car_source_sel@2x.png"></image>
           <text>已付款</text>
         </view>
