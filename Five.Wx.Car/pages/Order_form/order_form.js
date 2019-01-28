@@ -7,7 +7,11 @@ Page({
     currtab: 0,
     swipertab: [{ name: '已完成', index: 0 }, { name: '待付款', index: 1 }, { name: '已取消', index: 2 }],
   },
-
+  Details:function(){
+    wx.navigateTo({
+      url: '../order_details/order_details',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

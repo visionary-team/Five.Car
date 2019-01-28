@@ -10,7 +10,8 @@
     "pages/logs/logs",
     "pages/Personal_Center/Personal_Center",
     "pages/Vehicle_source/Vehicle_source",
-    "pages/Pay_page/Pay_page"
+    "pages/Pay_page/Pay_page",
+    "pages/order_details/order_details"
   ],
   "window": {
     "backgroundTextStyle": "light",
