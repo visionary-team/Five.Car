@@ -1,6 +1,6 @@
 <!--pages/Car searching/Car searching.wxml-->
-<view class="container">
-  <view class="find-list" wx:for="{{carData}}" wx:key="carName" wx:for-item="items">
+<view class="car">
+  <view class="find-list" wx:for="{{carData}}" wx:key="carName" wx:for-item="items" bindtap="jumppage">
     <view class="find-items">
       <image src="/Img/显示图片/icon_find_car@2x.png" mode="scollFill center" class="find-icon"></image>
       <text class="series">{{items.carName}} {{items.carPrice}}万</text>
@@ -20,7 +20,7 @@
       </view>
     </view>
     <view class="find-items">
-      <text wx:if="{{items.earnest_money > 0}}" class="earnest-money">己冻结诚意金{{items.earnest_money}}元</text>
+      <text wx:if="{{items.earnest_money > 0}}" class="earnest-money"></text>
     </view>
   </view>
 </view>

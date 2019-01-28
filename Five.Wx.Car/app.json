@@ -1,13 +1,16 @@
 {
   "pages": [
+    "pages/Home_page/Home_page",
     "pages/Add_address/Add_address",
     "pages/Address_details/Address_details",
-    "pages/Home_page/Home_page",
     "pages/Car_searching/Car_searching",
     "pages/index/index",
     "pages/logs/logs",
     "pages/Personal_Center/Personal_Center",
-    "pages/Vehicle_source/Vehicle_source"    
+    "pages/Vehicle_source/Vehicle_source",
+    "pages/Vehicle_system/Vehicle_system",
+    "pages/Car_details/Car_details",
+    "pages/Carissue/Carissue"
   ],
   "window": {
     "backgroundTextStyle": "light",
