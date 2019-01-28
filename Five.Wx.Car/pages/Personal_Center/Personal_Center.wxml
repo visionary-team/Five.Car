@@ -1,6 +1,6 @@
 <!--pages/Personal Center/Personal Center.wxml-->
 <!--user.wxml-->
-<view class='container' style="background-image:url:/Img/玛莎拉蒂/玛莎拉蒂3.jpg">
+<view class='container'>
   <view clas='personal_info'>
     <view class="photo_wrap">
       <image src="/Img/玛莎拉蒂/玛莎拉蒂3.jpg" class="photo"></image>
