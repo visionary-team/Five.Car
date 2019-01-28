@@ -2,6 +2,18 @@
 .Subject{
   background: #f2f2f2;
 }
-.Subject .text{
-  font-size: 20px;
+.title_text{
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+  padding: 20rpx 30rpx;
+}
+.data_show{
+  background: white;
+  margin-bottom: 20px;
+  height: 30px;
+}
+.data_show text{
+  padding: 10rpx 30rpx;
+  font-size: 30rpx;
 }

@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    car_brand:[{
+      name:"奔驰A6"
+    },{
+      name: "奔驰A5"
+      },{
+      name: "奔驰A5"
+      }]
   },
 
   /**

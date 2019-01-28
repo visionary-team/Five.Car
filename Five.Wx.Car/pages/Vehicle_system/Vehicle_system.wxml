@@ -1,4 +1,7 @@
 <!--pages/Vehicle_system/Vehicle_system.wxml-->
 <view class="Subject">
-  <text class="text">奔驰</text>
+  <text class="title_text">奔驰</text>
+  <view class="data_show" wx:for="{{car_brand}}" wx:key="1">
+    <text>{{item.name}}</text>
+  </view>
 </view>
