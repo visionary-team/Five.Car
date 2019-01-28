@@ -7,7 +7,11 @@ Page({
     currtab: 0,
     swipertab: [{ name: '已完成', index: 0 }, { name: '待付款', index: 1 }, { name: '已取消', index: 2 }],
   },
-
+  Details:function(){
+    wx.navigateTo({
+      url: '../order_details/order_details',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -70,23 +74,27 @@ Page({
   },
   alreadyShow: function () {
     this.setData({
-      alreadyOrder: [{ name: "北京跃动4S店(圆明园店)", state: "交易成功", time: "2018-09-30 14:00-16:00", status: "已结束", url: "../../images/bad0.png", money: "132" }, { name: "北京劳斯莱斯专卖店(长安街店)", state: "交易成功", time: "2018-10-12 18:00-20:00", status: "未开始", url: "../../images/bad3.jpg", money: "205" }]
+      alreadyOrder: [{ name: "北京飞扬迈凯伦4S店(圆明园店)", state: "交易成功", time: "2018-09-30 14:00-16:00", status: "已结束", url: "../../Img/迈凯伦/迈凯伦3.jpg", money: "13002000" }, { name: "北京宾利专卖店(长安街店)", state: "交易成功", time: "2018-10-12 18:00-20:00", status: "未开始", url: "../../Img/宾利/宾利3.jpg", money: "20500000" }]
     })
   },
 
   waitPayShow: function () {
     this.setData({
-      waitPayOrder: [{ name: "跃动体育运动俱乐部(圆明园店)", state: "待付款", time: "2018-10-14 14:00-16:00", status: "未开始", url: "../../images/bad1.jpg", money: "186" }],
+      waitPayOrder: [{ name: "中国梅赛德斯__奔驰(上地五街店)", state: "待付款", time: "2018-10-14 14:00-16:00", status: "未开始", url: "../../Img/奔驰/奔驰7.jpg", money: "1860000" }],
     })
   },
 
   lostShow: function () {
     this.setData({
-      lostOrder: [{ name: "北京兰博基尼专卖店(东五环店)", state: "已取消", time: "2018-10-4 10:00-12:00", status: "未开始", url: "../../images/bad1.jpg", money: "122" }],
+      lostOrder: [{ name: "北京玛莎拉蒂4S专卖(东五环店)", state: "已取消", time: "2018-10-4 10:00-12:00", status: "未开始", url: "../../Img/玛莎拉蒂/玛莎拉蒂7.jpg", money: "12200000" }],
     })
   },
 
-
+  FuKuan:function(){
+    wx.navigateTo({
+      url: '../Pay_page/Pay_page',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

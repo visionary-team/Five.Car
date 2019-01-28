@@ -1,0 +1,11 @@
+/* pages/Carcollect/Carcollect.wxss */
+
+.imgs{
+  margin-left: 10rpx;
+  width: 30%;
+  height: 30%;
+}
+.footer-add{
+  left: 400rpx;
+  background-color:  coral;
+}
