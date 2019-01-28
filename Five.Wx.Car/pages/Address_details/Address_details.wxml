@@ -7,7 +7,7 @@
         <text class="addr_sub">{{item.UName}} {{item.Phone}}</text>
         <text class="addr_address">{{item.ProvinceId}} {{item.UserAddress}}</text>
         <text class='addr-dele' bindtap="deleteaddress" data-aid="{{item.Id}}">×</text>
-        <text class="addr_edit" bindtap="editAddr" data-addrid="{{index+1}}">编辑</text>
+        <view class="addr_edit" bindtap="editAddr" data-addrid="{{index+1}}">编辑</view>
       </view>
     </block>
   </view>

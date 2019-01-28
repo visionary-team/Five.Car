@@ -1,0 +1,19 @@
+<!--pages/Add_Evaluation/Add_Evaluation.wxml-->
+<view class="active_item">
+        <view>
+            <image bindload="cusImageLoad" src="../../Img/奔驰/奔驰2.jpg" style="width: {{imageWidth}};height: {{imageHeight}}"></image>
+        </view>
+        <view class="active_goods_name">
+            大保健营养保健品适合老年人和婴幼儿易吸收营养好吃的
+        </view>
+        <view class="active_item_infor">
+            <text class="active_group_price">颜色:黑色，排量:1.6L</text>
+            <text class="active_time">166</text>
+        </view>
+        <view class="detailsaddress">
+           <textarea name="delivery_phone" class="weui-input" placeholder="评价" value="{{delivery_phone}}" />
+        </view>
+        <view>
+           <button class="footer1">保存</button>
+        </view>
+    </view>

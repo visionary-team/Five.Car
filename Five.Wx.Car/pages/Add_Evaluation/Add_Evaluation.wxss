@@ -1,0 +1,32 @@
+/* pages/Add_Evaluation/Add_Evaluation.wxss */
+.active_goods_name {
+    background-color: #FFF;
+    padding: 7px 10px;
+    font-size: 14px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.active_time {
+    float: right;
+    font-size: 32px;
+    color: red;   
+}
+.active_block {
+    margin-bottom: 10px;
+}
+.weui-textarea{
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid;
+}
+.detailsaddress{
+  border: 1px solid rgb(219, 209, 209);
+  margin-top: 20px;
+}
+.footer1
+{
+  background: red;
+  margin-top: 20px;
+  width: 50%;
+}

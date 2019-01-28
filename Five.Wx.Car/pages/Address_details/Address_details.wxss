@@ -31,7 +31,7 @@
 }
 .user_addr_item .addr_edit{
     width:50rpx;
-    background:url(../../images/edit.png) no-repeat;
+    background:url("../../Img/显示图片/address_edit_white.png");
     background-position: center;
     background-size:100%;  
 }
