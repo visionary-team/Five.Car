@@ -15,7 +15,17 @@ Page({
     autoplay: true,
     interval: 2000,
     duration: 1000
-    
+  },
+
+  jumppage:function(){
+    wx.navigateTo({
+      url: '../Carissue/Carissue',
+    })
+  },
+  jump:function(){
+    wx.navigateTo({
+      url: '../Car_details/Car_details',
+    })
   },
 
   /**

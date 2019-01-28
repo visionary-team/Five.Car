@@ -5,9 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
+    carData:[{
+      carName:"途胜",
+      carPrice:"17.99",
+      carPin:"途胜 15款",
+      carPai:"1.6T",
+      carColor:"黑色",
+      carAddr:"江苏省 南京市",
+      carKu:"41243"
+    },{
+        carName: "奥迪",
+        carPrice: "41.53",
+        carPin: "奥迪A6L 16款",
+        carPai: "1.8T",
+        carColor: "黑色",
+        carAddr: "江苏省 南京市",
+        carKu: "41243"
+    },{
+        carName: "宝骏",
+        carPrice: "8.99",
+        carPin: "宝骏73 15款",
+        carPai: "1.5L",
+        carColor: "大漠金",
+        carAddr: "江苏省 南京市",
+        carKu: "41243"
+    }]
+  },
+  jumppage:function(){
+    wx.navigateTo({
+      url: '../Car_details/Car_details',
+    })
 
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

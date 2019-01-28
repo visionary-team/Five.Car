@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Five.Car.Model
 {
-    public class CarColorModel
+    public class CarColor
     {
         public int Id { get; set; }//主键Id
+
         public string Colorname { get; set; }//车辆颜色
     }
 }
