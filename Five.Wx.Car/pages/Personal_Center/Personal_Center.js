@@ -7,7 +7,23 @@ Page({
   data: {
 
   },
-
+  /*跳转全部订单页面*/ 
+  OrderAll:function(){
+    wx.navigateTo({
+      url: '../Order_form/order_form',
+    })
+  },
+  /*跳转全部订单页面*/
+  OrderWei: function () {
+    wx.navigateTo({
+      url: '../Order_form/order_form',
+    })
+  }, /*跳转全部订单页面*/
+  OrderYi: function () {
+    wx.navigateTo({
+      url: '../Order_form/order_form',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
