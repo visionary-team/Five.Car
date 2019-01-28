@@ -1,10 +1,4 @@
-<!--pages/CarOrder/CarOrder.wxml-->
-<view>
-<text>朱保良    4569895661615</text>
-<view>
-<text>国家外观卷啊网络科技噶网络科技旮旯网</text>
-</view>
-</view>
+<!--pages/Carcollect/Carcollect.wxml-->
 <view class='imgs' wx:for="{{add}}" wx:key="item.Id">
 <image src="../../img/奔驰/奔驰2.jpg" mode="aspectFill"> 
 </image> 
@@ -13,11 +7,9 @@
 <view><text>排量：{{item.UserId}}</text> </view>
 <view><text>数量：{{item.Number}}</text> </view>
 
-
-<view><text>配送方式：免邮</text></view>
-
-<view>合计：110.00<button class='footer-add' form-type='submit'>提交订单</button></view>
-
+<view class='jie'>
+<button class='footer-add' form-type='submit'>去结算</button>
 </view>
 
-
+</view>
+<view></view>
