@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/Add_address/Add_address",
+    
     "pages/Address_details/Address_details",
+    "pages/Add_address/Add_address",
     "pages/Home_page/Home_page",
     "pages/Car_searching/Car_searching",
     "pages/index/index",

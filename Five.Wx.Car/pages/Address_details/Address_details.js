@@ -5,14 +5,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      addrdetails:[{
+        Id:1,
+        UName:"张三",
+        Phone:"13522788660",
+        UserAddress:"皮营乡北陶村",
+        UserId:1,
+        ProvinceId:"河南省周口市西华县",
+        State:1,
+      },
+      {
+          Id: 2,
+          UName: "李四",
+          Phone: "13522788660",
+          UserAddress: "皮营乡北陶村",
+          UserId: 1,
+        ProvinceId: "河南省周口市西华县",
+          State: 1,
+        },
+        {
+          Id: 3,
+          UName: "马六",
+          Phone: "13522788660",
+          UserAddress: "皮营乡北陶村",
+          UserId: 1,
+          ProvinceId: "河南省周口市西华县",
+          State: 1,
+        }
+      ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+        
   },
 
   /**
