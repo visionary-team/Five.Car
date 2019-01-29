@@ -54,7 +54,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Address\" />
+    <Folder Include="AddressDetails\" />
     <Folder Include="OrderAdd\" />
     <Folder Include="OrderDetails\" />
   </ItemGroup>

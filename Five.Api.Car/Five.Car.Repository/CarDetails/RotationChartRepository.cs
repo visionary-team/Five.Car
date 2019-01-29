@@ -9,6 +9,6 @@ namespace Five.Car.Repository
 {
     public class RotationChartRepository: RotationChartIRepository
     {
-        private static string strcon = "Data Source=169.254.104.123/orcl;Persist Security Info=True;User ID=zhubaolinag;pwd=666666";
+        private static string strcon = "Data Source=169.254.104.123/orcl;Persist Security Info=True;User ID=zhubaolinag;pwd=666666";       
     }
 }
