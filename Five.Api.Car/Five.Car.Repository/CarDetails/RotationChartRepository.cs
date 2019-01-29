@@ -14,6 +14,7 @@ namespace Five.Car.Repository
 {
     public class RotationChartRepository: IRotationChartRepository
     {
+<<<<<<< HEAD
         private static string strcon = "Data Source=169.254.104.123/orcl;Persist Security Info=True;User ID=zhubaolinag;pwd=666666";       
 =======
         /// <summary>
