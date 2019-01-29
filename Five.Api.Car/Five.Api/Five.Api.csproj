@@ -233,6 +233,10 @@
       <Project>{389ee964-e0dc-4ad0-b3c2-6f15832a6708}</Project>
       <Name>Five.Car.IRepository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Five.Car.Model\Five.Car.Model.csproj">
+      <Project>{d6b350c3-2b2c-4c81-ba0b-4ca14bb5f642}</Project>
+      <Name>Five.Car.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Five.Car.Repository\Five.Car.Repository.csproj">
       <Project>{4f914e6c-f98a-4f38-a9a0-f18cefc89fea}</Project>
       <Name>Five.Car.Repository</Name>

@@ -40,7 +40,7 @@ namespace Five.Api
         /// <param name="builder"></param>
         public static void SetupResolveRules(ContainerBuilder container)
         {
-            container.RegisterType<RotationChartRepository>().As<RotationChartIRepository>();
+            container.RegisterType<RotationChartRepository>().As<IRotationChartRepository>();
         }
     }
 }
