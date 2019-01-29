@@ -14,9 +14,6 @@ namespace Five.Car.Repository
 {
     public class RotationChartRepository: IRotationChartRepository
     {
-<<<<<<< HEAD
-        private static string strcon = "Data Source=169.254.104.123/orcl;Persist Security Info=True;User ID=zhubaolinag;pwd=666666";       
-=======
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
@@ -35,6 +32,5 @@ namespace Five.Car.Repository
                 return a;
             }
         }
->>>>>>> 8291f69ade6e49d83a4024bc2b73b22e3aea5c32
     }
 }
