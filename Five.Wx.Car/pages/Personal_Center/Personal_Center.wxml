@@ -1,15 +1,13 @@
 <!--pages/Personal Center/Personal Center.wxml-->
 <!--user.wxml-->
 <view class='container'>
-  <view clas='personal_info'>
-    <view class="photo_wrap">
-      <image src="/Img/玛莎拉蒂/玛莎拉蒂3.jpg" class="photo"></image>
-    </view>
-    <view class="personal_info">
-      <view class="nickname">
-        <input name="username" value="逆风飞翔"></input>
-      </view>
-    </view>
+   <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
 
 
     <view class="workbench">
@@ -66,6 +64,4 @@
         </view>
         
       </view>
-    </view>
-
 </view>
