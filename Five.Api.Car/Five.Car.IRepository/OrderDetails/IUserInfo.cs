@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Five.Car.IRepository.OrderDetails
 {
-    interface IUserInfo
+    public interface IUserInfo
     {
+
     }
 }
