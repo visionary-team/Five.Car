@@ -4,11 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Five.Car.IRepository;
+using Five.Car.Repository;
 
 namespace Five.Api.Controllers
 {
     public class ValuesController : ApiController
     {
+        public RotationChartRepository rota { get; set; }
         // GET api/values
         public IEnumerable<string> Get()
         {
