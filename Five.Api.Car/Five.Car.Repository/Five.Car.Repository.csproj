@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarDetails\RotationChartRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZC\RotationMeth.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Five.Car.IRepository\Five.Car.IRepository.csproj">
@@ -54,9 +54,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="WH\" />
-    <Folder Include="XRL\" />
-    <Folder Include="ZBL\" />
+    <Folder Include="Address\" />
+    <Folder Include="OrderAdd\" />
+    <Folder Include="OrderDetails\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

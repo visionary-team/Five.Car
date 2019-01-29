@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Five.Car.IRepository
 {
-    public interface RotationInfc
+    public class RotationChartIRepository
     {
+        
     }
 }
