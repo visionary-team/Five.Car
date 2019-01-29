@@ -11,7 +11,6 @@ namespace Five.Api.Controllers
 {
     public class ValuesController : ApiController
     {
-        public RotationChartRepository rota { get; set; }
         // GET api/values
         public IEnumerable<string> Get()
         {

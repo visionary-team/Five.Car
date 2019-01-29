@@ -4,7 +4,7 @@
     <view wx:for="{{lunbo}}" wx:key="1" bindtap="jump">
       <swiper-item>
         <view>
-          <image src="{{item.image}}" mode="scaleToFill center" class="banner" style="height:200px"></image>
+          <image src="{{item.Url}}" mode="scaleToFill center" class="banner" style="height:200px"></image>
         </view>
       </swiper-item>
     </view>
@@ -22,7 +22,7 @@
       </view>
     </view>
   </view>
-  <view class="ImgShow">
+  <view class="ImgShow" wx:for="{{lunbo}}">
     <image class="img" src="/Img/大众/大众4.jpg" bindtap="jump"></image>
     <image src="/Img/法拉利/法拉利3.jpg" bindtap="jump"></image>
     <image class="img" src="/Img/迈凯伦/迈凯伦5.jpg" bindtap="jump"></image>

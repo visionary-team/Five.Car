@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressDetails\AddressDetails.cs" />
     <Compile Include="CarDetails\RotationChartRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,7 +55,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Address\" />
     <Folder Include="OrderAdd\" />
     <Folder Include="OrderDetails\" />
   </ItemGroup>

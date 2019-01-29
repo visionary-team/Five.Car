@@ -5,13 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    lunbo: [{
-      image: "/Img/奔驰/奔驰7.jpg",
-    }, {
-      image: "/Img/法拉利/法拉利6.jpg",
-      },{
-        image: "/Img/迈凯伦/迈凯伦7.jpg",
-      },],   
     autoplay: true,
     interval: 2000,
     duration: 1000
@@ -37,7 +30,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that=this;
+    wx.request({
+      url: 'http://localhost:52631/api/CarDetails/ShowRotation',
+      method:"Get",
+      data:{},
+      success:function(res)
+      {
+        console.log(res);
+        that.setData({         
+          lunbo:res.data
+        })
+      }
+    })
   },
 
   /**
