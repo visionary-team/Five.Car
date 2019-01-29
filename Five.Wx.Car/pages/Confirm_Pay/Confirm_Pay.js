@@ -1,4 +1,4 @@
-var WxAutoImage = require('../../js/detailImage.js');
+
 var app = getApp();
 
 Page({
@@ -13,7 +13,13 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1200,
-    iscollect: true
+    iscollect: true,
+
+  },
+  go: function () {
+    wx.navigateTo({
+      url: '../Order_form/order_form',
+    })
   },
   collect: function () {
     this.setData({

@@ -2,17 +2,22 @@
   "pages": [
     "pages/Home_page/Home_page",
     "pages/Order_form/order_form",
-
     "pages/Add_address/Add_address",
     "pages/Address_details/Address_details",
     "pages/Car_searching/Car_searching",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/Personal_Center/Personal_Center",
     "pages/Vehicle_source/Vehicle_source",
     "pages/Carissue/Carissue",
     "pages/Car_details/Car_details",
-    "pages/Vehicle_system/Vehicle_system"
+    "pages/Vehicle_system/Vehicle_system",
+    "pages/Add_Evaluation/Add_Evaluation",
+    "pages/CarOrder/CarOrder",
+    "pages/Carcollect/Carcollect",
+    "pages/Evaluation_details/Evaluation_details",
+    "pages/order_details/order_details",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Confirm_Pay/Confirm_Pay"
   ],
   "window": {
     "backgroundTextStyle": "light",

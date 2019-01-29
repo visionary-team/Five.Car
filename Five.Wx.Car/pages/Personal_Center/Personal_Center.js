@@ -24,6 +24,21 @@ Page({
       url: '../Order_form/order_form',
     })
   },
+  MyCollection:function(){
+    wx.navigateTo({
+      url: '../Carcollect/Carcollect',
+    })
+  },
+  Myevaluation:function(){
+    wx.navigateTo({
+      url: '../Evaluation_details/Evaluation_details',
+    })
+  },
+  MyAddress:function(){
+    wx.navigateTo({
+      url: '../Address_details/Address_details',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

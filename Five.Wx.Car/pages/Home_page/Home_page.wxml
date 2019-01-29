@@ -16,7 +16,7 @@
         <image src="/Img/显示图片/desk_publish@2x.png"></image>
         <text>发布车源</text>
       </view>
-      <view class="items">
+      <view class="items" bindtap='MyOrder'>
         <image src="/Img/显示图片/desk_order@2x.png"></image>
         <text>我的订单</text>
       </view>

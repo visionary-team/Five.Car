@@ -40,12 +40,12 @@
       <text class="titles">評價收藏</text>
       <view class="lists">
 
-        <view class="itemss">
+        <view class="itemss" bindtap='Myevaluation'>
           <image src="/Img/显示图片/icon-xingxing.png"></image>
           <text>我的評價</text>
         </view>
 
-        <view class="itemss">
+        <view class="itemss" bindtap='MyCollection'>
           <image src="/Img/显示图片/icon-muma.png"></image>
           <text>我的收藏</text>
         </view>
@@ -60,7 +60,7 @@
       <text class="titless">地址管理</text>
       <view class="listss">
 
-        <view class="itemsss">
+        <view class="itemsss" bindtap='MyAddress'>
           <image src="/Img/显示图片/icon-aixin.png"></image>
           <text>地址管理</text>
         </view>

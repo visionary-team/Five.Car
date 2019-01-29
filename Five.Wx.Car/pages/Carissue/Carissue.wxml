@@ -2,14 +2,14 @@
   <form bindsubmit="handleSubmit">
     <view class='pinpai'>
       汽车品牌：
-    <view class="tui-picker-content">
- <picker bindchange="changeMultiPicker3" mode = "multiSelector" value="{{multiIndex3}}" range="{{multiArray3}}">
- <view class="tui-picker-detail">
- {{multiArray3[0][multiIndex3[0]]}} -{{multiArray3[1][multiIndex3[1]]}}
- </view>
- </picker>
- </view>
-</view>
+      <view class="tui-picker-content">
+        <picker bindchange="changeMultiPicker3" mode="multiSelector" value="{{multiIndex3}}" range="{{multiArray3}}">
+          <view class="tui-picker-detail">
+            {{multiArray3[0][multiIndex3[0]]}} -{{multiArray3[1][multiIndex3[1]]}}
+          </view>
+        </picker>
+      </view>
+    </view>
 
     <view class='pinpai'>
       车辆型号：

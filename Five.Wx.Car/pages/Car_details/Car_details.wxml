@@ -1,4 +1,4 @@
-<!--pages/Car_details/Car_details.wxml-->
+
 <view>
   <swiper indicator-dots="{{indicatorDots}}" 
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -77,6 +77,6 @@
   <view>
     <view class="goods_one">
     </view>
-    <view class="goods_half_half green">前往付款</view>
+    <view class="goods_half_half green" bindtap='GoPay'>前往付款</view>
   </view>
 </view>

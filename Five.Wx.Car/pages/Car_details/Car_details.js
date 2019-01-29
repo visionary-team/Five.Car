@@ -1,4 +1,4 @@
-// pages/Car_details/Car_details.js
+
 Page({
 
   /**
@@ -6,6 +6,11 @@ Page({
    */
   data: {
 
+  },
+  GoPay:function(){
+    wx.navigateTo({
+      url: '../Confirm_Pay/Confirm_Pay',
+    })
   },
 
   /**

@@ -92,7 +92,7 @@ Page({
 
   FuKuan:function(){
     wx.navigateTo({
-      url: '../Pay_page/Pay_page',
+      url: '../Confirm_Pay/Confirm_Pay',
     })
   },
   /**

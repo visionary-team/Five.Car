@@ -27,6 +27,11 @@ Page({
       url: '../Car_details/Car_details',
     })
   },
+  MyOrder:function(){
+    wx.navigateTo({
+      url: '../Order_form/order_form',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

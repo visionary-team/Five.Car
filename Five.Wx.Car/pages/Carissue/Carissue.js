@@ -9,7 +9,9 @@ Page({
     multiArray3: [['奥迪', '宝马', '奔驰', '大众', '丰田'], ['A8', '1X', 'Rx', '途观', '卡罗拉']],
     multiIndex3: ['奥迪', 'A8']
   },
-  
+  handleSubmit: function () {
+    
+  },
 
   //选择汽车品牌函数
   // 选择三级联动

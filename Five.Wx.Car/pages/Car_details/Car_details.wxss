@@ -1,4 +1,4 @@
-/* pages/Car_details/Car_details.wxss */
+
 .swiper-item{
   display: block;
 }
