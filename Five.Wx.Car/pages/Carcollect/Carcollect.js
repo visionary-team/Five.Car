@@ -1,22 +1,32 @@
-// pages/Add_address/Add_address.js
+// pages/Carcollect/Carcollect.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // 省市区三级联动初始化
-    region: ["四川省", "广元市", "苍溪县"],
+    add:[{
+      Id:"奔驰",
+      CarId:"白色",
+      UserId:"1.8T",
+      Number:1
+    
   },
-  // 选择省市区函数
-  changeRegin(e) {
-    this.setData({ region: e.detail.value });
+  {
+
+    Id: "奔驰",
+    CarId: "白色",
+    UserId: "1.8T",
+    Number: 1
+  },
+
+]
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      
+
   },
 
   /**

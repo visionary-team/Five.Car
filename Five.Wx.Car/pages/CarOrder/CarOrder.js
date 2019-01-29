@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    add: [{
+      Id: "奔驰",
+      CarId: "白色",
+      UserId: "1.8T",
+      Number: 1
 
+    },
+    ]
   },
 
   /**

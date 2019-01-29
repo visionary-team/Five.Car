@@ -1,0 +1,43 @@
+<!--pages/order_details/order_details.wxml-->
+<view>
+
+  <view>
+    <image src="/Img/玛莎拉蒂/玛莎拉蒂3.jpg" class="photo"></image>
+  </view>
+  <view class="goods_infor_raw">
+    <view class="goods_infor_item">
+      <text>【品 牌】</text>梅赛德斯-奔驰
+    </view>
+    <view class="goods_infor_item">
+      <text>【型 号】</text>S600迈巴赫系列
+    </view>
+    <view class="goods_infor_item">
+      <text>【颜 色】</text>黑色
+    </view>
+    <view class="goods_infor_item">
+      <text>【排 量】</text>6.6L
+    </view>
+    <view class="goods_infor_item">
+      <text>【发 动 机】</text>自然吸气，9档手自一体
+    </view>
+    <view class="goods_infor_item">
+      <text>【最大马力】</text>667匹
+    </view>
+    <view class="goods_infor_item">
+      <text>【汽车级别】</text>大型车
+    </view>
+    <view class="goods_infor_item">
+      <text>【驱动方式】</text>前置四驱
+    </view>
+    <view class="goods_infor_item">
+      <text>【最大扭矩】</text>463kW/1000N.m
+    </view>
+  </view>
+<view>
+<text>配送方式:上门自取</text>
+<text>免邮</text>
+</view>
+<view>
+<button>返回</button>
+</view>
+</view>

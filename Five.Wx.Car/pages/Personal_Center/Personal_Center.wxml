@@ -41,12 +41,12 @@
       <view class="lists">
 
         <view class="itemss">
-          <image src="/Img/显示图片/tab_home_sel@2x.png"></image>
+          <image src="/Img/显示图片/icon-xingxing.png"></image>
           <text>我的評價</text>
         </view>
 
         <view class="itemss">
-          <image src="/Img/显示图片/tab_user_sel@2x.png"></image>
+          <image src="/Img/显示图片/icon-muma.png"></image>
           <text>我的收藏</text>
         </view>
       </view>
@@ -61,7 +61,7 @@
       <view class="listss">
 
         <view class="itemsss">
-          <image src="/Img/显示图片/tab_home_sel@2x.png"></image>
+          <image src="/Img/显示图片/icon-aixin.png"></image>
           <text>地址管理</text>
         </view>
         

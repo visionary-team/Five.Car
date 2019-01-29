@@ -1,0 +1,55 @@
+/* pages/Evaluation_details/Evaluation_details.wxss */
+.car_item_wrap {
+    position: relative;
+    height: 100px;
+    background-color: #FFF;
+    padding-left: 100px;
+    border-bottom: 1px solid #E7E7EB;
+}
+.car_image_wrap {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.car_item_image {
+    width: 80px;
+    height: 80px;
+}
+.car_item_title {
+    padding: 10px 10px 10px 0;
+    font-size: 14px;
+}
+.car_item_bot {
+   padding: 0 10px 0 0;
+   height: 28px;
+   line-height: 28px;
+}
+.car_item_price {
+    color: #ff0000;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.car_item_ColorName {
+    color: #ccc5c5;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.car_item_Displacement {
+    color: #ccc5c5;
+    font-size: 14px;
+}
+.car_item_Content {
+   
+    font-size: 14px;
+}
+
+
+.car_item_btn {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #B2B2B2;
+    color: #929292;
+}

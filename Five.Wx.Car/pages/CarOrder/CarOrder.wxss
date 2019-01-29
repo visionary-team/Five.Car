@@ -1,1 +1,15 @@
 /* pages/CarOrder/CarOrder.wxss */
+.xinxi{
+  width: 20rpx;
+  height: 20rpx;
+  top: 10px;
+}
+
+.imgs{
+  margin-left: 10rpx;
+  width: 30%;
+  height: 30%;
+}
+.footer-add{
+  background-color: red;
+}

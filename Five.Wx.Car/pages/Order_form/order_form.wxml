@@ -29,6 +29,7 @@
           </view>
         </view>         
       </view>
+      <button bindtap='Details'>查看详情</button>
     </scroll-view>
   </swiper-item>
   <!-- 待付款 -->
@@ -54,7 +55,7 @@
           </view>
         </view>
       </view>
-      <button>去付款</button>
+      <button bindtap='FuKuan'>去付款</button>
     </scroll-view>
   </swiper-item>
   <!-- 取消 -->

@@ -1,9 +1,6 @@
 /* pages/Add_address/Add_address.wxss */
 page{
 
-  background-image: url("/Img/奔驰/奔驰2.jpg");
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
 }
 .footer-add {
   width: 100%;
@@ -32,4 +29,20 @@ page{
   height: 50px;
   width: 90%;
   border: 1px solid #f3ebec;
+}
+.tui-picker-content{
+ padding: 30rpx;
+ text-align: center;
+}
+.tui-picker-name{
+ height: 80rpx;
+ line-height: 80rpx;
+}
+.tui-picker-detail{
+ height: 80rpx;
+ line-height: 80rpx;
+ background-color: #fff;
+ font-size: 35rpx;
+ padding: 0 10px;
+ overflow: hidden;
 }
