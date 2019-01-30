@@ -5,34 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      addrdetails:[{
-        Id:1,
-        UName:"张三",
-        Phone:"13522788660",
-        UserAddress:"皮营乡北陶村",
-        UserId:1,
-        ProvinceId:"河南省周口市西华县",
-        State:1,
-      },
-      {
-          Id: 2,
-          UName: "李四",
-          Phone: "13522788660",
-          UserAddress: "皮营乡北陶村",
-          UserId: 1,
-        ProvinceId: "河南省周口市西华县",
-          State: 1,
-        },
-        {
-          Id: 3,
-          UName: "马六",
-          Phone: "13522788660",
-          UserAddress: "皮营乡北陶村",
-          UserId: 1,
-          ProvinceId: "河南省周口市西华县",
-          State: 1,
-        }
-      ]
+     
   },
   editAddr:function(){
     wx.navigateTo({
@@ -43,14 +16,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-        
+       var that = this;
+       wx.request({
+         url: 'http://localhost:52631/api/Address/Show',
+         method:"get",
+         data:{},
+         success:function(res)
+         {
+           console.log(res);
+           that.setData({
+             lunbo: res.data
+           })
+         }
+       })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+     
   },
 
   /**

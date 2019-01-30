@@ -1,5 +1,6 @@
 <!--pages/Add_address/Add_address.wxml-->
 
+<!-- <view class='Verification' wx:if{{VerificationMag}}>{{VerificationMag}}</view> -->
 <view class="container">
   <form bindsubmit="handleSubmit">
     <view class="header"></view>
@@ -10,7 +11,7 @@
             <view class="weui-label">收货人:</view>
           </view>
          <view class="weui-cell__bd">
-           <input name="delivery_name" class="weui-input" placeholder="请输入收货人" value="{{delivery_name}}" />
+           <input name="delivery_name" bindchange="changeuname" class="weui-input" placeholder="请输入收货人" value="{{delivery_name}}" />
          </view>
       </view>
 
@@ -19,7 +20,7 @@
             <view class="weui-label">手机号码:</view>
           </view>
         <view class="weui-cell__bd">
-          <input name="delivery_phone" class="weui-input" placeholder="请输入手机号码" value="{{delivery_phone}}" />
+          <input name="delivery_phone" bindchange="changephone" class="weui-input" placeholder="请输入手机号码" value="{{delivery_phone}}" />
         </view>
       </view>
 
@@ -37,12 +38,12 @@
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <textarea name="delivery_street" class="weui-textarea" placeholder="请输入详细地址" style="height: 3.3em" value="{{delivery_street}}" />
+            <textarea bindchange="changeaddress" name="delivery_street" class="weui-textarea" placeholder="请输入详细地址" style="height: 3.3em" value="{{delivery_street}}" />
           </view>
         </view>
       </view>
     </view>
-    <view class="weui-cells weui-cells_after-title  margin-top">
+    <!-- <view class="weui-cells weui-cells_after-title  margin-top">
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_switch">
           <view class="weui-cell__bd">设为默认地址</view>
@@ -51,16 +52,16 @@
           </view>
         </view>
       </view>
-    </view>
+    </view> -->
 
-    <view class="personal_info">
+    <!-- <view class="personal_info">
       <view class="nickname">
       <input name="username" style='display:none' value="{{userInfo.nickName}}"></input>  
       </view>
-    </view>
+    </view> -->
 
     <view class="footer">
-      <button class="footer-add" formType="submit">保存</button>
+      <button class="footer-add" bindtap='save' formType="submit">保存</button>
     </view>
 
 

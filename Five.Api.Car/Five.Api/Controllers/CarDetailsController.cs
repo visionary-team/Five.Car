@@ -13,6 +13,9 @@ namespace Five.Api.Controllers
     public class CarDetailsController : ApiController
     {
         public IRotationChartRepository Rotation { get; set; }
+        public ICarBrand CarBrand { get; set; }
+        public IRotationChartRepository Rotation { get; set; }      
+>>>>>>> a8cceb4f427e5e99bb776b50c8010e25b605bb98
 
         [HttpGet]
         /// <summary>
@@ -23,6 +26,18 @@ namespace Five.Api.Controllers
         {
             var RotationList = Rotation.ShowRotationchart();
             return RotationList;
+        }
+
+        [HttpGet]
+        /// <summary>
+        /// 关于汽车品牌的显示
+        /// </summary>
+        /// <param name="Pid"></param>
+        /// <returns></returns>
+        public List<Cars> CarBrandShow(int Pid)
+        {
+            var CarBrands = CarBrand.CarBrandShow(Pid);
+            return CarBrands;
         }
     }
 }
