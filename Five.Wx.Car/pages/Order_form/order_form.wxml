@@ -1,6 +1,6 @@
 <!--pages/Order_form/order_form.wxml-->
 <view class="swiper-tab">
-  <block wx:for="{{swipertab}}" wx:key="sptab">
+  <block wx:for="{{swipertab}}" wx:key="index">
     <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">{{item.name}}</view>
   </block>
 </view>
@@ -11,21 +11,20 @@
     <scroll-view class="hot-box" scroll-y="true">
       <view  class="orderDetails" wx:for="{{alreadyOrder}}" wx:key=" ">
         <view class="orderListTitle">
-          <text class="userName">{{item.name}}</text>
-          <text class="orderStatus">{{item.state}}</text>
+          <text class="userName">{{item.Address}}</text>
         </view>
         <view class="orderListDetails">
           <view class="productImg">
-            <image src="{{item.url}}" background-size="cover"></image>
+            <image src="{{item.Imgurl}}" background-size="cover"></image>
           </view>
           <view class="productInfo">
-            <view class="productTitle">预定时间: {{item.time}}</view>
-            <text class="productPrice">当前状态：{{item.status}}</text>
+            <view class="productTitle">预定时间: {{item.Times}}</view>
+            <text class="productPrice">当前状态：{{item.State}}</text>
           </view>
         </view>
         <view class="productCount">
           <view>
-            <text>合计：￥{{item.money}}</text>
+            <text>合计：￥{{item.Price}}</text>
           </view>
         </view>         
       </view>

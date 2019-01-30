@@ -31,9 +31,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper">
-      <HintPath>C:\Users\张策\Desktop\大一\Dapper.dll</HintPath>
+      <HintPath>C:\Users\逆风飞翔\Desktop\乾坤大挪移\常用文件\Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="Oracle.Web, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
@@ -45,8 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarDetails\CarBrand.cs" />
+    <Compile Include="AddressDetails\AddressDetails.cs" />
     <Compile Include="CarDetails\RotationChartRepository.cs" />
+    <Compile Include="OrderDetails\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,9 +60,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AddressDetails\" />
     <Folder Include="OrderAdd\" />
-    <Folder Include="OrderDetails\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

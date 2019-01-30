@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Five.Car.Model
 {
     //订单表
-    public class Order
+    public class Orders
     {
         public int Id { get; set; }//主键
 

@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/Add_address/Add_address",
+  "pages/Order_form/order_form",
     "pages/Home_page/Home_page",
-    "pages/Order_form/order_form",
-    
+   
+    "pages/Add_address/Add_address",
     "pages/Address_details/Address_details",
     "pages/Car_searching/Car_searching",
     "pages/Personal_Center/Personal_Center",
@@ -47,12 +47,12 @@
       {
         "pagePath": "pages/Car_searching/Car_searching",
         "text": "寻车",
-          "iconPath": "Img/显示图片/tab_search_def@2x.png",
+        "iconPath": "Img/显示图片/tab_search_def@2x.png",
         "selectedIconPath": "Img/显示图片/tab_search_sel@2x.png"
       },
       {
         "pagePath": "pages/Personal_Center/Personal_Center",
-        "text": "我的",   
+        "text": "我的",
         "iconPath": "Img/显示图片/tab_user_def@2x.png",
         "selectedIconPath": "Img/显示图片/tab_user_sel@2x.png"
       }
