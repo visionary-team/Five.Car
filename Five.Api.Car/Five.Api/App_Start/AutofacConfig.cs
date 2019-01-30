@@ -41,6 +41,8 @@ namespace Five.Api
         {
             container.RegisterType<RotationChartRepository>().As<IRotationChartRepository>();
             container.RegisterType<CarBrand>().As<ICarBrand>();
+            container.RegisterType<AddressDetails>().As<IAddressDetails>();
+            container.RegisterType<Collect>().As<ICollect>();
         }
     }
 }
