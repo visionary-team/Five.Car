@@ -26,5 +26,7 @@ namespace Five.Car.Model
         public int Stock { get; set; }//车辆库存
 
         public int Price { get; set; } //车辆价格
+
+        public string Times { get; set; }   //时间
     }
 }

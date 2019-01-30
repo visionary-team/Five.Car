@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarDetails\RotationChartIRepository.cs" />
+    <Compile Include="CarDetails\IRotationChartRepository.cs" />
+    <Compile Include="IAddressDetails\IAddressDetails.cs" />
     <Compile Include="OrderDetails\IUserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

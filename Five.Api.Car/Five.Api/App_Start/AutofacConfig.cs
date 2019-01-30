@@ -11,6 +11,8 @@ using Five.Car.Repository;
 using Autofac.Integration.WebApi;
 using System.Web.Http;
 using Autofac.Integration.Mvc;
+using Five.Car.Repository.OrderDetails;
+using Five.Car.IRepository.OrderDetails;
 
 namespace Five.Api
 {
@@ -40,7 +42,8 @@ namespace Five.Api
         /// <param name="builder"></param>
         public static void SetupResolveRules(ContainerBuilder container)
         {
-            container.RegisterType<RotationChartRepository>().As<IRotationChartRepository>();
+
+            container.RegisterType<UserInfo>().As<IUserInfo>();
         }
     }
 }
