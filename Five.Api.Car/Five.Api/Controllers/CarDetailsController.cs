@@ -14,6 +14,8 @@ namespace Five.Api.Controllers
     {
         public IRotationChartRepository Rotation { get; set; }
         public ICarBrand CarBrand { get; set; }
+        public IRotationChartRepository Rotation { get; set; }      
+>>>>>>> a8cceb4f427e5e99bb776b50c8010e25b605bb98
 
         [HttpGet]
         /// <summary>

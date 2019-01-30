@@ -13,5 +13,12 @@ namespace Five.Car.Model
         public int Carid { get; set; }//汽车外键
         public int Userid { get; set; }//用户外键
         public int Number1 { get; set; }//数量
+
+
+
+        public string  ColorName { get; set; }
+        public string DISPLACEMENT { get; set; }
+        public string CARBRAND { get; set; }
+        public string ImgUrl { get; set; }
     }
 }
