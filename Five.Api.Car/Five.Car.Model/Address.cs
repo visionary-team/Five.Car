@@ -11,7 +11,7 @@ namespace Five.Car.Model
     {
         public int Id { get; set; }//主键Id
 
-        public string Uname { get; set; }//用户名称 
+        public string UName { get; set; }//用户名称 
 
         public string Phone { get; set; }//用户手机  
 

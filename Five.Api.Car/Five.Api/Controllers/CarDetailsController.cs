@@ -12,7 +12,7 @@ namespace Five.Api.Controllers
 {
     public class CarDetailsController : ApiController
     {
-        public IRotationChartRepository Rotation { get; set; }
+        public IRotationChartRepository Rotation { get; set; }      
 
         [HttpGet]
         /// <summary>
@@ -24,5 +24,7 @@ namespace Five.Api.Controllers
             var RotationList = Rotation.ShowRotationchart();
             return RotationList;
         }
+
+       
     }
 }
