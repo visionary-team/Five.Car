@@ -7,12 +7,12 @@ using Five.Car.Model;
 
 namespace Five.Car.IRepository
 {
-    public interface IRotationChartRepository
+    public interface ICarBrand
     {
         /// <summary>
-        /// 关于轮播图的显示
+        /// 关于汽车品牌的显示
         /// </summary>
         /// <returns></returns>
-        List<Rotationchart> ShowRotationchart();
+        List<Cars> CarBrandShow(int Pid);
     }
 }

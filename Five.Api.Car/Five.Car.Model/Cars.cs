@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace Five.Car.Model
 {
     //车辆品牌表
-    public class Car
+    public class Cars
     {
         public int Id { get; set; }//主键
 
-        public int Carbrand { get; set; }//车辆品牌或型号
+        public string Carbrand { get; set; }//车辆品牌或型号
 
         public int Pid { get; set; }//父级id
 

@@ -22,10 +22,9 @@
       </view>
     </view>
   </view>
-  <view class="ImgShow" wx:for="{{lunbo}}">
-    <image class="img" src="/Img/大众/大众4.jpg" bindtap="jump"></image>
-    <image src="/Img/法拉利/法拉利3.jpg" bindtap="jump"></image>
-    <image class="img" src="/Img/迈凯伦/迈凯伦5.jpg" bindtap="jump"></image>
-    <image src="/Img/宾利/宾利3.jpg" bindtap="jump"></image>
+  <view class="hot-list" wx:for="{{lunbo}}" wx:key="1">
+    <view class="hot-item">
+      <image class="img" src="{{item.Url}}" bindtap="jump"></image>
+    </view>
   </view>
 </view>
