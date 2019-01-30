@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/Carcollect/Carcollect",
     "pages/Home_page/Home_page",
     "pages/Order_form/order_form",
     "pages/Add_address/Add_address",
@@ -12,7 +13,6 @@
     "pages/Vehicle_system/Vehicle_system",
     "pages/Add_Evaluation/Add_Evaluation",
     "pages/CarOrder/CarOrder",
-    "pages/Carcollect/Carcollect",
     "pages/Evaluation_details/Evaluation_details",
     "pages/order_details/order_details",
     "pages/index/index",

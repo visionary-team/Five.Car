@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarDetails\RotationChartIRepository.cs" />
+    <Compile Include="CarDetails\IRotationChartRepository.cs" />
+    <Compile Include="IAddressDetails\IAddressDetails.cs" />
+    <Compile Include="OrderAdd\ICollect.cs" />
     <Compile Include="OrderDetails\IUserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Address\" />
-    <Folder Include="OrderAdd\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
