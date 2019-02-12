@@ -5,6 +5,7 @@ Page({
    */
   data: {
     currtab: 0,
+    orderShow:false,
     swipertab: [{ name: '已完成', index: 0 }, { name: '待付款', index: 1 }, { name: '已取消', index: 2 }],
   },
   Details:function(){
@@ -16,7 +17,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
+    var that=this;
+    wx.request({
+      url: 'http://localhost:52631/api/Order/CarOrdreTable',
+      method:"get",
+      data:{},
+      success:function(res)
+      {
+        console.log(res);
+        that.setData({
+          orderShow: res.data
+        })
+      }
+    });
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

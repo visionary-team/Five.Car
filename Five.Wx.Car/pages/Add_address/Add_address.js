@@ -5,19 +5,108 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 省市区三级联动初始化
-    region: ["四川省", "广元市", "苍溪县"],
+    
+      // 省市区三级联动初始化
+      region: ["河南省", "周口市", "西华县"],   
+       name : '',//收货人
+       phone : '',//收货人手机号
+       street : '',//收货地址
+      
   },
-  // 选择省市区函数
-  changeRegin(e) {
-    this.setData({ region: e.detail.value });
+   
+   //省市县
+  changeRegin:function(e)
+  {
+     this.setData({region:e.detail.value});
   },
+
+   
+  //  //非空判断
+  //  handleSubmit:function(e)
+  //  {
+  //   var name=e.detail.value.delivery_name;
+  //   var phone=e.detail.value.delivery_phone;
+  //   var street=e.detail.value.delivery_street;
+  //    wx:if(name==""||phone==""||street=="")
+  //    {
+  //           wx.showModal({
+  //             title: '提示',
+  //             content: '请输入完整信息',
+  //          })
+  //    }
+  //    else
+  //    {
+  //      console.log(e.detail.value)
+  //    }
+  //  },
+   
+
+  //手机号
+  changephone: function (e)
+  {
+    let phone = e.detail.value;
+    if (phone.length==11)
+     {
+      let checkedNum = this.checkphoneNum(phone)
+     }
+     else{
+      wx.showToast({
+        title: '手机号位数不对',
+      })
+     }
+  },
+
+  checkphoneNum: function (phone) {
+    var str = /^1(3|4|5|7|8)\d{9}$/;
+    if (str.test(phone)) {
+         return true;
+    }   
+    else
+    {
+      wx.showToast({
+        title: '手机号不正确',
+      })
+      return false;
+    }
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
       
   },
+   
+  handleSubmit: function (e) {
+
+    var name = e.detail.value.delivery_name;
+    var phone = e.detail.value.delivery_phone;
+    var street = e.detail.value.delivery_street;
+    wx: if (name == "" || phone == "" || street == "") {
+      wx.showModal({
+        title: '提示',
+        content: '请输入完整信息',
+      })
+    }
+    else {
+      console.log(e.detail.value)
+    }
+
+     wx.request({
+       url: 'http://localhost:52631/api/Address/AddressDetails',
+       method: "get",
+       data: {
+         UName: name,
+         Phone: phone,
+         UserAddress: street
+       },
+       success: function () {
+        wx.showToast({
+          title: '添加成功',
+        })
+       }
+     })
+   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -10,6 +10,7 @@ namespace Five.Car.IRepository
    public interface IAddressDetails
     {
         int IAdd(Address addr);
+        List<Address> Show();
 
     }
 }

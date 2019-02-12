@@ -18,7 +18,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var pid=parseInt(options.Pid);
+    var name = options.name;
+    var that=this;
+    wx.request({
+      url: 'http://localhost:52631/api/CarDetails/CarBrandShow?Pid='+pid,
+      method: "Get",
+      data: {},
+      success: function (res) {
+        that.setData({
+          hotCar: res.data
+        })
+      }
+    })
   },
 
   /**

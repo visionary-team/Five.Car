@@ -31,8 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper">
-      <HintPath>..\..\..\..\..\小二\电商系统\Dapper.dll</HintPath>
+      <HintPath>C:\Users\张策\Desktop\大一\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.Web, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
@@ -45,8 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressDetails\AddressDetails.cs" />
+    <Compile Include="CarDetails\CarBrand.cs" />
+    <Compile Include="CarDetails\CarDetailsRepository.cs" />
     <Compile Include="CarDetails\RotationChartRepository.cs" />
     <Compile Include="OrderAdd\Collect.cs" />
+    <Compile Include="OrderDetails\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,9 +63,7 @@
       <Name>Five.Car.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OrderDetails\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

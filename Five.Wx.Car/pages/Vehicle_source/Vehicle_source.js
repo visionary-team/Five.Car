@@ -5,45 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hotCar:[{
-      imgUrl:"/Img/大众/大众1.jpg",
-      name:"大众",
-    },
-      {
-        imgUrl: "/Img/宾利/宾利1.jpg",
-        name: "宾利",
-      },
-      {
-        imgUrl: "/Img/法拉利/法拉利1.jpg",
-        name: "法拉利",
-      },
-      {
-        imgUrl: "/Img/红旗/红旗.jpg",
-        name: "红旗",
-      },
-    ],
-    allCar:[
-      {
-        imgUrl: "/Img/大众/大众1.jpg",
-        name: "大众",
-      },
-      {
-        imgUrl: "/Img/宾利/宾利1.jpg",
-        name: "宾利",
-      },
-      {
-        imgUrl: "/Img/法拉利/法拉利1.jpg",
-        name: "法拉利",
-      },
-      {
-        imgUrl: "/Img/红旗/红旗.jpg",
-        name: "红旗",
-      },
-    ]
+    
   },
-  jump:function(){
+  jump:function(e){
+    var pid = e.currentTarget.dataset.pid;
+    console.log(pid);
       wx.navigateTo({
-        url: '../Vehicle_system/Vehicle_system',
+        url: '../Vehicle_system/Vehicle_system?Pid=' + pid,
       })
   },
 
@@ -51,7 +19,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.request({
+      url: 'http://localhost:52631/api/CarDetails/CarBrandShow?Pid=0',
+      method: "Get",
+      data: {},
+      success: function (res) {
+        that.setData({
+          hotCar: res.data
+        })
+      }
+    })
   },
 
   /**
