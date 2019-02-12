@@ -15,9 +15,10 @@ Page({
       url: '../Carissue/Carissue',
     })
   },
-  jump:function(){
+  jump:function(e){
+    var pid = e.currentTarget.dataset.pid;
     wx.navigateTo({
-      url: '../Car_details/Car_details',
+      url: '../Car_details/Car_details?Pid='+pid,
     })
   },
   MyOrder:function(){
@@ -37,7 +38,6 @@ Page({
       data:{},
       success:function(res)
       {
-        console.log(res);
         that.setData({         
           lunbo:res.data
         })

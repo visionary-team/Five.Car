@@ -9,6 +9,10 @@ namespace Five.Car.IRepository
 {
     public interface IRotationChartRepository
     {
+        /// <summary>
+        /// 关于轮播图的显示
+        /// </summary>
+        /// <returns></returns>
         List<Rotationchart> ShowRotationchart();
     }
 }
