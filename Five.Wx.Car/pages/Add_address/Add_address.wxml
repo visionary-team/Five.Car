@@ -11,7 +11,7 @@
             <view class="weui-label">收货人:</view>
           </view>
          <view class="weui-cell__bd">
-           <input name="delivery_name" bindchange="changeuname" class="weui-input" placeholder="请输入收货人" value="{{delivery_name}}" />
+           <input name="delivery_name"  class="weui-input" placeholder="请输入收货人" value="{{delivery_name}}" />
          </view>
       </view>
 
@@ -38,7 +38,7 @@
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <textarea bindchange="changeaddress" name="delivery_street" class="weui-textarea" placeholder="请输入详细地址" style="height: 3.3em" value="{{delivery_street}}" />
+            <textarea  name="delivery_street" class="weui-textarea" placeholder="请输入详细地址" style="height: 3.3em" value="{{delivery_street}}" />
           </view>
         </view>
       </view>

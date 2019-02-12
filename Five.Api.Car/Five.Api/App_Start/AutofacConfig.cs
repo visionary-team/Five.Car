@@ -42,7 +42,6 @@ namespace Five.Api
         {
             container.RegisterType<RotationChartRepository>().As<IRotationChartRepository>();
 
-            
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <param name="addr"></param>
         /// <returns></returns>
+        [HttpGet]
         public int AddressDetails(Address addr)
         {
             int addaddress = Iaddress.IAdd(addr);
