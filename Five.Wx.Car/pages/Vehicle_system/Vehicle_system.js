@@ -26,7 +26,6 @@ Page({
       method: "Get",
       data: {},
       success: function (res) {
-        console.log(res);
         that.setData({
           hotCar: res.data
         })

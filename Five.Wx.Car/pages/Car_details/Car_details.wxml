@@ -2,7 +2,7 @@
 <view>
   <swiper indicator-dots="{{indicatorDots}}" 
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="1">
       <swiper-item>
         <image src="{{item}}" class="slide-image" />
       </swiper-item>
@@ -14,10 +14,10 @@
     木村耀司登山旅行大学生户外情侣双肩背包外带小背包
     <view class="goods_collect_btn" bindtap="collect">
       <view wx:if="{{iscollect}}">
-        <image src="../Img/显示图片/icon-aixin.png" class="goods_collect_img"></image>
+        <image src="" class="goods_collect_img"></image>
       </view>
       <view wx:else>
-        <image src="../Img/显示图片/icon-aixin1.png" class="goods_collect_img"></image>
+        <image src="" class="goods_collect_img"></image>
       </view> 
       <text wx:if="{{iscollect}}">已收藏</text>
       <text wx:else>收藏</text>
@@ -69,7 +69,7 @@
 <view class="goods_detail">
   <view class="goods_detail_title">商品详情</view>
   <view>
-    <image bindload="cusImageLoad" src="../../image/IMG_0466.jpg" style="width:{{imageWidth}};height:{{imageHeight}}"></image>
+    <image bindload="cusImageLoad" src="" style="width:{{imageWidth}};height:{{imageHeight}}"></image>
   </view>
 </view>
 <view class="goods_bottom"></view>

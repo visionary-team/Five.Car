@@ -53,9 +53,3 @@
   margin-left: -1px;
   margin-top: -1px;
 }
-.hot-list{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex:1;
-}

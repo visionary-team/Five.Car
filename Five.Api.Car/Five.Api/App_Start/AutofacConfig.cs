@@ -45,8 +45,8 @@ namespace Five.Api
             container.RegisterType<CarBrand>().As<ICarBrand>();
             container.RegisterType<AddressDetails>().As<IAddressDetails>();
             container.RegisterType<Collect>().As<ICollect>();
-
             container.RegisterType<UserInfo>().As<IUserInfo>();
+            container.RegisterType<CarDetailsRepository>().As<ICarDetailsRepository>();
         }
     }
 }
