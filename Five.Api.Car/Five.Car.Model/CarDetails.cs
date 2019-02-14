@@ -28,5 +28,6 @@ namespace Five.Car.Model
         public int Price { get; set; } //车辆价格
 
         public string Times { get; set; }   //时间
+        public string Imgurl { get; set; }//图片路径
     }
 }

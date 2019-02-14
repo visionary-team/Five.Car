@@ -10,10 +10,9 @@ namespace Five.Car.Repository
 {
     public class AddressDetails : IAddressDetails
     {
-
         public int IAdd(Address addr)
         {
-            return 1;
+            throw new NotImplementedException();
         }
 
         public List<Address> Show()
