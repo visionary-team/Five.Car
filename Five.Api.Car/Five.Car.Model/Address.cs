@@ -15,10 +15,13 @@ namespace Five.Car.Model
 
         public string Phone { get; set; }//用户手机  
 
+        public string Province { get; set; } //省市县   
+
         public string Useraddress { get; set; }//详细地址
 
         public int Userid { get; set; }//相关用户
 
-        public int Provinceid { get; set; } //省市县id         
+       
+       
     }
 }

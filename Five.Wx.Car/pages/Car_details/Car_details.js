@@ -17,9 +17,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var pid = parseInt(options.Pid);
+    var that = this;
+    wx.request({
+      url: 'http://localhost:52631/api/CarDetails/CarDetailsShow?id='+pid,
+      method: "Get",
+      data: {},
+      success: function (res) {
+        that.setData({
+          CarDetail: res.data
+        })
+      }
+    })
   },
-
+  collect:function(e){
+    var id = e.currentTarget.dataset.id;
+    var collection = e.currentTarget.dataset.collection;
+    console.log(id, collection);
+    wx.request({
+      url: 'http://localhost:52631/api/Collect/UpdateCarCollection',
+      method: "Get",
+      data: { id: id, IsCollection: collection},
+      success: function (res) {
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,7 +1,7 @@
 <!--pages/Vehicle_source/Vehicle_source.wxml-->
 <view class="car">
   <view class="search_bar">
-    <input placeholder="搜索品牌/车系" auto-focus class="search_bar_txt" />
+    <input placeholder="搜索品牌" auto-focus class="search_bar_txt" bindblur="search"/>
   </view>
   <view class="hot-brand">
     <text class="source_title">热门品牌</text>

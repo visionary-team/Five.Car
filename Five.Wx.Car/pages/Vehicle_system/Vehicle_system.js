@@ -22,11 +22,10 @@ Page({
     var name = options.name;
     var that=this;
     wx.request({
-      url: 'http://localhost:52631/api/CarDetails/CarBrandShow?Pid='+pid,
+      url: 'http://localhost:52631/api/CarDetails/CarBrandShow',
       method: "Get",
-      data: {},
+      data: { Pid: pid, Brand:''},
       success: function (res) {
-        console.log(res);
         that.setData({
           hotCar: res.data
         })
