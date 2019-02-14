@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Five.Car.Model
 {
     //车辆图片表
-    public class CarImg
+    public class Image
     {
         public int Id { get; set; }//主键
 

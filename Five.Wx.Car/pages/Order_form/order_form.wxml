@@ -1,86 +1,38 @@
-<!--pages/Order_form/order_form.wxml-->
-<view class="swiper-tab">
-  <block wx:for="{{swipertab}}" wx:key="index">
-    <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">{{item.name}}</view>
-  </block>
+<!--pages/myorder/myorder.wxml-->
+
+<view>
+  <button bindtap='getAllorders'>所有订单</button>
+  <button bindtap='getstates' data-ids="0">已完成</button>
+  <button bindtap='getstates' data-ids="1">待支付</button>
+  <button bindtap='getstates' data-ids="2">已取消</button>
 </view>
- 
-<swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH-31}}px" bindchange="tabChange">
-  <!-- 完成 -->
-  <swiper-item>
-    <scroll-view class="hot-box" scroll-y="true">
-      <view  class="orderDetails" wx:for="{{alreadyOrder}}" wx:key=" ">
-        <view class="orderListTitle">
-          <text class="userName">{{item.Address}}</text>
-        </view>
-        <view class="orderListDetails">
-          <view class="productImg">
-            <image src="{{item.Imgurl}}" background-size="cover"></image>
-          </view>
-          <view class="productInfo">
-            <view class="productTitle">预定时间: {{item.Times}}</view>
-            <text class="productPrice">当前状态：{{item.State}}</text>
-          </view>
-        </view>
-        <view class="productCount">
-          <view>
-            <text>合计：￥{{item.Price}}</text>
-          </view>
-        </view>         
-      </view>
-      <button bindtap='Details'>查看详情</button>
-    </scroll-view>
-  </swiper-item>
-  <!-- 待付款 -->
-  <swiper-item>
-    <scroll-view class="hot-box" scroll-y="true">
-      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key=" ">
-        <view class="orderListTitle">
-           <text class="userName">{{item.name}}</text>
-          <text class="orderStatus">{{item.state}}</text>
-        </view>
-        <view class="orderListDetails">
-          <view class="productImg">
-            <image src="{{item.url}}" background-size="cover"></image>
-          </view>
-          <view class="productInfo">
-            <view class="productTitle">预定时间: {{item.time}}</view>
-            <text class="productPrice">当前状态：{{item.status}}</text>
-          </view>
-        </view>
-        <view class="productCount">
-          <view>
-             <text>合计：￥{{item.money}}</text>
-          </view>
-        </view>
-      </view>
-      <button bindtap='FuKuan'>去付款</button>
-    </scroll-view>
-  </swiper-item>
-  <!-- 取消 -->
-  <swiper-item>
-    <scroll-view class="hot-box" scroll-y="true">
-      <view class="orderDetails" wx:for="{{lostOrder}}" wx:key=" ">
-        <view class="orderListTitle">
-         <text class="userName">{{item.name}}</text>
-          <text class="orderStatus">{{item.state}}</text>
-        </view>
-        <view class="orderListDetails">
-          <view class="productImg">
-            <image src="{{item.url}}" background-size="cover"></image>
-          </view>
-          <view class="productInfo">
-            <view class="productTitle">预定时间: {{item.time}}</view>
-            <text class="productPrice">当前状态：{{item.status}}</text>
-          </view>
-        </view>
-        <view class="productCount">
-          <view>
-             <text>合计：￥{{item.money}}</text>
-          </view>
-        </view>
-      </view>
-    </scroll-view>
-  </swiper-item>
- 
-</swiper>
+<!-- 数据信息 begin-->
+ <view class="nav_section">
+        <block wx:for="{{items}}" wx:key="item.State">
+            <view class="nav_section_items" >
+                <!--image-->
+                <view class="section_image" bindtap="navigateDetail" data-aid="{{item.ProductImage}}" >
+                <block>
+                    <image  src="{{item.Imgurl  }}" mode="aspectFill" data-img="{{item.ImagesArr[0]}}"></image>
+                    
+                </block>
+                </view>
+                <!--content-->
+                <view class="section_cont" bindtap="navigateDetail" data-aid="{{item.Id}}">
+                    <view class="section_cont_sub">
+                        <text>{{item.Address}}</text>
+                    </view>
+                    <view class="section_cont_price">名字:{{item.Address}}</view>
+                    <view class="section_cont_price">价格：￥{{item.Price}}</view>
+                    <view class="section_cont_price">选购时间:{{item.Times}}</view>
+                </view>
+                <!--book-->
+                <view class="section_book"   bindtap="delorder" data-ids="{{item.ID}}">查看详情</view>
+                <view class="section_book" wx:if="{{item.State==1}}" bindtap='Pay'>付款</view>
+                <view wx:else=""></view>
+                
+            </view>
+        </block>
+</view>
+
+<!-- 数据信息 end-->

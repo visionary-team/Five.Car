@@ -10,9 +10,15 @@ namespace Five.Car.IRepository
     public interface ICarDetailsRepository
     {
         /// <summary>
-        /// 关于汽车详情的显示
+        /// 关于根据Id显示汽车详情
         /// </summary>
         /// <returns></returns>
-        List<CarDetails> CarDetailShow(int Pid);
+        List<CarShop> CarDetailShow(int Pid);
+
+        /// <summary>
+        /// 显示全部的汽车详情
+        /// </summary>
+        /// <returns></returns>
+        List<CarShop> CarDetailAllShow();
     }
 }

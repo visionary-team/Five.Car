@@ -29,14 +29,26 @@ namespace Five.Api.Controllers
 
         [HttpGet]
         /// <summary>
-        /// 汽车详情显示
+        /// 根据Id显示单个的汽车详情
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public List<CarDetails> CarDetailsShow(int id)
+        public List<CarShop> CarDetailsShow(int id)
         {
             var CarDetailes = CarDetail.CarDetailShow(id);
             return CarDetailes;
+        }
+
+        [HttpGet]
+        /// <summary>
+        /// 显示所有的汽车详情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public List<CarShop> CarDetailAllShow()
+        {
+            var CarAllDetailes = CarDetail.CarDetailAllShow();
+            return CarAllDetailes;
         }
 
         [HttpGet]
@@ -45,9 +57,10 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <param name="Pid"></param>
         /// <returns></returns>
-        public List<Cars> CarBrandShow(int Pid)
+        [ActionName("CarBrandShow")]
+        public List<CarTable> CarBrandShow(int Pid, string Brand)
         {
-            var CarBrands = CarBrand.CarBrandShow(Pid);
+            var CarBrands = CarBrand.CarBrandShow(Pid, Brand);
             return CarBrands;
         }       
     }

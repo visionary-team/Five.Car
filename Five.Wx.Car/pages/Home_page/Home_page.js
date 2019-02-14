@@ -38,6 +38,7 @@ Page({
       data:{},
       success:function(res)
       {
+        console.log(res);
         that.setData({         
           lunbo:res.data
         })

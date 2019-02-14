@@ -14,12 +14,12 @@
       <text class="title">我的订单</text>
       <view class="list">
 
-        <view class="items" bindtap='OrderAll'>
+        <view class="items" bindtap='OrderAll'  data-Sid="{{item.Id}}">
           <image src="/Img/显示图片/tab_home_sel@2x.png"></image>
           <text>全部訂單</text>
         </view>
 
-        <view class="items" bindtap='OrderWei'>
+        <view class="items" bindtap='OrderWei' data-Sid1="{{item.Id}}">
           <image src="/Img/显示图片/tab_user_sel@2x.png"></image>
           <text>未付款</text>
         </view>

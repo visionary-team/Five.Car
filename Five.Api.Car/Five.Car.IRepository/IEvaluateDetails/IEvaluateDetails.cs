@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Five.Car.Model;
 
-namespace Five.Car.IRepository
+namespace Five.Car.IRepository.IEvaluateDetails
 {
-    public interface ICarBrand
+    public interface IEvaluateDetails
     {
         /// <summary>
-        /// 关于汽车品牌的显示
+        /// 评论显示
         /// </summary>
         /// <returns></returns>
-        List<CarTable> CarBrandShow(int Pid,string Brand);
+        List<Evaluate> Show();
     }
 }

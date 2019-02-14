@@ -30,6 +30,49 @@ Page({
          }
        })
   },
+  
+  //删除
+  delnew:function(e)
+   {
+    var pid = e.currentTarget.dataset.aid;
+     console.log(pid);
+      wx.showModal({
+        title: '提示',
+        content: '确定要删除吗？',
+        cancelColor: '#0076FF',
+        confirmColor: '#0076FF',
+        success:function(sm){
+          //如果点击了确定就可以删除了
+          if(sm.confirm)
+          {
+              wx.request({
+                url: 'http://localhost:52631/api/Address/Del?Id=' + pid,
+                data:'',
+                header:{
+                  'content-type':'application/json'
+                },
+                method:"get",
+                success:function(res)
+                {
+                  console.log(res);
+                  wx.showToast({
+                    title: '删除成功',//数据返回提示
+                    icon:'success',
+                    duration:2000
+                  })
+                
+                },
+                 fail:function(res){ },
+                 complete:function (res){ }
+              })
+          }
+          else if(sm.cancel)
+          {
+              console.log('用户点击取消');
+          }
+        }
+      })   
+   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
