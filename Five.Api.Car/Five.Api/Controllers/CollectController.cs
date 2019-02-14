@@ -34,7 +34,7 @@ namespace Five.Api.Controllers
             addr.Address = HttpContext.Current.Request["Address"];
             addr.Price = Convert.ToInt32(HttpContext.Current.Request["Price"]);
             addr.Imgurl = HttpContext.Current.Request["Imgurl"];
-            int addaddress = Collect.AddCarDetails(addr);
+            int addaddress = Collect.Add(addr);
             return addaddress;
         }
     }

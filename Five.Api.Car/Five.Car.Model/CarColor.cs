@@ -10,6 +10,6 @@ namespace Five.Car.Model
     {
         public int Id { get; set; }//主键Id
 
-        public string Colorname { get; set; }//车辆颜色
+        public string ColorName { get; set; }//车辆颜色
     }
 }

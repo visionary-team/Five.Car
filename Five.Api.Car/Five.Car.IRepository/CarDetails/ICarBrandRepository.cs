@@ -7,12 +7,12 @@ using Five.Car.Model;
 
 namespace Five.Car.IRepository
 {
-    public interface ICarBrand
+    public interface ICarBrandRepository
     {
         /// <summary>
         /// 关于汽车品牌的显示
         /// </summary>
         /// <returns></returns>
-        List<CarTable> CarBrandShow(int Pid,string Brand);
+        List<CarTable> GetCarTables(int pid,string brand);
     }
 }

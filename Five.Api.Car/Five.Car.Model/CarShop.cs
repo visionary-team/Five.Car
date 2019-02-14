@@ -10,7 +10,10 @@ namespace Five.Car.Model
     {
         public int Id { get; set; }//主键Id
 
-        public int Brandid { get; set; }//车辆品牌外键
+        /// <summary>
+        /// 车辆品牌外键
+        /// </summary>
+        public int Brandid { get; set; }
 
         public int Carcolorid { get; set; }//车辆颜色外键
 

@@ -20,7 +20,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:52631/api/CarDetails/CarDetailAllShow',
+      url: 'http://localhost:52631/api/CarDetails/GetCarShops',
       method: "Get",
       success: function (res) {
         that.setData({

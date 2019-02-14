@@ -9,23 +9,19 @@ using Five.Car.Model;
 using System.Data;
 using Dapper;
 using System.Data.OracleClient;
+using Five.Car.Command;
 
 namespace Five.Car.Repository
 {
     public class RotationChartRepository: IRotationChartRepository
     {
         /// <summary>
-        /// 数据库连接字符串
-        /// </summary>
-        private static string strcon = "Data Source=orcl;User ID=zhubaoliang;pwd=666666";
-
-        /// <summary>
         /// 显示轮播图
         /// </summary>
         /// <returns></returns>
-        public List<Rotationchart> ShowRotationchart()
+        public List<Rotationchart> GetRotationcharts()
         {
-            using (IDbConnection conn = new OracleConnection(strcon))
+            using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
                 string sql = "select * from Rotationchart";
                 var Rotations= conn.Query<Rotationchart>(sql).ToList();

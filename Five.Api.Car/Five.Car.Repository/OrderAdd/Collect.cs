@@ -18,6 +18,12 @@ namespace Five.Car.Repository
         /// 数据库连接字符串
         /// </summary>
         private static string strcon = "Data Source=orcl;User ID=zhubaoliang;pwd=666666";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Usersid"></param>
+        /// <returns></returns>
         public List<Collection> ShowCollection(string Usersid)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
@@ -33,9 +39,14 @@ namespace Five.Car.Repository
             using (IDbConnection conn = new OracleConnection(strcon))
             {
                 string sql = string.Format("insert into CarDetails values('{0}','{1}','{2}','{3}','{4}')", c.Carcolorid, c.Displacement, c.Address, c.Price, c.Imgurl);
-                int a = conn.Execute(sql);
-                return a;
+                int i = conn.Execute(sql);
+                return i;
             }
+        }
+
+        public int Add(CarDetails carDetails)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -17,6 +17,6 @@ namespace Five.Car.IRepository
         List<Collection> ShowCollection( string Usersid);
 
 
-        int AddCarDetails(CarDetails c);
+        int Add(CarDetails carDetails);
     }
 }

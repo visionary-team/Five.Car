@@ -13,7 +13,9 @@ namespace Five.Api.Controllers
     public class CarDetailsController : ApiController
     {
         public IRotationChartRepository Rotation { get; set; }
-        public ICarBrand CarBrand { get; set; }
+
+        public ICarBrandRepository CarBrand { get; set; }
+
         public ICarDetailsRepository CarDetail { get; set; }
 
         [HttpGet]
@@ -21,9 +23,9 @@ namespace Five.Api.Controllers
         /// 显示轮播图
         /// </summary>
         /// <returns></returns>
-        public List<Rotationchart> ShowRotation()
+        public List<Rotationchart> GetRotationcharts()
         {
-            var RotationList = Rotation.ShowRotationchart();
+            var RotationList = Rotation.GetRotationcharts();
             return RotationList;
         }
 
@@ -33,9 +35,9 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public List<CarShop> CarDetailsShow(int id)
+        public List<CarShop> GetCarShopsById(int id)
         {
-            var CarDetailes = CarDetail.CarDetailShow(id);
+            var CarDetailes = CarDetail.GetCarShopsById(id);
             return CarDetailes;
         }
 
@@ -45,9 +47,9 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public List<CarShop> CarDetailAllShow()
+        public List<CarShop> GetCarShops()
         {
-            var CarAllDetailes = CarDetail.CarDetailAllShow();
+            var CarAllDetailes = CarDetail.GetCarShops();
             return CarAllDetailes;
         }
 
@@ -58,9 +60,9 @@ namespace Five.Api.Controllers
         /// <param name="Pid"></param>
         /// <returns></returns>
         [ActionName("CarBrandShow")]
-        public List<CarTable> CarBrandShow(int Pid, string Brand)
+        public List<CarTable> GetCarTables(int Pid, string Brand)
         {
-            var CarBrands = CarBrand.CarBrandShow(Pid, Brand);
+            var CarBrands = CarBrand.GetCarTables(Pid, Brand);
             return CarBrands;
         }       
     }

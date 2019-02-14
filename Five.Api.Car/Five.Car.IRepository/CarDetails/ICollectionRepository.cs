@@ -14,6 +14,6 @@ namespace Five.Car.IRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        int UpdateCarCollection(int id,int IsCollection);
+        int UpdateCarCollection(int id,int isCollection);
     }
 }

@@ -46,16 +46,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressDetails\AddressDetails.cs" />
-    <Compile Include="CarDetails\CarBrand.cs" />
+    <Compile Include="CarDetails\CarBrandRepository.cs" />
     <Compile Include="CarDetails\CarDetailsRepository.cs" />
     <Compile Include="CarDetails\CollectionRepository.cs" />
     <Compile Include="CarDetails\RotationChartRepository.cs" />
+    <Compile Include="EvaluateDetails\EvaluateDetails.cs" />
     <Compile Include="OrderAdd\Carissue.cs" />
     <Compile Include="OrderAdd\Collect.cs" />
     <Compile Include="OrderDetails\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Five.Car.Command\Five.Car.Common.csproj">
+      <Project>{099194f9-4970-40b7-8f98-8fee9a49a081}</Project>
+      <Name>Five.Car.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Five.Car.IRepository\Five.Car.IRepository.csproj">
       <Project>{389ee964-e0dc-4ad0-b3c2-6f15832a6708}</Project>
       <Name>Five.Car.IRepository</Name>

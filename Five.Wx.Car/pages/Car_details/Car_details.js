@@ -20,7 +20,7 @@ Page({
     var pid = parseInt(options.Pid);
     var that = this;
     wx.request({
-      url: 'http://localhost:52631/api/CarDetails/CarDetailsShow?id='+pid,
+      url: 'http://localhost:52631/api/CarDetails/GetCarShopsById?id='+pid,
       method: "Get",
       data: {},
       success: function (res) {
