@@ -9,21 +9,33 @@ Page({
   },
   jump:function(e){
     var pid = e.currentTarget.dataset.pid;
-    console.log(pid);
       wx.navigateTo({
         url: '../Vehicle_system/Vehicle_system?Pid=' + pid,
       })
   },
-
+  search:function(e){
+    var text=e.detail.value;
+    var that = this;
+    wx.request({
+      url: 'http://localhost:52631/api/CarDetails/CarBrandShow',
+      method: "Get",
+      data: { Pid: 0, Brand: text },
+      success: function (res) {
+        that.setData({
+          hotCar: res.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:52631/api/CarDetails/CarBrandShow?Pid=0',
+      url: 'http://localhost:52631/api/CarDetails/CarBrandShow',
       method: "Get",
-      data: {},
+      data: {Pid:0,Brand:""},
       success: function (res) {
         that.setData({
           hotCar: res.data

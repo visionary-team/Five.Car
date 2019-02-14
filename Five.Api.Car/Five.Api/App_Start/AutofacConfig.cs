@@ -47,6 +47,7 @@ namespace Five.Api
             container.RegisterType<Collect>().As<ICollect>();
             container.RegisterType<UserInfo>().As<IUserInfo>();
             container.RegisterType<CarDetailsRepository>().As<ICarDetailsRepository>();
+            container.RegisterType<CollectionRepository>().As<ICollectionRepository>();
         }
     }
 }

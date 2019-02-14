@@ -15,7 +15,6 @@
 .workbench .title{
   font-size:20rpx;
   padding: 20rpx 20rpx;
-  
   display: block;
 }
 .workbench .list{
@@ -41,15 +40,14 @@
   text-align: center;
   margin-top: 10rpx;
 }
-.hot-list image{
-  width:40%;
-  height: 240rpx;
+.hot-item image{
+  width: 375rpx;
+  height:220rpx;
+  margin-bottom: 25rpx;
+}
+.hot-list{
   display: flex;
   flex-direction: row;
-}
-.hot-item{
-  /*flex:1;*/
-  text-align: center;
-  margin-left: -1px;
-  margin-top: -1px;
+  flex-wrap: wrap;
+  flex:1;
 }

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CarDetails\ICarBrand.cs" />
     <Compile Include="CarDetails\ICarDetailsRepository.cs" />
+    <Compile Include="CarDetails\ICollectionRepository.cs" />
     <Compile Include="CarDetails\IRotationChartRepository.cs" />
     <Compile Include="IAddressDetails\IAddressDetails.cs" />
     <Compile Include="OrderAdd\ICollect.cs" />

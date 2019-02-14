@@ -1,6 +1,6 @@
 <!--pages/Home page/Home page.wxml-->
 <view class="home-wrap">
-  <swiper style="height:190px" indicator-dots="true" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}">
+  <swiper style="height:200px" indicator-dots="true" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}">
     <view wx:for="{{lunbo}}" wx:key="1" bindtap="jump" data-pid="{{item.CarDetailsid}}">
       <swiper-item>
         <view>
@@ -22,9 +22,13 @@
       </view>
     </view>
   </view>
-  <view class="hot-list" wx:for="{{lunbo}}" wx:key="1">
-    <view class="hot-item">
-      <image class="img" src="{{item.Url}}" bindtap="jump"></image>
+  <view class="hot-brand">
+    <view class="hot-list" >
+      <view class="hot-item" wx:for="{{lunbo}}" wx:key="ImageUrl">
+        <view bindtap="jump" data-pid="{{item.Id}}">
+          <image src="{{item.Url}}" mode="scaleToFill center" bindtap="jump" data-pid="{{item.CarDetailsid}}"></image>
+        </view>
+      </view>
     </view>
   </view>
 </view>

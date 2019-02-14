@@ -12,12 +12,20 @@ namespace Five.Api.Controllers
     public class CollectController : ApiController
     {
         public ICollect Collect { get; set; }
+        public ICollectionRepository Collection { get; set; }
 
         [HttpGet]
         public List<Collection> ShowCollection(string Usersid)
         {
             var collects = Collect.ShowCollection(Usersid);
             return collects;
+        }
+
+        [HttpGet]
+        public int UpdateCarCollection(int id, int IsCollection)
+        {
+            var i = Collection.UpdateCarCollection(id, IsCollection);
+            return i;
         }
     }
 }
