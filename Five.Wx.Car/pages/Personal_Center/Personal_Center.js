@@ -47,15 +47,17 @@ Page({
   },
 
    /*跳转全部订单页面*/ 
-  OrderAll: function () {
+  OrderAll: function (e) {
+    var sid = e.currentTarget.dataset.Sid;
     wx.navigateTo({
-      url: '../Order_form/order_form',
+      url: '../Order_form/order_form?Sid='+sid,
     })
   },
   /*跳转全部订单页面*/
-  OrderWei: function () {
+  OrderWei: function (e) {
+    var sid1 = e.currentTarget.dataset.Sid1;
     wx.navigateTo({
-      url: '../Order_form/order_form',
+      url: '../Order_form/order_form?Sid1='+sid1,
     })
   }, /*跳转全部订单页面*/
   OrderYi: function () {

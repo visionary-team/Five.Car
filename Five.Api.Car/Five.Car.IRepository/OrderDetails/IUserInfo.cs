@@ -13,6 +13,11 @@ namespace Five.Car.IRepository.OrderDetails
         /// 汽车订单表
         /// </summary>
         /// <returns></returns>
-        List<OrderCarDetails> CarOrdreTable();        
+        List<OrderCarDetails> CarOrdreTable(int id);
+        /// <summary>
+        /// 汽车订单表全部
+        /// </summary>
+        /// <returns></returns>
+        List<OrderCarDetails> CarOrdreTableAll();
     }
 }

@@ -15,5 +15,10 @@ namespace Five.Car.Repository
         {
             return 1;
         }
+
+        public List<Address> Show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
