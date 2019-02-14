@@ -10,7 +10,7 @@ Page({
       region: ["河南省", "周口市", "西华县"],   
        name : '',//收货人
        phone : '',//收货人手机号
-       street : '',//收货地址
+       street : ''//收货地
       
   },
    
@@ -21,24 +21,7 @@ Page({
   },
 
    
-  //  //非空判断
-  //  handleSubmit:function(e)
-  //  {
-  //   var name=e.detail.value.delivery_name;
-  //   var phone=e.detail.value.delivery_phone;
-  //   var street=e.detail.value.delivery_street;
-  //    wx:if(name==""||phone==""||street=="")
-  //    {
-  //           wx.showModal({
-  //             title: '提示',
-  //             content: '请输入完整信息',
-  //          })
-  //    }
-  //    else
-  //    {
-  //      console.log(e.detail.value)
-  //    }
-  //  },
+  
    
 
   //手机号
@@ -91,13 +74,14 @@ Page({
     else {
       console.log(e.detail.value)
     }
-
+    
      wx.request({
        url: 'http://localhost:52631/api/Address/AddressDetails',
        method: "get",
        data: {
          UName: name,
          Phone: phone,
+         Province: this.data.region,
          UserAddress: street
        },
        success: function () {
