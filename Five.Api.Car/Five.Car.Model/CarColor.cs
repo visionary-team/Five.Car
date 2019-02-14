@@ -8,8 +8,14 @@ namespace Five.Car.Model
 {
     public class CarColor
     {
-        public int Id { get; set; }//主键Id
+        /// <summary>
+        /// 主键Id
+        /// </summary>
+        public int Id { get; set; }
 
-        public string Colorname { get; set; }//车辆颜色
+        /// <summary>
+        /// 车辆颜色
+        /// </summary>
+        public string Colorname { get; set; }
     }
 }

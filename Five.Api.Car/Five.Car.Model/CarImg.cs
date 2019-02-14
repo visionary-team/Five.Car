@@ -9,10 +9,19 @@ namespace Five.Car.Model
     //车辆图片表
     public class CarImg
     {
-        public int Id { get; set; }//主键
+        /// <summary>
+        /// 主键
+        /// </summary>
+        public int Id { get; set; }
 
-        public string Imgurl { get; set; }//图片路径
+        /// <summary>
+        /// 图片路径
+        /// </summary>
+        public string Imgurl { get; set; }
 
-        public int Carid { get; set; }//车辆id
+        /// <summary>
+        /// 车辆id
+        /// </summary>
+        public int Carid { get; set; }
     }
 }

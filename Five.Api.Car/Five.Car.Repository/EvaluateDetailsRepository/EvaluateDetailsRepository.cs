@@ -12,7 +12,7 @@ using System.Data.OracleClient;
 
 namespace Five.Car.Repository.EvaluateDetails
 {
-    public class EvaluateDetails : IEvaluateDetails
+    public class EvaluateDetailsRepository : IEvaluateDetailsRepository
     {
         /// <summary>
         /// 数据库连接字符串
@@ -24,7 +24,7 @@ namespace Five.Car.Repository.EvaluateDetails
         /// 评价显示
         /// </summary>
         /// <returns></returns>
-        public List<Evaluate> Show()
+        public List<Evaluate> GetEvaluates()
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {

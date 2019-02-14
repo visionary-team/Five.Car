@@ -9,12 +9,24 @@ namespace Five.Car.Model
     //车辆品牌表
     public class Cars
     {
-        public int Id { get; set; }//主键
+        /// <summary>
+        /// 主键
+        /// </summary>
+        public int Id { get; set; }
 
-        public string Carbrand { get; set; }//车辆品牌或型号
+        /// <summary>
+        /// 车辆品牌或型号
+        /// </summary>
+        public string Carbrand { get; set; }
 
-        public int Pid { get; set; }//父级id
+        /// <summary>
+        /// 父级id
+        /// </summary>
+        public int Pid { get; set; }
 
-        public string ImageUrl { get; set; }//品牌logo
+        /// <summary>
+        /// 品牌logo
+        /// </summary>
+        public string ImageUrl { get; set; }
     }
 }

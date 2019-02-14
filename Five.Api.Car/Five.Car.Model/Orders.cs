@@ -9,18 +9,39 @@ namespace Five.Car.Model
     //订单表
     public class Orders
     {
-        public int Id { get; set; }//主键
+        /// <summary>
+        /// 主键
+        /// </summary>
+        public int Id { get; set; }
 
-        public int Numbers { get; set; }//数量
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public int Numbers { get; set; }
 
-        public int Price { get; set; }//总价
+        /// <summary>
+        /// 总价
+        /// </summary>
+        public int Price { get; set; }
 
-        public int Carid { get; set; }//汽车id
+        /// <summary>
+        /// 汽车id
+        /// </summary>
+        public int Carid { get; set; }
 
-        public int State { get; set; }//状态
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public int State { get; set; }
 
-        public int Useid { get; set; }//用户id
+        /// <summary>
+        /// 用户id
+        /// </summary>
+        public int Useid { get; set; }
 
-        public int Paymentid { get; set; }//支付方式
+        /// <summary>
+        /// 支付方式
+        /// </summary>
+        public int Paymentid { get; set; }
     }
 }

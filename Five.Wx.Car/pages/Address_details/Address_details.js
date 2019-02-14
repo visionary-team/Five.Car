@@ -18,7 +18,7 @@ Page({
   onLoad: function (options) {
        var that = this;
        wx.request({
-         url: 'http://localhost:52631/api/Address/Show',
+         url: 'http://localhost:52631/api/Address/GetAddress',
          method:"get",
          data:{},
          success:function(res)

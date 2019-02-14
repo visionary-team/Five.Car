@@ -9,17 +9,35 @@ namespace Five.Car.Model
     //用户地址表
     public class Address
     {
-        public int Id { get; set; }//主键Id
+        /// <summary>
+        /// 主键Id
+        /// </summary>
+        public int Id { get; set; }
 
-        public string UName { get; set; }//用户名称 
+        /// <summary>
+        /// 用户名称 
+        /// </summary>
+        public string UName { get; set; }
 
-        public string Phone { get; set; }//用户手机  
+        /// <summary>
+        /// 用户手机
+        /// </summary>
+        public string Phone { get; set; }
 
-        public string Province { get; set; } //省市县   
+        /// <summary>
+        /// 省市县
+        /// </summary>
+        public string Province { get; set; }
 
-        public string Useraddress { get; set; }//详细地址
+        /// <summary>
+        /// 详细地址
+        /// </summary>
+        public string Useraddress { get; set; }
 
-        public int Userid { get; set; }//相关用户
+        /// <summary>
+        /// 相关用户
+        /// </summary>
+        public int Userid { get; set; }
 
        
        
