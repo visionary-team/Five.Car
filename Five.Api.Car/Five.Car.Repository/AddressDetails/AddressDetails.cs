@@ -64,9 +64,5 @@ namespace Five.Car.Repository
             }
         }
 
-        public List<Address> Show()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarDetails\ICarBrand.cs" />
+    <Compile Include="CarDetails\ICarDetailsRepository.cs" />
+    <Compile Include="CarDetails\ICollectionRepository.cs" />
     <Compile Include="CarDetails\IRotationChartRepository.cs" />
     <Compile Include="IAddressDetails\IAddressDetails.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
