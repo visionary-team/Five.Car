@@ -5,41 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    carArray: [
-      {
-        carImage: '../../Img/大众/大众2.jpg',
-        CarBrand: '大众',
-        PRICE: '¥192.00',
-        ColorName: '蓝色',
-        Content:'很好很好很好很好很好很好很好很好',
-        Displacement: "1.6T",
-        carShow: true
-      },
-      {
-        carImage: '../../Img/奔驰/奔驰2.jpg',
-        CarBrand: '奔驰',
-        PRICE: '¥193.00',
-        ColorName: '白色',
-        Content: '很好很好很好很好很好很好很好很好',
-        Displacement:"1.6T",
-        carShow: true
-      },
-      {
-        carImage: '../../Img/法拉利/法拉利2.jpg',
-        CarBrand: '大众',
-        PRICE: '¥194.00',
-        ColorName: '红色',
-        Content: '很好很好很好很好很好很好很好很好',
-        Displacement: "1.6T",
-        carShow: true
-      }
-    ]
+   
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:52631/api/Evaluate/Show',
+      method: "get",
+      data: {},
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          lunbo: res.data
+        })
+      }
+    })
 
   },
 

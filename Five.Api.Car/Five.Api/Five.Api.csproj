@@ -173,6 +173,7 @@
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\CarDetailsController.cs" />
     <Compile Include="Controllers\CollectController.cs" />
+    <Compile Include="Controllers\EvaluateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
