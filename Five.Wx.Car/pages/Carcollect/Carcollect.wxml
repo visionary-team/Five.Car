@@ -1,15 +1,19 @@
 <!--pages/Carcollect/Carcollect.wxml-->
 <view class='imgs' wx:for="{{lunbo}}" wx:key="item.Id">
-<image src="{{item.ImgUrl}}" mode="aspectFill"> 
-</image> 
-<view><text>{{item.CARBRAND}}</text> </view>
-<view><text>颜色：{{item.ColorName}}</text> </view>
-<view><text>排量：{{item.DISPLACEMENT}}</text> </view>
-<view><text>数量：{{item.Number1}}</text> </view>
+  <image src="{{item.ImgUrl}}" mode="aspectFill">
+  </image>
+  <view>
+    <text>{{item.CARBRAND}}</text> </view>
+  <view>
+    <text>颜色：{{item.ColorName}}</text> </view>
+  <view>
+    <text>排量：{{item.DISPLACEMENT}}</text> </view>
+  <view>
+    <text>数量：{{item.Number1}}</text> </view>
 
-<view class='jie'>
-<button class='footer-add' form-type='submit'>去结算</button>
-</view>
+  <view class='jie'>
+    <button class='footer-add' form-type='submit'>去结算</button>
+  </view>
 
 </view>
 <view></view>

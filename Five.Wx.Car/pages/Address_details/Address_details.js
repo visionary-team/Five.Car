@@ -30,7 +30,11 @@ Page({
          }
        })
   },
-  
+  addAddress:function(e){
+    wx.navigateTo({
+      url: '../Add_address/Add_address',
+    })
+  },
   //删除
   delnew:function(e)
    {
