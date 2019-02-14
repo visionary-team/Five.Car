@@ -11,6 +11,7 @@ namespace Five.Car.IRepository
     {
         int IAdd(Address addr);
         List<Address> Show();
+        int Delete(int id);
 
     }
 }

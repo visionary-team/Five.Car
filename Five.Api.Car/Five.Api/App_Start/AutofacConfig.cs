@@ -6,12 +6,11 @@ using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using Five.Car.IRepository;
+using Five.Car.IRepository.OrderDetails;
 using Five.Car.Repository;
 using Autofac.Integration.WebApi;
 using System.Web.Http;
 using Autofac.Integration.Mvc;
-using Five.Car.Repository.OrderDetails;
-using Five.Car.IRepository.OrderDetails;
 
 namespace Five.Api
 {
@@ -48,6 +47,7 @@ namespace Five.Api
             container.RegisterType<UserInfo>().As<IUserInfo>();
             container.RegisterType<CarDetailsRepository>().As<ICarDetailsRepository>();
             container.RegisterType<CollectionRepository>().As<ICollectionRepository>();
+
         }
     }
 }
