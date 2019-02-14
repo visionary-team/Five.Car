@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarDetails\ICarBrand.cs" />
+    <Compile Include="CarDetails\ICarBrandRepository.cs" />
     <Compile Include="CarDetails\ICarDetailsRepository.cs" />
     <Compile Include="CarDetails\ICollectionRepository.cs" />
     <Compile Include="CarDetails\IRotationChartRepository.cs" />
@@ -61,9 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="WH\" />
-    <Folder Include="XRL\" />
-    <Folder Include="ZBL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Five.Car.IRepository.dll" />

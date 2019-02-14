@@ -8,23 +8,22 @@ using Five.Car.Model;
 using System.Data;
 using System.Data.OracleClient;
 using Dapper;
+using Five.Car.Command;
 
 namespace Five.Car.Repository
 {
-    public class CarBrand : ICarBrand
+    public class CarBrandRepository : ICarBrandRepository
     {
-        private static string strcon = "Data Source=orcl;User ID=zhubaoliang;pwd=666666";
-
         /// <summary>
         /// 显示汽车品牌
         /// </summary>
         /// <returns></returns>
-        public List<Cars> CarBrandShow(int Pid,string Brand)
+        public List<CarTable> GetCarTables(int pid,string brand)
         {
-            using (IDbConnection conn = new OracleConnection(strcon))
+            using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
-                string sql = $"select * from CarTable where CarBrand like '%{Brand}%' and PID={Pid}";
-                var CarBrands = conn.Query<Cars>(sql).ToList();
+                string sql = $"select * from CarTable where CarBrand like '%{brand}%' and PID={pid}";
+                var CarBrands = conn.Query<CarTable>(sql).ToList();
                 return CarBrands;
             }
         }       

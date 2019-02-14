@@ -1,59 +1,53 @@
 <view class='container'>
-  <form bindsubmit="handleSubmit">
+  <form bindsubmit="formSubmit">
     <view class='pinpai'>
       汽车品牌：
-      <view class="tui-picker-content">
-        <picker bindchange="changeMultiPicker3" mode="multiSelector" value="{{multiIndex3}}" range="{{multiArray3}}">
-          <view class="tui-picker-detail">
-            {{multiArray3[0][multiIndex3[0]]}} -{{multiArray3[1][multiIndex3[1]]}}
-          </view>
-        </picker>
-      </view>
-    </view>
-
-    <view class='pinpai'>
-      车辆型号：
     </view>
     <view class='pinpai_bd'>
-      <input name="delivery_name" class="weui-input" />
+      <input name="qiche" class="weui-input" />
     </view>
 
     <view class='pinpai'>
       车辆颜色：
     </view>
     <view class='pinpai_bd'>
-      <input name="delivery_name" class="weui-input" />
+      <input name="yanse" class="weui-input" />
     </view>
 
     <view class='pinpai'>
       车辆排量：
     </view>
     <view class='pinpai_bd'>
-      <input name="delivery_name" class="weui-input" />
+      <input name="pailiang" class="weui-input" />
     </view>
 
     <view class='pinpai'>
       车辆所在地：
     </view>
     <view class='pinpai_bd'>
-      <input name="delivery_name" class="weui-input" />
+      <input name="suozaidi" class="weui-input" />
     </view>
 
     <view class='pinpai'>
       发布价格：
     </view>
     <view class='pinpai_bd'>
-      <input name="delivery_name" class="weui-input" />
+      <input name="jiage" class="weui-input" />
     </view>
 
     <view class='pinpai'>
       上传图片：
     </view>
     <view class='pinpai_bd'>
-      <input name="delivery_name" class="weui-input" />
+      <button bindtap="upload" name="tupian"> 上传图片 </button>
     </view>
     <view class='footer'>
-      <button class='footer-add' form-type='submit'>保存</button>
+    <view>
+    <button class='footer-add' form-type='submit'>保存</button>
+    </view>
+      <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+    <image src="{{item }}" bindtap="listenerButtonPreviewImage" data-index="{{index}}" style="width: 100%;"/>
+  </block>
     </view>
   </form>
 </view>

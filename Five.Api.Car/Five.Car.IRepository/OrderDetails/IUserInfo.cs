@@ -14,6 +14,7 @@ namespace Five.Car.IRepository.OrderDetails
         /// </summary>
         /// <returns></returns>
         List<OrderCarDetails> CarOrdreTable(int id);
+
         /// <summary>
         /// 汽车订单表全部
         /// </summary>

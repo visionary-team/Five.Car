@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Five.Car.Model
 {
     //车辆品牌表
-    public class Cars
+    public class CarTable
     {
         /// <summary>
         /// 主键

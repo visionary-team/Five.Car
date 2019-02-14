@@ -1,4 +1,5 @@
 <!--pages/Address_details/Address_details.wxml-->
+<button bindtap="addAddress">添加地址</button>
  <view class="user_addr_manage">
     <block wx:for="{{lunbo}}" wx:key="item.Id">
       <view class="user_addr_item">

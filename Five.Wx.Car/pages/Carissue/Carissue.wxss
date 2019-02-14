@@ -21,3 +21,6 @@ page{background-color: #efeff4;}
  padding: 0 10px;
  overflow: hidden;
 }
+.pinpai_bd{
+  border: 1rpx solid black;
+}

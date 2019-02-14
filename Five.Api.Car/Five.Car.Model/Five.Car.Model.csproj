@@ -43,8 +43,8 @@
     <Compile Include="Address.cs" />
     <Compile Include="CarColor.cs" />
     <Compile Include="CarDetails.cs" />
-    <Compile Include="CarImg.cs" />
-    <Compile Include="Cars.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="CarTable.cs" />
     <Compile Include="CarShop.cs" />
     <Compile Include="Collection.cs" />
     <Compile Include="Evaluate.cs" />

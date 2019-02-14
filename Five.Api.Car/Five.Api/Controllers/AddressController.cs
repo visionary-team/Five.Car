@@ -56,7 +56,6 @@ namespace Five.Api.Controllers
         {
             int i = addressDetails.Delete(id);
             return i;
-
         }
     }
 }

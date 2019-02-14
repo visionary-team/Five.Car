@@ -9,7 +9,14 @@ namespace Five.Car.IRepository
 {
    public interface ICollect
     {
+        /// <summary>
+        /// 我的收藏
+        /// </summary>
+        /// <param name="Usersid"></param>
+        /// <returns></returns>
         List<Collection> ShowCollection( string Usersid);
-        
+
+
+        int Add(CarDetails carDetails);
     }
 }
