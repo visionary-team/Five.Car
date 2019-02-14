@@ -15,13 +15,26 @@ namespace Five.Api.Controllers
     {
         public IUserInfo Iuser { get; set; }
         /// <summary>
-        /// 汽车订单
+        /// 单个汽车订单
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public List<OrderCarDetails> CarOrdreTable()
+        [ActionName("CarOrdreTable")]
+        public List<OrderCarDetails> CarOrdreTable(int id)
         {
-            var OrderCar = Iuser.CarOrdreTable();
+            var OrderCar = Iuser.CarOrdreTable(id);
+            return OrderCar;
+        }
+
+        /// <summary>
+        /// 所有汽车订单
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [ActionName("CarOrdreTableAll")]
+        public List<OrderCarDetails> CarOrdreTableAll()
+        {
+            var OrderCar = Iuser.CarOrdreTableAll();
             return OrderCar;
         }
     }

@@ -45,6 +45,7 @@
     <Compile Include="CarDetails.cs" />
     <Compile Include="CarImg.cs" />
     <Compile Include="Cars.cs" />
+    <Compile Include="CarShop.cs" />
     <Compile Include="Collection.cs" />
     <Compile Include="Evaluate.cs" />
     <Compile Include="OrderCarDetails.cs" />

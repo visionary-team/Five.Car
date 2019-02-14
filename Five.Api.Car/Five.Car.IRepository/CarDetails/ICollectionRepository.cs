@@ -1,18 +1,19 @@
-﻿using System;
+﻿using Five.Car.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Five.Car.Model;
 
 namespace Five.Car.IRepository
 {
-    public interface ICarBrand
+    public interface ICollectionRepository
     {
         /// <summary>
-        /// 关于汽车品牌的显示
+        /// 根据Id修改车辆是否收藏
         /// </summary>
+        /// <param name="id"></param>
         /// <returns></returns>
-        List<Cars> CarBrandShow(int Pid,string Brand);
+        int UpdateCarCollection(int id,int IsCollection);
     }
 }
