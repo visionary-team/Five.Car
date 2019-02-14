@@ -1,13 +1,13 @@
 {
   "pages": [
-    
+    "pages/Home_page/Home_page",
     "pages/Address_details/Address_details",
     "pages/Add_address/Add_address",
     
     "pages/Car_details/Car_details",   
     "pages/Carissue/Carissue",
     "pages/Carcollect/Carcollect",
-    "pages/Home_page/Home_page",
+    
     "pages/Order_form/order_form",
     
     "pages/Car_searching/Car_searching",

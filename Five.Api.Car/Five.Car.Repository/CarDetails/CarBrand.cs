@@ -19,12 +19,12 @@ namespace Five.Car.Repository
         /// 显示汽车品牌
         /// </summary>
         /// <returns></returns>
-        public List<Cars> CarBrandShow(int Pid,string Brand)
+        public List<CarTable> CarBrandShow(int Pid,string Brand)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {
                 string sql = $"select * from CarTable where CarBrand like '%{Brand}%' and PID={Pid}";
-                var CarBrands = conn.Query<Cars>(sql).ToList();
+                var CarBrands = conn.Query<CarTable>(sql).ToList();
                 return CarBrands;
             }
         }       

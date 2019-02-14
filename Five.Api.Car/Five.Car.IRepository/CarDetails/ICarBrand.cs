@@ -13,6 +13,6 @@ namespace Five.Car.IRepository
         /// 关于汽车品牌的显示
         /// </summary>
         /// <returns></returns>
-        List<Cars> CarBrandShow(int Pid,string Brand);
+        List<CarTable> CarBrandShow(int Pid,string Brand);
     }
 }

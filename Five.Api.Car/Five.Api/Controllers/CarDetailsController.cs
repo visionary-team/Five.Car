@@ -58,7 +58,7 @@ namespace Five.Api.Controllers
         /// <param name="Pid"></param>
         /// <returns></returns>
         [ActionName("CarBrandShow")]
-        public List<Cars> CarBrandShow(int Pid, string Brand)
+        public List<CarTable> CarBrandShow(int Pid, string Brand)
         {
             var CarBrands = CarBrand.CarBrandShow(Pid, Brand);
             return CarBrands;

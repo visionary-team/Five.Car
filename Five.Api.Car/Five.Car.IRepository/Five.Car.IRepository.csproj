@@ -59,12 +59,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AddressDetails\" />
-    <Folder Include="Address\" />
     <Folder Include="bin\Release\" />
-    <Folder Include="WH\" />
-    <Folder Include="XRL\" />
-    <Folder Include="ZBL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Five.Car.IRepository.dll" />
