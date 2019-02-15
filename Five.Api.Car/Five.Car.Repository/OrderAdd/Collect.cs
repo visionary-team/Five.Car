@@ -23,19 +23,51 @@ namespace Five.Car.Repository
             using (IDbConnection conn = new OracleConnection(strcon))
             {
                 string sql = string.Format("select * from Collection a join cardetails b on a.carid=b.id join carcolor c on b.carcolorid=c.id join cartable d on d.id=b.brandid join IMAGE e on b.id=e.carid where userid='{0}'", Usersid);
-                var a = conn.Query<Collection>(sql).ToList();
-                return a;
+                var collection = conn.Query<Collection>(sql).ToList();
+                return collection;
             }
         }
-        public IAddressDetails b { get; set; }
-        public int AddCarDetails(CarDetails c)
+        /// <summary>
+        /// 发布车源
+        /// </summary>
+        /// <param name="details"></param>
+        /// <returns></returns>
+        public int AddCarDetails(CarDetails details)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {
-                string sql = string.Format("insert into CarDetails values('{0}','{1}','{2}','{3}','{4}')", c.Carcolorid, c.Displacement, c.Address, c.Price, c.Imgurl);
-                int a = conn.Execute(sql);
-                return a;
+                string sql = string.Format("insert into CarDetails values('{0}','{1}','{2}','{3}','{4}')", details.Carcolorid, details.Displacement, details.Address, details.Price, details.Imgurl);
+                int idetails = conn.Execute(sql);
+                return idetails;
             }
+        }
+        /// <summary>
+        /// 显示地址
+        /// </summary>
+        /// <returns></returns>
+        public List<Address> Address()
+        {
+            using (IDbConnection conn = new OracleConnection(strcon))
+            {
+                string sql = "select Id,UName,Phone,Province,Useraddress from Address";
+                var address = conn.Query<Address>(sql).ToList();
+                return address;
+            }
+        }
+
+        public List<Orders> ShowOrders(string Usersid)
+        {
+            using (IDbConnection conn = new OracleConnection(strcon))
+            {
+                string sql = string.Format("select * from Collection a join cardetails b on a.carid=b.id join carcolor c on b.carcolorid=c.id join cartable d on d.id=b.brandid join IMAGE e on b.id=e.carid where userid='{0}'", Usersid);
+                var orders = conn.Query<Orders>(sql).ToList();
+                return orders;
+            }
+        }
+
+        public List<Orders> ShowOrders()
+        {
+            throw new NotImplementedException();
         }
     }
 }

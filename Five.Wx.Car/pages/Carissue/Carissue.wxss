@@ -24,3 +24,16 @@ page{background-color: #efeff4;}
 .pinpai_bd{
   border: 1rpx solid black;
 }
+.CarColloc{
+  border: 1rpx solid #fff;
+  background-color: #fff;
+}
+
+.pinpai_bd{
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 0 10rpx;
+}

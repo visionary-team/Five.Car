@@ -24,18 +24,45 @@ namespace Five.Api.Controllers
             var collects = Collect.ShowCollection(Usersid);
             return collects;
         }
+        /// <summary>
+        /// 发布车辆
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public int AddCarDetails()
         {
-            CarDetails addr = new CarDetails();
-            addr.Brandid = Convert.ToInt32( HttpContext.Current.Request["Brandid"]);
-            addr.Carcolorid = Convert.ToInt32(HttpContext.Current.Request["Carcolorid"]);
-            addr.Displacement = HttpContext.Current.Request["Displacement"];
-            addr.Address = HttpContext.Current.Request["Address"];
-            addr.Price = Convert.ToInt32(HttpContext.Current.Request["Price"]);
-            addr.Imgurl = HttpContext.Current.Request["Imgurl"];
-            int addaddress = Collect.AddCarDetails(addr);
-            return addaddress;
+            CarDetails details = new CarDetails();
+            details.Brandid = Convert.ToInt32( HttpContext.Current.Request["Brandid"]);
+            details.Carcolorid = Convert.ToInt32(HttpContext.Current.Request["Carcolorid"]);
+            details.Displacement = HttpContext.Current.Request["Displacement"];
+            details.Address = HttpContext.Current.Request["Address"];
+            details.Price = Convert.ToInt32(HttpContext.Current.Request["Price"]);
+            details.Imgurl = HttpContext.Current.Request["Imgurl"];
+            int issue = Collect.AddCarDetails(details);
+            return issue;
+        }
+        /// <summary>
+        /// 地址
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("ShowAddress")]
+        [HttpGet]
+        public List<Address> ShowAddress()
+        {
+            var address = Collect.Address();
+            return address;
+        }
+
+        /// <summary>
+        /// 订单
+        /// </summary>
+        /// <param name="Usersid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<Collection> ShowOrders(string Usersid)
+        {
+            var orders = Collect.ShowCollection(Usersid);
+            return orders;
         }
     }
 }

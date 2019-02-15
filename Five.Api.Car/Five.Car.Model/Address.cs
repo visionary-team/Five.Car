@@ -21,7 +21,11 @@ namespace Five.Car.Model
 
         public int Userid { get; set; }//相关用户
 
-       
-       
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public int State { get; set; }  
+
+
     }
 }

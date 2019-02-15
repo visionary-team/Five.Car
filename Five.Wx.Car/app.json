@@ -1,10 +1,13 @@
 {
   "pages": [
-    "pages/Carissue/Carissue",
-    "pages/Carcollect/Carcollect",
     "pages/Home_page/Home_page",
-    "pages/Order_form/order_form",
+    "pages/CarOrder/CarOrder",
     "pages/Add_address/Add_address",
+    "pages/Carcollect/Carcollect",
+    "pages/Carissue/Carissue",
+    
+    "pages/Order_form/order_form",
+   
     "pages/Address_details/Address_details",
     "pages/Car_searching/Car_searching",
     "pages/Personal_Center/Personal_Center",
@@ -12,7 +15,6 @@
     "pages/Car_details/Car_details",
     "pages/Vehicle_system/Vehicle_system",
     "pages/Add_Evaluation/Add_Evaluation",
-    "pages/CarOrder/CarOrder",
     "pages/Evaluation_details/Evaluation_details",
     "pages/order_details/order_details",
     "pages/index/index",
