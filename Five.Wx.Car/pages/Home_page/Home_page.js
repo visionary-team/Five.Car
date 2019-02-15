@@ -33,11 +33,12 @@ Page({
   onLoad: function (options) {
     var that=this;
     wx.request({
-      url: 'http://localhost:52631/api/CarDetails/ShowRotation',
+      url: 'http://localhost:52631/api/CarDetails/GetRotationcharts',
       method:"Get",
       data:{},
       success:function(res)
       {
+        console.log(res);
         that.setData({         
           lunbo:res.data
         })

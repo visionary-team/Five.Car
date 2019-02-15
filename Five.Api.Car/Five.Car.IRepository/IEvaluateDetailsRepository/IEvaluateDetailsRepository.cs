@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Five.Car.Model;
 
-namespace Five.Car.IRepository
+namespace Five.Car.IRepository.IEvaluateDetails
 {
-    public interface IRotationChartRepository
+    public interface IEvaluateDetailsRepository
     {
         /// <summary>
-        /// 关于轮播图的显示
+        /// 评论显示
         /// </summary>
         /// <returns></returns>
-        List<Rotationchart> GetRotationcharts();
+        List<Evaluate> GetEvaluates();
     }
 }

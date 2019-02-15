@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Five.Car.Model
 {
-    //轮播图表
-    public class Rotationchart
+    //车辆品牌表
+    public class CarTable
     {
         /// <summary>
         /// 主键
@@ -15,13 +15,18 @@ namespace Five.Car.Model
         public int Id { get; set; }
 
         /// <summary>
-        /// 路径
+        /// 车辆品牌或型号
         /// </summary>
-        public string Url { get; set; }
+        public string Carbrand { get; set; }
 
         /// <summary>
-        /// 汽车详细ID
+        /// 父级id
         /// </summary>
-        public int CarDetailsid { get; set; }
+        public int Pid { get; set; }
+
+        /// <summary>
+        /// 品牌logo
+        /// </summary>
+        public string ImageUrl { get; set; }
     }
 }

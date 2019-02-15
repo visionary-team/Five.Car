@@ -31,8 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper">
-      <HintPath>C:\Users\逆风飞翔\Desktop\乾坤大挪移\常用文件\Dapper.dll</HintPath>
+      <HintPath>C:\Users\张策\Desktop\大一\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.Web, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
@@ -44,14 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddressDetails\AddressDetails.cs" />
+    <Compile Include="AddressDetailsRepository\AddressDetailsRepository.cs" />
     <Compile Include="CarDetails\CarBrand.cs" />
     <Compile Include="CarDetails\CarDetailsRepository.cs" />
     <Compile Include="CarDetails\CollectionRepository.cs" />
     <Compile Include="CarDetails\RotationChartRepository.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="EvaluateDetailsRepository\EvaluateDetailsRepository.cs" />
     <Compile Include="OrderAdd\Collect.cs" />
     <Compile Include="OrderDetails\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,22 +65,7 @@
       <Name>Five.Car.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="obj\Debug\build.force" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\Five.Car.Repository.csprojResolveAssemblyReference.cache" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="obj\Debug\Five.Car.Repository.csproj.FileListAbsolute.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Address\" />
-    <Folder Include="bin\Debug\" />
-    <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="WH\" />
-    <Folder Include="XRL\" />
-    <Folder Include="ZBL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

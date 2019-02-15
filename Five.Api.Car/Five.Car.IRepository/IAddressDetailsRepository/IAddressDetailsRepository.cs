@@ -7,11 +7,12 @@ using Five.Car.Model;
 
 namespace Five.Car.IRepository
 {
-   public interface IAddressDetails
+   public interface IAddressDetailsRepository
     {
         int IAdd(Address addr);
-        List<Address> Show();
+        List<Address> GetAddress();
         int Delete(int id);
+
 
     }
 }

@@ -11,7 +11,7 @@ using Dapper;
 
 namespace Five.Car.Repository
 {
-    public class AddressDetails : IAddressDetails
+    public class AddressDetailsRepository : IAddressDetailsRepository
     {
         /// <summary>
         /// 数据库连接字符串
@@ -54,7 +54,7 @@ namespace Five.Car.Repository
         /// 显示地址
         /// </summary>
         /// <returns></returns>
-        public List<Address> Show()
+        public List<Address> GetAddress()
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {

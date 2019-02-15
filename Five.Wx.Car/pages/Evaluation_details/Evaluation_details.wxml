@@ -1,15 +1,16 @@
 <!--pages/Evaluation_details/Evaluation_details.wxml-->
 <view>
-    <view class="car_item_wrap" wx:for="{{carArray}}" wx:if="{{item.carShow}}">
+    <!-- <view class="car_item_wrap" wx:for="{{lunbo}}" wx:if="{{item.carShow}}"> -->
+     <view class="car_item_wrap" wx:for="{{lunbo}}">
         <view class="car_image_wrap">
-            <image src="{{item.carImage}}" class="car_item_image"></image>
+            <image src="{{item.Imgurl}}" class="car_item_image"></image>
         </view>
         <view class="car_item_title">
-            <view>{{item.CarBrand}}</view>
+            <view>{{item.Carbrand}}</view>
         </view>
         <view class="car_item_bot">
-        	<text class="car_item_price">{{item.PRICE}}</text>
-          <text class="car_item_ColorName">颜色:{{item.ColorName}}</text>
+        	<text class="car_item_price">{{item.Price}}</text>
+          <text class="car_item_ColorName">颜色:{{item.Colorname}}</text>
           <text class="car_item_Displacement">排量:{{item.Displacement}}</text>
         </view>
         <view>
