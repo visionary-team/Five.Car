@@ -9,8 +9,14 @@ namespace Five.Car.Model
     //支付方式
     public class Payment
     {
-        public int Id { get; set; }//主键
+        /// <summary>
+        /// 主键
+        /// </summary>
+        public int Id { get; set; }
 
-        public string Method { get; set; }//支付方式
+        /// <summary>
+        /// 支付方式
+        /// </summary>
+        public string Method { get; set; }
     }
 }

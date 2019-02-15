@@ -13,7 +13,8 @@ namespace Five.Api.Controllers
     public class AddressController : ApiController
     {
 
-        public IAddressDetails Iaddress { get; set; }
+        public IAddressDetailsRepository addressDetails { get; set; }
+
 
         /// <summary>
         /// 添加地址
@@ -29,8 +30,8 @@ namespace Five.Api.Controllers
             addr.Phone = HttpContext.Current.Request["Phone"];
             addr.Province = HttpContext.Current.Request["Province"];
             addr.Useraddress = HttpContext.Current.Request["UserAddress"];
-            int addaddress = Iaddress.IAdd(addr);
-            return addaddress;
+            int i = addressDetails.IAdd(addr);
+            return i;
         }
 
         /// <summary>
@@ -38,10 +39,10 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ActionName("Show")]
-        public List<Address> Show()
+        [ActionName("GetAddress")]
+        public List<Address> GetAddress()
         {
-            var addresslist = Iaddress.Show();
+            var addresslist = addressDetails.GetAddress();
             return addresslist;
         }
 
@@ -53,7 +54,7 @@ namespace Five.Api.Controllers
         [HttpGet]
         public int Del(int id)
         {
-            int i = Iaddress.Delete(id);
+            int i = addressDetails.Delete(id);
             return i;
         }
     }

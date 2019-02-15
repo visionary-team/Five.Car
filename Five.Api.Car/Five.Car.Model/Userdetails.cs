@@ -9,18 +9,39 @@ namespace Five.Car.Model
     //用户详情表
     public class Userdetails
     {
-        public int Id { get; set; }//主键id
+        /// <summary>
+        /// 主键id
+        /// </summary>
+        public int Id { get; set; }
 
-        public string Uname { get; set; }//用户名称
+        /// <summary>
+        /// 用户名称
+        /// </summary>
+        public string Uname { get; set; }
 
-        public string Usex { get; set; }//用户性别
+        /// <summary>
+        /// 用户性别
+        /// </summary>
+        public string Usex { get; set; }
 
-        public string Uemail { get; set; }//邮箱
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        public string Uemail { get; set; }
 
-        public string Uimg { get; set; }//路径
+        /// <summary>
+        /// 路径
+        /// </summary>
+        public string Uimg { get; set; }
 
-        public string Phone { get; set; }//电话
+        /// <summary>
+        /// 电话
+        /// </summary>
+        public string Phone { get; set; }
 
-        public int State { get; set; }//是否默认
+        /// <summary>
+        /// 是否默认
+        /// </summary>
+        public int State { get; set; }
     }
 }

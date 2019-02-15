@@ -7,12 +7,12 @@ using Five.Car.Model;
 
 namespace Five.Car.IRepository.IEvaluateDetails
 {
-    public interface IEvaluateDetails
+    public interface IEvaluateDetailsRepository
     {
         /// <summary>
         /// 评论显示
         /// </summary>
         /// <returns></returns>
-        List<Evaluate> Show();
+        List<Evaluate> GetEvaluates();
     }
 }

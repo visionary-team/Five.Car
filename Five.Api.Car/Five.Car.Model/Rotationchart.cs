@@ -9,10 +9,19 @@ namespace Five.Car.Model
     //轮播图表
     public class Rotationchart
     {
-        public int Id { get; set; }//主键
+        /// <summary>
+        /// 主键
+        /// </summary>
+        public int Id { get; set; }
 
-        public string Url { get; set; }//路径
+        /// <summary>
+        /// 路径
+        /// </summary>
+        public string Url { get; set; }
 
-        public int CarDetailsid { get; set; }//汽车详细ID
+        /// <summary>
+        /// 汽车详细ID
+        /// </summary>
+        public int CarDetailsid { get; set; }
     }
 }

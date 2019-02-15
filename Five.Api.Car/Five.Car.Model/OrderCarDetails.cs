@@ -8,16 +8,34 @@ namespace Five.Car.Model
 {
     public class OrderCarDetails
     {
-        public int Id { get; set; }//Id
+        /// <summary>
+        /// 主键
+        /// </summary>
+        public int Id { get; set; }
 
-        public int Price { get; set; } //车辆价格
+        /// <summary>
+        /// 车辆价格
+        /// </summary>
+        public int Price { get; set; } 
 
-        public int State { get; set; }//状态
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public int State { get; set; }
 
-        public string Times { get; set; }   //时间
+        /// <summary>
+        /// 时间
+        /// </summary>
+        public string Times { get; set; }
 
-        public string Imgurl { get; set; }//图片路径
+        /// <summary>
+        /// 图片路径
+        /// </summary>
+        public string Imgurl { get; set; }
 
-        public string Address { get; set; }//车辆所在地
+        /// <summary>
+        /// 车辆所在地
+        /// </summary>
+        public string Address { get; set; }
     }
 }

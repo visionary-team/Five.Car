@@ -13,18 +13,17 @@ namespace Five.Api.Controllers
     public class EvaluateController : ApiController
     {
 
-        public IEvaluateDetails Ievaluate { get; set; }
+        public IEvaluateDetailsRepository evaluateDetails { get; set; }
 
         /// <summary>
         /// 显示评价
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public List<Evaluate> Show()
+        public List<Evaluate> GetEvaluates()
         {
-            List<Evaluate> Evaluatelist = Ievaluate.Show();
+            List<Evaluate> Evaluatelist = evaluateDetails.GetEvaluates();
             return Evaluatelist;
-
         }
     }
 }
