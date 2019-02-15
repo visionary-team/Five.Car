@@ -43,5 +43,7 @@ namespace Five.Car.Model
         public string Series { get; set; }  //汽车的系列
 
         public int IsCollection { get; set; }//是否收藏
+
+        public int State { get; set; }  //状态
     }
 }
