@@ -13,6 +13,9 @@ namespace Five.Api.Controllers
     public class CollectController : ApiController
     {
         public ICollect Collect { get; set; }
+
+        public ICollectionRepository collection { get; set; }
+
         /// <summary>
         /// 我的收藏
         /// </summary>
@@ -36,6 +39,13 @@ namespace Five.Api.Controllers
             addr.Imgurl = HttpContext.Current.Request["Imgurl"];
             int addaddress = Collect.Add(addr);
             return addaddress;
+        }
+
+        [HttpGet]
+        public int UpdateCarCollection(int id, int isCollection)
+        {
+            int i = collection.UpdateCarCollection(id, isCollection);
+            return i;
         }
     }
 }
