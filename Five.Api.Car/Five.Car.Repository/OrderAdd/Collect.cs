@@ -33,7 +33,7 @@ namespace Five.Car.Repository
                 return a;
             }
         }
-        public IAddressDetails b { get; set; }
+
         public int AddCarDetails(CarDetails c)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
