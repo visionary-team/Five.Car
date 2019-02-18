@@ -32,12 +32,13 @@ namespace Five.Api.Controllers
         public int AddCarDetails()
         {
             CarDetails details = new CarDetails();
-            details.Brandid = Convert.ToInt32( HttpContext.Current.Request["Brandid"]);
-            details.Carcolorid = Convert.ToInt32(HttpContext.Current.Request["Carcolorid"]);
+            Image image = new Image();
+            details.Brandid =Convert.ToInt32(HttpContext.Current.Request["Carbrand"]);
+            details.Carcolorid =Convert.ToInt32(HttpContext.Current.Request["Colorname"]);
             details.Displacement = HttpContext.Current.Request["Displacement"];
             details.Address = HttpContext.Current.Request["Address"];
             details.Price = Convert.ToInt32(HttpContext.Current.Request["Price"]);
-            details.Imgurl = HttpContext.Current.Request["Imgurl"];
+            image.Imgurl = HttpContext.Current.Request["Imgurl"];
             int issue = Collect.AddCarDetails(details);
             return issue;
         }
@@ -63,6 +64,31 @@ namespace Five.Api.Controllers
         {
             var orders = Collect.ShowCollection(Usersid);
             return orders;
+        }
+
+        /// <summary>
+        /// 车辆详情下拉
+        /// </summary>
+        /// <returns></returns>
+        /// 
+        [ActionName("ShowCarDetails")]
+        [HttpGet]
+        public List<CarTable> ShowCarDetails()
+        {
+            var details =Collect.Details();
+            return details;
+        }
+
+        /// <summary>
+        /// 车辆颜色下拉
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("ShowCarColor")]
+        [HttpGet]
+        public List<CarColor> ShowCarColor()
+        {
+            var color = Collect.Color();
+            return color;
         }
     }
 }

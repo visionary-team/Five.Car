@@ -36,8 +36,9 @@ namespace Five.Car.Repository
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {
-                string sql = string.Format("insert into CarDetails values('{0}','{1}','{2}','{3}','{4}')", details.Carcolorid, details.Displacement, details.Address, details.Price, details.Imgurl);
-                int idetails = conn.Execute(sql);
+                string sql = string.Format("insert into CarDetails values('{0}','{1}','{2}','{3}','{4}')", details.Brandid, details.Carcolorid, details.Displacement, details.Address, details.Price);
+
+                var idetails = conn.Execute(sql);
                 return idetails;
             }
         }
@@ -54,7 +55,11 @@ namespace Five.Car.Repository
                 return address;
             }
         }
-
+        /// <summary>
+        /// 显示车辆详情
+        /// </summary>
+        /// <param name="Usersid"></param>
+        /// <returns></returns>
         public List<Orders> ShowOrders(string Usersid)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
@@ -66,6 +71,39 @@ namespace Five.Car.Repository
         }
 
         public List<Orders> ShowOrders()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// 车辆详情下拉
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public List<CarTable> Details()
+        {
+            using (IDbConnection conn = new OracleConnection(strcon))
+            {
+                string sql = string.Format("select Id,Carbrand from CarTable");
+                var details = conn.Query<CarTable>(sql).ToList();
+                return details;
+            }
+        }
+
+        /// <summary>
+        /// 车辆颜色下拉
+        /// </summary>
+        /// <returns></returns>
+        public List<CarColor> Color()
+        {
+            using (IDbConnection conn = new OracleConnection(strcon))
+            {
+                string sql = string.Format("select Id,Colorname from CarColor");
+                var color = conn.Query<CarColor>(sql).ToList();
+                return color;
+            }
+        }
+
+        public int AddCarDetails(CarDetails details, Image image)
         {
             throw new NotImplementedException();
         }

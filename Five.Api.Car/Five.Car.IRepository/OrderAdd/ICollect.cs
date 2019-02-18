@@ -24,7 +24,7 @@ namespace Five.Car.IRepository
         int AddCarDetails(CarDetails details);
 
         /// <summary>
-        /// 车辆订单
+        /// 地址
         /// </summary>
         /// <returns></returns>
         List<Address> Address();
@@ -34,5 +34,17 @@ namespace Five.Car.IRepository
         /// </summary>
         /// <returns></returns>
         List<Orders> ShowOrders();
+
+        /// <summary>
+        /// 车辆详情下拉
+        /// </summary>
+        /// <returns></returns>
+        List<CarTable> Details();
+
+        /// <summary>
+        /// 车辆颜色下拉
+        /// </summary>
+        /// <returns></returns>
+        List<CarColor> Color();
     }
 }

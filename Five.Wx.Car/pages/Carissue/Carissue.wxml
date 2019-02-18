@@ -3,26 +3,35 @@
     <view class='pinpai'>
       汽车品牌：
     </view>
-    <view class='CarColloc'>
-    <picker>
-    {{multiArray[0][multiIndex[0]]}}-请选择-{{multiArray[1][multiIndex[1]]}}
-     </picker>
+ 
+   <view class='CarColloc' name="qiche">
+     <picker bindchange="bindPickerChangebrand" value="{{brandindex}}" range="{{brands}}">
+    <view class="picker">
+      {{brand}}
     </view>
+    </picker>
+</view>
+   <!--> <picker>
+    {{lunbo[0][lunbo[0]]}}-请选择-{{lunbo[1][lunbo[1]]}}
+     </picker>
+    </view>-->
 
     <view class='pinpai'>
       车辆颜色：
     </view>
-    <view class='CarColloc'>
-    <picker>
-    {{multiArray[0][multiIndex[0]]}}-请选择-{{multiArray[1][multiIndex[1]]}}
-     </picker>
+    <view class='CarColloc' name="color" >
+      <picker bindchange="bindPickerChangecolor" value="{{colorindex}}" range="{{colors}}">
+    <view class="picker">
+      {{color}}
     </view>
+    </picker>
+</view>
 
     <view class='pinpai'>
       车辆排量：
     </view>
     <view class='pinpai_bd'>
-      <input name="pailiang" class="weui-input" />
+      <input name="pailiang" class="weui-input"  />
     </view>
 
     <view class='pinpai'>
@@ -39,12 +48,7 @@
       <input name="jiage" class="weui-input" />
     </view>
 
-    <view class='pinpai'>
-      上传图片：
-    </view>
-    <view class='tupian_bd'>
-      <button bindtap="upload" name="tupian"> 上传图片 </button>
-    </view>
+    
     <view class='footer'>
     <view>
     <button class='footer-add' form-type='submit'>保存</button>
