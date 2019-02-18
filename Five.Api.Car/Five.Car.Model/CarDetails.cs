@@ -58,5 +58,6 @@ namespace Five.Car.Model
         /// 时间
         /// </summary>
         public string Times { get; set; }
+        public object Imgurl { get; set; }
     }
 }

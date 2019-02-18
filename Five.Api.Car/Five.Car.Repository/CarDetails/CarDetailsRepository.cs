@@ -42,5 +42,19 @@ namespace Five.Car.Repository
                 return carDetailList;
             }
         }
+
+        /// <summary>
+        /// 根据商品Id显示评论
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public List<Evaluate> GetEvaluates(int id)
+        {
+            using (IDbConnection conn=new OracleConnection(ConfigHelper.ConnString)) {
+                string sql = $"select * from Evaluate where Cardetailsid={id}";
+                var evaluates = conn.Query<Evaluate>(sql).ToList();
+                return evaluates;
+            }
+        }
     }
 }

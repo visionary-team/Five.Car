@@ -64,6 +64,18 @@ namespace Five.Api.Controllers
         {
             var CarBrands = CarBrand.GetCarTables(Pid, Brand);
             return CarBrands;
-        }       
+        }
+
+        /// <summary>
+        /// 根据商品id显示评论
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<Evaluate> GetEvaluates(int id)
+        {
+            var evaluates = CarDetail.GetEvaluates(id);
+            return evaluates;
+        }
     }
 }

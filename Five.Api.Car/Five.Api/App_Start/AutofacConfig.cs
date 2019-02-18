@@ -44,7 +44,7 @@ namespace Five.Api
         public static void SetupResolveRules(ContainerBuilder container)
         {
             container.RegisterType<RotationChartRepository>().As<IRotationChartRepository>();
-            container.RegisterType<CarBrand>().As<ICarBrand>();
+            container.RegisterType<CarBrandRepository>().As<ICarBrandRepository>();
             container.RegisterType<CarDetailsRepository>().As<ICarDetailsRepository>();
             container.RegisterType<CollectionRepository>().As<ICollectionRepository>();
             container.RegisterType<AddressDetailsRepository>().As<IAddressDetailsRepository>();

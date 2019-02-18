@@ -20,5 +20,11 @@ namespace Five.Car.IRepository
         /// </summary>
         /// <returns></returns>
         List<CarShop> GetCarShops();
+
+        /// <summary>
+        /// 根据商品Id显示评论
+        /// </summary>
+        /// <returns></returns>
+        List<Evaluate> GetEvaluates(int id);
     }
 }

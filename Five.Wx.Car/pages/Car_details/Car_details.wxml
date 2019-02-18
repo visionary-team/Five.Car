@@ -55,7 +55,12 @@
       <text>【生产日期】</text>{{item.Times}}
     </view>
   </view>
+   商品评价
+   <view wx:for="{{evaluates}}" wx:key="1">
+      <text>{{item.Userid}}\n{{item.Content}}\n</text>
+   </view>
   <view class="goods_bottom"></view>
+ 
   <view class="goods_bottom_btn">
     <view>
       <view class="goods_one">
