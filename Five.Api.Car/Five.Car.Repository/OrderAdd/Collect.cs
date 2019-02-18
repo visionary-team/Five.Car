@@ -17,7 +17,7 @@ namespace Five.Car.Repository
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
-        private static string strcon = "Data Source=orcl;User ID=zhubaoliang;pwd=666666";
+        private static string strcon = "Data Source=orcl;User ID=zhubaoliang;pwd=666666";//47
         public List<Collection> ShowCollection(string Usersid)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
@@ -66,7 +66,7 @@ namespace Five.Car.Repository
             {
                 string sql = string.Format("select * from Collection a join cardetails b on a.carid=b.id join carcolor c on b.carcolorid=c.id join cartable d on d.id=b.brandid join IMAGE e on b.id=e.carid where userid='{0}'", Usersid);
                 var orders = conn.Query<Orders>(sql).ToList();
-                return orders;//5268326531256
+                return orders;
             }
         }
 
@@ -83,9 +83,9 @@ namespace Five.Car.Repository
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {
-                string sql = string.Format("select Id,Carbrand from CarTable");
+                string sql = string.Format("select Id,Carbrand from CarTable");//44
                 var details = conn.Query<CarTable>(sql).ToList();
-                return details;//123
+                return details;
             }
         }
 
