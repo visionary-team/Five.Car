@@ -17,6 +17,7 @@ namespace Five.Car.Repository
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
+<<<<<<< HEAD
         private static string strcon = "Data Source=orcl;User ID=zhubaoliang;pwd=666666";//47
         public List<Collection> ShowCollection(string Usersid)
         {
@@ -37,70 +38,46 @@ namespace Five.Car.Repository
             using (IDbConnection conn = new OracleConnection(strcon))
             {
                 string sql = string.Format("insert into CarDetails values('{0}','{1}','{2}','{3}','{4}')", details.Brandid, details.Carcolorid, details.Displacement, details.Address, details.Price);
+=======
+        private static string strcon = "Data Source=orcl;User ID=zhubaoliang;pwd=666666";
+>>>>>>> 89630baeee8aaa8603c4942573a3cbf7df480e31
 
-                var idetails = conn.Execute(sql);
-                return idetails;
-            }
-        }
         /// <summary>
-        /// 显示地址
-        /// </summary>
-        /// <returns></returns>
-        public List<Address> Address()
-        {
-            using (IDbConnection conn = new OracleConnection(strcon))
-            {
-                string sql = "select Id,UName,Phone,Province,Useraddress from Address";
-                var address = conn.Query<Address>(sql).ToList();
-                return address;
-            }
-        }
-        /// <summary>
-        /// 显示车辆详情
+        /// 
         /// </summary>
         /// <param name="Usersid"></param>
         /// <returns></returns>
-        public List<Orders> ShowOrders(string Usersid)
+        public List<Collection> ShowCollection(string Usersid)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {
                 string sql = string.Format("select * from Collection a join cardetails b on a.carid=b.id join carcolor c on b.carcolorid=c.id join cartable d on d.id=b.brandid join IMAGE e on b.id=e.carid where userid='{0}'", Usersid);
+                var a = conn.Query<Collection>(sql).ToList();
+                return a;
                 var orders = conn.Query<Orders>(sql).ToList();
                 return orders;
             }
         }
 
-        public List<Orders> ShowOrders()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// 车辆详情下拉
-        /// </summary>
-        /// <param name=""></param>
-        /// <returns></returns>
-        public List<CarTable> Details()
+        public int AddCarDetails(CarDetails c)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {
+<<<<<<< HEAD
                 string sql = string.Format("select Id,Carbrand from CarTable");//44
                 var details = conn.Query<CarTable>(sql).ToList();
                 return details;
+=======
+                string sql = string.Format("insert into CarDetails values('{0}','{1}','{2}','{3}','{4}')", c.Carcolorid, c.Displacement, c.Address, c.Price, c.Imgurl);
+                int i = conn.Execute(sql);
+                return i;
+>>>>>>> 89630baeee8aaa8603c4942573a3cbf7df480e31
             }
         }
 
-        /// <summary>
-        /// 车辆颜色下拉
-        /// </summary>
-        /// <returns></returns>
-        public List<CarColor> Color()
+        public int Add(CarDetails carDetails)
         {
-            using (IDbConnection conn = new OracleConnection(strcon))
-            {
-                string sql = string.Format("select Id,Colorname from CarColor");
-                var color = conn.Query<CarColor>(sql).ToList();
-                return color;
-            }
+            throw new NotImplementedException();
         }
     }
 }

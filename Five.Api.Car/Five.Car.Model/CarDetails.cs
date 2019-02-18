@@ -63,5 +63,6 @@ namespace Five.Car.Model
         /// //车辆id
         /// </summary>
         public int Carid { get; set; }
+        public object Imgurl { get; set; }
     }
 }
