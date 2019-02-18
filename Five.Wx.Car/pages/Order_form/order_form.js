@@ -61,14 +61,16 @@ Page({
   onShareAppMessage: function() {
 
   },
-  delorder:function(){
+  delorder:function(e){
+    var sid = e.currentTarget.dataset.ids
     wx.navigateTo({
-      url: '../order_details/order_details',
+      url: '../order_details/order_details?pid='+sid,
     })
   },
-  Pay:function(){
+  Pay:function(e){
+    var bid=e.currentTarget.dataset.pay
     wx.navigateTo({
-      url: '../Confirm_Pay/Confirm_Pay',
+      url: '../Confirm_Pay/Confirm_Pay?pay='+bid,
     })
   },
   getAllorders: function(options) {
@@ -94,6 +96,7 @@ Page({
         id: getid
       },
       success: function(res) {
+        console.log(res)
         that.setData({
           items: res.data
         })

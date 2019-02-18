@@ -1,37 +1,61 @@
-<view>
-  <image src="../../Img/奔驰/奔驰3.jpg" class="goods_collect_img"></image>
-</view>
-<view class="goods_infor_top">
-  <view class="goods_title">
-    梅赛德斯-迈巴赫S级轿车，为尊崇而生，殊荣尽展，礼行天下
-    <view class="goods_collect_btn" bindtap="collect">
+<view wx:for="{{CarDetail}}" wx:key="1">
+  <view>
+    <swiper style="height:200px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block>
+        <swiper-item>
+          <image src="{{item.Imgurl}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="goods_infor_top">
+    <view class="goods_title">
+    {{item.Carbrand}}  {{item.Series}}
+      <view class="goods_collect_btn" bindtap="collect" data-id="{{item.Id}}" data-collection="{{item.IsCollection}}">
+      </view>
+    </view>
+    <view class="goods_price">
+      <text>¥{{item.Price}}</text>
+    </view>
+    <view class="goods_deliver">
+      *本产品由 品牌商 提供发货服务。
     </view>
   </view>
-  <view class="goods_price">
-    <text>¥16900K</text>
-    <text class="goods_old_price">¥26900K</text>
+  <view class="goods_infor_pre">
+    <view class="goods_infor_txt">
+      <view class="goods_infor_brand"></view>
+      <text>{{item.Details}}</text>
+    </view>
   </view>
-</view>
-<view class="goods_infor_pre">
-  <view class="goods_infor_txt">
-    <text>不偏之谓中，不易之谓庸，梅赛德斯-迈巴赫S级轿车，坚持大道之法，令澎湃动力适时为您所用。礼道之盛，不言而喻，梅赛德斯-迈巴赫S级轿车，匠心独具，为极致礼仪而生。雅人深致，格调自然高远，梅赛德斯-迈巴赫S级轿车，处处研精致思，致敬于礼。君子诚之为贵， 明乎此理，方可称为有“智” ，梅赛德斯-迈巴赫S级轿车，天生尊崇，自拥智慧之道。 </text>
+  <view class="goods_infor_raw">
+    <view class="goods_infor_item">
+      <text>【颜 色】</text>{{item.Colorname}}
+    </view>
+    <view class="goods_infor_item">
+      <text>【产 地】</text>{{item.Address}}
+    </view>
+    <view class="goods_infor_item">
+      <text>【排 量】</text>{{item.Displacement}}
+    </view>
+    <view class="goods_infor_item">
+      <text>【库 存】</text>{{item.Stock}}
+    </view>
+    <view class="goods_infor_item">
+      <text>【座 位】</text>{{item.Seat}}
+    </view>
+    <view class="goods_infor_item">
+      <text>【生产日期】</text>{{item.Times}}
+    </view>
   </view>
-</view>
-<view class="goods_infor_raw">
-  <view class="goods_infor_item">
-    <text>【品 牌】</text>梅赛德斯-奔驰
+  <view class="goods_bottom"></view>
+  <view class="goods_bottom_btn">
+    <view>
+      <view class="goods_one">
+      </view>
+    </view>
   </view>
-  <view class="goods_infor_item">
-    <text>【型 号】</text>S600迈巴赫系列
-  </view>
-  <view class="goods_infor_item">
-    <text>【颜 色】</text>黑色
-  </view>
-  <view class="goods_infor_item">
-    <text>【排 量】</text>6.6L
-  </view>
-</view>
-<view class="goods_bottom"></view>
+
 <view class="goods_bottom_btn">
-    <view class="goods_half_half green" bindtap='go'>确定付款</view>
+    <view class="goods_half_half green" bindtap='go' data-aid="{{item.Id}}">确定付款</view>
+</view>
 </view>

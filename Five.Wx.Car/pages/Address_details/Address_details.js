@@ -7,10 +7,12 @@ Page({
   data: {
      
   },
-  editAddr:function(){
+  editAddr:function(e){
+    var pid = e.currentTarget.dataset.addrid;
     wx.navigateTo({
-      url: '../Add_address/Add_address',
+      url: '../Upt_address/Upt_address?Id='+pid,     
     })
+    console.log(pid)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -18,7 +20,7 @@ Page({
   onLoad: function (options) {
        var that = this;
        wx.request({
-         url: 'http://localhost:52631/api/Address/Show',
+         url: 'http://localhost:52631/api/Address/GetAddress',
          method:"get",
          data:{},
          success:function(res)
@@ -30,7 +32,11 @@ Page({
          }
        })
   },
-  
+  addAddress:function(e){
+    wx.navigateTo({
+      url: '../Add_address/Add_address',
+    })
+  },
   //删除
   delnew:function(e)
    {

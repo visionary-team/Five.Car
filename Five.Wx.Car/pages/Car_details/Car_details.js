@@ -9,7 +9,7 @@ Page({
   },
   GoPay:function(){
     wx.navigateTo({
-      url: '../Confirm_Pay/Confirm_Pay',
+      url: '../CarOrder/CarOrder',
     })
   },
 
@@ -20,7 +20,7 @@ Page({
     var pid = parseInt(options.Pid);
     var that = this;
     wx.request({
-      url: 'http://localhost:52631/api/CarDetails/CarDetailsShow?id='+pid,
+      url: 'http://localhost:52631/api/CarDetails/GetCarShopsById?id='+pid,
       method: "Get",
       data: {},
       success: function (res) {
@@ -37,7 +37,7 @@ Page({
     wx.request({
       url: 'http://localhost:52631/api/Collect/UpdateCarCollection',
       method: "Get",
-      data: { id: id, IsCollection: collection},
+      data: { id: id, isCollection: collection},
       success: function (res) {
       }
     })

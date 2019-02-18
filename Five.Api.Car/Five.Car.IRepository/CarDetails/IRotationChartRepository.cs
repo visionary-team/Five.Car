@@ -13,6 +13,6 @@ namespace Five.Car.IRepository
         /// 关于轮播图的显示
         /// </summary>
         /// <returns></returns>
-        List<Rotationchart> ShowRotationchart();
+        List<Rotationchart> GetRotationcharts();
     }
 }

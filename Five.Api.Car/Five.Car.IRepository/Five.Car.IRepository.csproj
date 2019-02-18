@@ -40,12 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarDetails\ICarBrand.cs" />
+    <Compile Include="CarDetails\ICarBrandRepository.cs" />
     <Compile Include="CarDetails\ICarDetailsRepository.cs" />
     <Compile Include="CarDetails\ICollectionRepository.cs" />
     <Compile Include="CarDetails\IRotationChartRepository.cs" />
-    <Compile Include="IAddressDetails\IAddressDetails.cs" />
-    <Compile Include="IEvaluateDetails\IEvaluateDetails.cs" />
+    <Compile Include="IAddressDetailsRepository\IAddressDetailsRepository.cs" />
+    <Compile Include="IEvaluateDetailsRepository\IEvaluateDetailsRepository.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -54,12 +54,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Five.Car.Command\Five.Car.Common.csproj">
+      <Project>{099194f9-4970-40b7-8f98-8fee9a49a081}</Project>
+      <Name>Five.Car.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Five.Car.Model\Five.Car.Model.csproj">
       <Project>{d6b350c3-2b2c-4c81-ba0b-4ca14bb5f642}</Project>
       <Name>Five.Car.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Address\" />
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <ItemGroup>

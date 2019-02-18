@@ -13,12 +13,12 @@ namespace Five.Car.IRepository
         /// 关于根据Id显示汽车详情
         /// </summary>
         /// <returns></returns>
-        List<CarShop> CarDetailShow(int Pid);
+        List<CarShop> GetCarShopsById(int pid);
 
         /// <summary>
         /// 显示全部的汽车详情
         /// </summary>
         /// <returns></returns>
-        List<CarShop> CarDetailAllShow();
+        List<CarShop> GetCarShops();
     }
 }

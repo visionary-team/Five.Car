@@ -14,6 +14,21 @@ namespace Five.Api.Controllers
     public class OrderController : ApiController
     {
         public IUserInfo Iuser { get; set; }
+
+
+        /// <summary>
+        /// 根据ID显示汽车详情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [ActionName("CarDetail")]
+        public List<CarShop> CarDetail(int id)
+        {
+            var carDetail = Iuser.CarDetail(id);
+            return carDetail;
+        }
+
         /// <summary>
         /// 单个汽车订单
         /// </summary>
@@ -22,8 +37,8 @@ namespace Five.Api.Controllers
         [ActionName("CarOrdreTable")]
         public List<OrderCarDetails> CarOrdreTable(int id)
         {
-            var OrderCar = Iuser.CarOrdreTable(id);
-            return OrderCar;
+            var orderCar = Iuser.CarOrdreTable(id);
+            return orderCar;
         }
 
         /// <summary>
@@ -34,8 +49,30 @@ namespace Five.Api.Controllers
         [ActionName("CarOrdreTableAll")]
         public List<OrderCarDetails> CarOrdreTableAll()
         {
-            var OrderCar = Iuser.CarOrdreTableAll();
-            return OrderCar;
+            var orderCar = Iuser.CarOrdreTableAll();
+            return orderCar;
+        }
+
+        /// <summary>
+        /// 付款修改车辆订单状态
+        /// </summary>
+        [HttpGet]
+        public int UpdateCarOrderState(int  id)
+        {
+            var updateState = Iuser.UpdateCarOrderState(id);
+            return updateState;
+        }
+
+        /// <summary>
+        /// 根据Order ID 显示付款页面信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<CarShop> GetOrdersById(int id)
+        {
+            var getOrderById = Iuser.GetOrdersById(id);
+            return getOrderById;
         }
     }
     

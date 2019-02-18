@@ -5,8 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-   
+  
   },
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -14,7 +17,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:52631/api/Evaluate/Show',
+      url: 'http://localhost:52631/api/Evaluate/GetEvaluates',
       method: "get",
       data: {},
       success: function (res) {
@@ -24,7 +27,7 @@ Page({
         })
       }
     })
-
+   
   },
 
   /**

@@ -1,34 +1,107 @@
-
-var app = getApp();
-
+// pages/order_details/order_details.js
 Page({
+  /**
+   * 页面的初始数据
+   */
   data: {
-    imgUrls: [
-      '../Img/奔驰/奔驰3.jpg',
-      '../Img/奔驰/奔驰6.jpg',
-      '../Img/奔驰/奔驰8.jpg'
-    ],
-    indicatorDots: true,
-    vertical: false,
-    autoplay: true,
-    interval: 3000,
-    duration: 1200,
-    iscollect: true,
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function(options) {
+    var that = this
+    var id = parseInt(options.pay)
+    wx.request({
+      url: 'http://localhost:52631/api/Order/GetOrdersById?id=' + id,
+      method: 'get',
+      success: function(res) {
+        console.log(res.data) -
+          that.setData({
+            CarDetail: res.data
+          })
+      }
+    })
+  },
+
+  go: function(e) {
+    var that = this
+    var id = e.currentTarget.dataset.aid
+    console.log(id);
+    wx.showModal({
+      title: '提示付款',
+      content: '确定要付款吗？',
+      cancelColor: '#0076FF',
+      confirmColor: '#0076FF',
+      success: function(sm) {
+        if (sm.confirm) {
+          wx.request({
+            url: 'http://localhost:52631/api/Order/UpdateCarOrderState',
+            method: "get",
+            data:{id:id},
+            success: function(res) {
+              console.log(res.data)
+              wx.showToast({
+                title: '付款成功!',//提示付款成功，状态成功修改
+                icon:"success",
+                duration: 2000
+              })
+            }
+          })
+        }
+        else if(sm.cancel){
+          console.log("用户点击取消");
+        }
+      }
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function() {
 
   },
-  go: function () {
-    wx.navigateTo({
-      url: '../Order_form/order_form',
-    })
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function() {
+
   },
-  collect: function () {
-    this.setData({
-      iscollect: !this.data.iscollect
-    })
-    console.log(this.data.iscollect);
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function() {
+
   },
-  cusImageLoad: function (e) {
-    var that = this;
-    that.setData(WxAutoImage.wxAutoImageCal(e));
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function() {
+
   }
 })
