@@ -1,8 +1,10 @@
+
 .swiper-item{
   display: block;
 }
 .slide-image {
   width: 100%;
+  height: 100%;
 }
 swiper {
   width: 100%;
@@ -48,13 +50,8 @@ swiper {
   line-height: 14px;
 }
 .goods_collect_img {
-  width: 100%;
-  height: 200px;
-}
-.goods_collect_imgs
-{
-  height: 20px;
-  width: 20px;
+  width: 24px;
+  height: 24px;
 }
 .goods_infor_pre {
   margin-top: 10px;
@@ -135,7 +132,27 @@ swiper {
 .blue {
   background-color: #00aaef;
 }
-
-.goods_half_half{
-float: right;
+.goods_car_num {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 10px;
+  background-image: url(../../image/car1.png);
+  background-size: 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.goods_car_num span {
+  position: absolute;
+  right: -5px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  background-color: #FF0000;
+  color: #FFF;
+  text-align: center;
+  line-height: 14px;
 }

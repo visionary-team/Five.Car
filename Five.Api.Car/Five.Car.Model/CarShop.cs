@@ -8,94 +8,42 @@ namespace Five.Car.Model
 {
     public class CarShop
     {
-        /// <summary>
-        /// 主键Id
-        /// </summary>
-        public int Id { get; set; }
+        public int Id { get; set; }//主键Id
 
-        /// <summary>
-        /// 车辆品牌外键
-        /// </summary>
-        public int Brandid { get; set; }
+        public int Brandid { get; set; }//车辆品牌外键
 
-        /// <summary>
-        /// 车辆颜色外键
-        /// </summary>
-        public int Carcolorid { get; set; }
+        public int Carcolorid { get; set; }//车辆颜色外键
 
-        /// <summary>
-        /// 车辆排量
-        /// </summary>
-        public string Displacement { get; set; }
+        public string Displacement { get; set; }//车辆排量
 
-        /// <summary>
-        /// 车辆座位
-        /// </summary>
-        public int Seat { get; set; }
+        public int Seat { get; set; }//车辆座位
 
-        /// <summary>
-        /// 车辆所在地
-        /// </summary>
-        public string Address { get; set; }
+        public string Address { get; set; }//车辆所在地
 
-        /// <summary>
-        /// 车辆详细描述
-        /// </summary>
-        public string Details { get; set; }
+        public string Details { get; set; }//车辆详细描述
 
-        /// <summary>
-        /// 车辆库存
-        /// </summary>
-        public int Stock { get; set; }
+        public int Stock { get; set; }//车辆库存
 
-        /// <summary>
-        /// 车辆价格
-        /// </summary>
-        public int Price { get; set; }
+        public int Price { get; set; } //车辆价格
 
-        /// <summary>
-        /// 时间
-        /// </summary>
-        public string Times { get; set; } 
+        public string Times { get; set; }   //时间
 
-        /// <summary>
-        /// 图片路径
-        /// </summary>
-        public string Imgurl { get; set; }
+        public string Imgurl { get; set; }//图片路径
 
-        /// <summary>
-        /// 车辆id
-        /// </summary>
-        public int Carid { get; set; }
+        public int Carid { get; set; }//车辆id
 
-        /// <summary>
-        /// 车辆颜色
-        /// </summary>
-        public string Colorname { get; set; }
+        public string Colorname { get; set; }//车辆颜色
 
-        /// <summary>
-        /// 车辆品牌或型号
-        /// </summary>
-        public string Carbrand { get; set; }
+        public string Carbrand { get; set; }//车辆品牌或型号
 
-        /// <summary>
-        /// 父级id
-        /// </summary>
-        public int Pid { get; set; }
+        public int Pid { get; set; }//父级id
 
-        /// <summary>
-        /// 品牌logo
-        /// </summary>
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get; set; }//品牌logo
 
-        /// <summary>
-        /// 汽车的系列
-        /// </summary>
-        public string Series { get; set; }  
+        public string Series { get; set; }  //汽车的系列
 
-        /// <summary>
-        /// 是否收藏
-        /// </summary>
-        public int IsCollection { get; set; }
+        public int IsCollection { get; set; }//是否收藏
+
+        public int State { get; set; }  //状态
     }
 }

@@ -12,7 +12,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that=this
+    var id=parseInt(options.pid)
+    wx.request({
+      url: 'http://localhost:52631/api/Order/CarDetail?id='+id,
+      method: 'get',
+      success: function (res) {
+        console.log(res.data)-
+        that.setData({
+          CarDetail: res.data
+        })
+      }
+    })
   },
 
   /**
