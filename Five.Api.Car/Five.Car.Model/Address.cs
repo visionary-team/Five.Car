@@ -39,6 +39,11 @@ namespace Five.Car.Model
         /// </summary>
         public int Userid { get; set; }
 
+        /// <summary>
+        /// 地址状态
+        /// </summary>
+        public int State { get; set; }
+
        
        
     }

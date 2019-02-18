@@ -58,5 +58,20 @@ namespace Five.Car.Model
         /// 时间
         /// </summary>
         public string Times { get; set; }
+
+        /// <summary>
+        /// 图片路径
+        /// </summary>
+        public string Imgurl { get; set; }
+
+        /// <summary>
+        /// 车辆颜色
+        /// </summary>
+        public string Colorname { get; set; }
+
+        /// <summary>
+        /// 车辆品牌或型号
+        /// </summary>
+        public string Carbrand { get; set; }
     }
 }
