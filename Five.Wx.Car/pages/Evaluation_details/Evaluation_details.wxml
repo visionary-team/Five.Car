@@ -15,6 +15,7 @@
         </view>
         <view>
         <text class="car_item_Content">{{item.Content}}</text>
+       
         </view>
     </view>
 </view>

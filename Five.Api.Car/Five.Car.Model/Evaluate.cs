@@ -39,6 +39,7 @@ namespace Five.Car.Model
         /// </summary>
         public int CarDetailsId { get; set; }
 
+
         /// <summary>
         /// 图片路径
         /// </summary>

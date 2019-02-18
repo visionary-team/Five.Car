@@ -7,10 +7,12 @@ Page({
   data: {
      
   },
-  editAddr:function(){
+  editAddr:function(e){
+    var pid = e.currentTarget.dataset.addrid;
     wx.navigateTo({
-      url: '../Add_address/Add_address',
+      url: '../Upt_address/Upt_address?Id='+pid,     
     })
+    console.log(pid)
   },
   /**
    * 生命周期函数--监听页面加载

@@ -57,5 +57,33 @@ namespace Five.Api.Controllers
             int i = addressDetails.Delete(id);
             return i;
         }
+
+        /// <summary>
+        /// 反填
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public List<Address> GetAddressById(int id)
+        {
+            var addresslist = addressDetails.GetAddressById(id);
+            return addresslist;
+        }
+
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int UptAddress()
+        {
+            Address addr = new Address();
+            addr.Id = Convert.ToInt32(HttpContext.Current.Request["Id"]);
+            addr.UName = HttpContext.Current.Request["UName"];
+            addr.Phone = HttpContext.Current.Request["Phone"];
+            addr.Province = HttpContext.Current.Request["Province"];
+            addr.Useraddress = HttpContext.Current.Request["UserAddress"];
+            int i = addressDetails.UptAddress(addr);
+            return i;
+        }
     }
 }

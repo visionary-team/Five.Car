@@ -14,5 +14,19 @@ namespace Five.Car.IRepository.IEvaluateDetails
         /// </summary>
         /// <returns></returns>
         List<Evaluate> GetEvaluates();
+
+        /// <summary>
+        /// 添加评论
+        /// </summary>
+        /// <param name="eval"></param>
+        /// <returns></returns>
+        int Add(Evaluate eval);
+
+
+        /// <summary>
+        /// 获取汽车详情
+        /// </summary>
+        /// <returns></returns>
+        List<CarDetails> GetCarDetails();
     }
 }

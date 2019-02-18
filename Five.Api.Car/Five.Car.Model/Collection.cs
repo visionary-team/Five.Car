@@ -49,5 +49,9 @@ namespace Five.Car.Model
         /// 图片路径
         /// </summary>
         public string ImgUrl { get; set; }
+
+        public int Price { get; set; } //车辆价格
+        public string Carbrand { get; set; }//车辆品牌或型号
+        public int Brandid { get; set; }//车辆品牌外键
     }
 }

@@ -5,21 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    add: [{
-      Id: "奔驰",
-      CarId: "白色",
-      UserId: "1.8T",
-      Number: 1
-
-    },
-    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:52631/api/Collect/ShowAddress',
+      method: "get",
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          lunbo: res.data
+        })
+      }
+    })
 
+    var thats = this;
+    wx.request({
+      url: 'http://localhost:52631/api/Collect/ShowOrders',
+      method: "get",
+      data: { Usersid: 2 },
+      success: function (col) {
+        console.log(col);
+        thats.setData({
+          lunbos: col.data
+        })
+      }
+    })
   },
 
   /**

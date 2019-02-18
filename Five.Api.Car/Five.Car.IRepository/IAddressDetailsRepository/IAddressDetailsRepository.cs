@@ -9,9 +9,39 @@ namespace Five.Car.IRepository
 {
    public interface IAddressDetailsRepository
     {
+        /// <summary>
+        /// 添加
+        /// </summary>
+        /// <param name="addr"></param>
+        /// <returns></returns>
         int IAdd(Address addr);
+
+        /// <summary>
+        /// 显示地址
+        /// </summary>
+        /// <returns></returns>
         List<Address> GetAddress();
+
+        /// <summary>
+        /// 删除地址
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         int Delete(int id);
+
+        /// <summary>
+        /// 反填
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        List<Address> GetAddressById(int id);
+
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        int UptAddress(Address addr);
 
 
     }
