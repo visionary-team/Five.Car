@@ -9,26 +9,59 @@ namespace Five.Car.Model
     //车辆详情表
     public class CarDetails
     {
-        public int Id { get; set; }//主键Id
+        /// <summary>
+        /// //主键Id
+        /// </summary>
+        public int Id { get; set; }
 
-        public int Brandid { get; set; }//车辆品牌外键
+        /// <summary>
+        /// //车辆品牌外键
+        /// </summary>
+        public int Brandid { get; set; }
 
-        public int Carcolorid { get; set; }//车辆颜色外键
+        /// <summary>
+        /// //车辆颜色外键
+        /// </summary>
+        public int Carcolorid { get; set; }
 
-        public string Displacement { get; set; }//车辆排量
+        /// <summary>
+        /// //车辆排量
+        /// </summary>
+        public string Displacement { get; set; }
 
-        public int Seat { get; set; }//车辆座位
+        /// <summary>
+        /// //车辆座位
+        /// </summary>
+        public int Seat { get; set; }
 
-        public string Address { get; set; }//车辆所在地
+        /// <summary>
+        /// //车辆所在地
+        /// </summary>
+        public string Address { get; set; }
 
-        public string Details { get; set; }//车辆详细描述
+        /// <summary>
+        /// //车辆详细描述
+        /// </summary>
+        public string Details { get; set; }
 
-        public int Stock { get; set; }//车辆库存
+        /// <summary>
+        /// //车辆库存
+        /// </summary>
+        public int Stock { get; set; }
 
-        public int Price { get; set; } //车辆价格
+        /// <summary>
+        /// //车辆价格
+        /// </summary>
+        public int Price { get; set; }
 
-        public string Times { get; set; }   //时间
+        /// <summary>
+        /// //时间
+        /// </summary>
+        public string Times { get; set; }
 
-        public int Carid { get; set; }//车辆id
+        /// <summary>
+        /// //车辆id
+        /// </summary>
+        public int Carid { get; set; }
     }
 }

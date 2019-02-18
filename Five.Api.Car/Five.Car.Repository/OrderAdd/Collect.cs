@@ -102,10 +102,5 @@ namespace Five.Car.Repository
                 return color;
             }
         }
-
-        public int AddCarDetails(CarDetails details, Image image)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
