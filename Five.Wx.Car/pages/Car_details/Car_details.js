@@ -29,6 +29,16 @@ Page({
         })
       }
     })
+    wx.request({
+      url: 'http://localhost:52631/api/CarDetails/GetEvaluates?id=' + pid,
+      method: "Get",
+      data: {},
+      success: function (res) {
+        that.setData({
+          evaluates: res.data
+        })
+      }
+    })
   },
   collect:function(e){
     var id = e.currentTarget.dataset.id;
