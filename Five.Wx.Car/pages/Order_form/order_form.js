@@ -69,6 +69,7 @@ Page({
   },
   Pay:function(e){
     var bid=e.currentTarget.dataset.pay
+    console.log(bid);
     wx.navigateTo({
       url: '../Confirm_Pay/Confirm_Pay?pay='+bid,
     })
@@ -76,7 +77,7 @@ Page({
   getAllorders: function(options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:52631/api/Order/CarOrdreTableAll',
+      url: 'http://localhost:52631/api/Order/GetCarOrdreAll',
       method: 'get',
       success: function(res) {
         console.log(res.data)
@@ -90,7 +91,7 @@ Page({
     var that = this;
     var getid = e.currentTarget.dataset.ids;
     wx.request({
-      url: 'http://localhost:52631/api/Order/CarOrdreTable',
+      url: 'http://localhost:52631/api/Order/GetCarOrdreById',
       method: 'get',
       data: {
         id: getid
