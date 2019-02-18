@@ -45,11 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressDetailsRepository\AddressDetailsRepository.cs" />
     <Compile Include="AddressDetails\AddressDetails.cs" />
-    <Compile Include="CarDetails\CarBrand.cs" />
+    <Compile Include="CarDetails\CarBrandRepository.cs" />
     <Compile Include="CarDetails\CarDetailsRepository.cs" />
     <Compile Include="CarDetails\CollectionRepository.cs" />
     <Compile Include="CarDetails\RotationChartRepository.cs" />
+    <Compile Include="EvaluateDetailsRepository\EvaluateDetailsRepository.cs" />
     <Compile Include="OrderAdd\Collect.cs" />
     <Compile Include="OrderDetails\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
