@@ -21,9 +21,9 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public List<Evaluate> GetEvaluates()
+        public List<Evaluate> GetEvaluates(int num)
         {
-            List<Evaluate> Evaluatelist = evaluateDetails.GetEvaluates();
+            List<Evaluate> Evaluatelist = evaluateDetails.GetEvaluates(num);
             return Evaluatelist;
         }
 

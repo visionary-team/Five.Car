@@ -68,13 +68,17 @@ Page({
       success:function(res)
       {
         console.log(res);
-        wx.showModal({
-          title: '提示', 
-          content: '修改成功',
+        wx.showToast({
+          title: '修改成功',
         })
-      }
-      
+      },
     })
+    setTimeout(function () {
+      wx.reLaunch({
+        url: '../Address_details/Address_details',
+      })
+    }, 1000)
+    
   },
 
   /**
