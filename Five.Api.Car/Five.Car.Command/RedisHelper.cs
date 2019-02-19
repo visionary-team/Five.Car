@@ -1,4 +1,5 @@
-﻿using ServiceStack.Redis;
+﻿using Five.Car.Command;
+using ServiceStack.Redis;
 using ServiceStack.Text;
 using System;
 using System.Collections.Generic;
