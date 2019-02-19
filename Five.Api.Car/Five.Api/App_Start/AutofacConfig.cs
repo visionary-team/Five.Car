@@ -13,7 +13,7 @@ using System.Web.Http;
 using Autofac.Integration.Mvc;
 using Five.Car.Repository.EvaluateDetails;
 using Five.Car.IRepository.IEvaluateDetails;
-using Five.Car.IRepository.OrderDetails;
+using Five.Car.IRepository.IOrderDetails;
 
 namespace Five.Api
 {
@@ -50,7 +50,7 @@ namespace Five.Api
             container.RegisterType<AddressDetailsRepository>().As<IAddressDetailsRepository>();
             container.RegisterType<EvaluateDetailsRepository>().As<IEvaluateDetailsRepository>();
             container.RegisterType<Collect>().As<ICollect>();
-            container.RegisterType<UserInfo>().As<IUserInfo>();
+            container.RegisterType<UserInfoRepository>().As<IUserInfoRepository>();
 
 
 

@@ -15,7 +15,7 @@ Page({
     var that=this
     var id=parseInt(options.pid)
     wx.request({
-      url: 'http://localhost:52631/api/Order/CarDetail?id='+id,
+      url: 'http://localhost:52631/api/Order/GetCarDetailById?id='+id,
       method: 'get',
       success: function (res) {
         console.log(res.data)-

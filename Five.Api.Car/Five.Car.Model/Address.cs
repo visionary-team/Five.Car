@@ -44,7 +44,6 @@ namespace Five.Car.Model
         /// </summary>
         public int State { get; set; }
 
-       
-       
+
     }
 }

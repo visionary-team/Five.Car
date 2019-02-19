@@ -5,27 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using Five.Car.Model;
 
-namespace Five.Car.IRepository.OrderDetails
+namespace Five.Car.IRepository.IOrderDetails
 {
-    public interface IUserInfo
+    public interface IUserInfoRepository
     {
         /// <summary>
         /// 汽车订单表
         /// </summary>
         /// <returns></returns>
-        List<OrderCarDetails> CarOrdreTable(int id);
+        List<OrderCarDetails> GetCarOrdreById(int id);
 
         /// <summary>
         /// 汽车订单表全部
         /// </summary>
         /// <returns></returns>
-        List<OrderCarDetails> CarOrdreTableAll();
+        List<OrderCarDetails> GetCarOrdreAll();
 
         /// <summary>
         /// 根据ID显示车辆详情
         /// </summary>
         /// <returns></returns>
-        List<CarShop> CarDetail(int id);
+        List<CarShop> GetCarDetailById(int id);
 
         /// <summary>
         /// 付款修改车辆订单状态

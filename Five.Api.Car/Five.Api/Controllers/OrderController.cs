@@ -7,13 +7,13 @@ using System.Web.Http;
 using Five.Car.IRepository;
 using Five.Car.Repository;
 using Five.Car.Model;
-using Five.Car.IRepository.OrderDetails;
+using Five.Car.IRepository.IOrderDetails;
 
 namespace Five.Api.Controllers
 {
     public class OrderController : ApiController
     {
-        public IUserInfo Iuser { get; set; }
+        public IUserInfoRepository Iuser { get; set; }
 
 
         /// <summary>
@@ -22,10 +22,10 @@ namespace Five.Api.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [ActionName("CarDetail")]
-        public List<CarShop> CarDetail(int id)
+        [ActionName("GetCarDetailById")]
+        public List<CarShop> GetCarDetailById(int id)
         {
-            var carDetail = Iuser.CarDetail(id);
+            var carDetail = Iuser.GetCarDetailById(id);
             return carDetail;
         }
 
@@ -34,10 +34,10 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ActionName("CarOrdreTable")]
-        public List<OrderCarDetails> CarOrdreTable(int id)
+        [ActionName("GetCarOrdreById")]
+        public List<OrderCarDetails> GetCarOrdreById(int id)
         {
-            var orderCar = Iuser.CarOrdreTable(id);
+            var orderCar = Iuser.GetCarOrdreById(id);
             return orderCar;
         }
 
@@ -46,10 +46,10 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ActionName("CarOrdreTableAll")]
-        public List<OrderCarDetails> CarOrdreTableAll()
+        [ActionName("GetCarOrdreAll")]
+        public List<OrderCarDetails> GetCarOrdreAll()
         {
-            var orderCar = Iuser.CarOrdreTableAll();
+            var orderCar = Iuser.GetCarOrdreAll();
             return orderCar;
         }
 

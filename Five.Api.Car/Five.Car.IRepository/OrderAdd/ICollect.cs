@@ -16,7 +16,35 @@ namespace Five.Car.IRepository
         /// <returns></returns>
         List<Collection> ShowCollection( string Usersid);
 
+        /// <summary>
+        /// 发布车辆
+        /// </summary>
+        /// <param name="details"></param>
+        /// <returns></returns>
+        int AddCarDetails(CarDetails details);
 
-        int Add(CarDetails carDetails);
+        /// <summary>
+        /// 地址
+        /// </summary>
+        /// <returns></returns>
+        List<Address> Address();
+
+        /// <summary>
+        /// 订单
+        /// </summary>
+        /// <returns></returns>
+        List<Orders> ShowOrders();
+
+        /// <summary>
+        /// 车辆详情下拉
+        /// </summary>
+        /// <returns></returns>
+        List<CarTable> Details();
+
+        /// <summary>
+        /// 车辆颜色下拉
+        /// </summary>
+        /// <returns></returns>
+        List<CarColor> Color();
     }
 }

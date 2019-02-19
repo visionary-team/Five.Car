@@ -44,15 +44,21 @@ Page({
               wx.showToast({
                 title: '付款成功!',//提示付款成功，状态成功修改
                 icon:"success",
-                duration: 2000
+                duration: 2000,
               })
             }
           })
         }
+        
         else if(sm.cancel){
           console.log("用户点击取消");
         }
       }
+    })
+    setTimeout(function() {
+      wx.navigateTo({
+        url: '../Order_form/order_form',
+      },1000)
     })
   },
 
