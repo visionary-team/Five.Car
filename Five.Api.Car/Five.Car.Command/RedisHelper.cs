@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace CommonCache
+namespace Five.Car.Command
 {
     /// <summary>
     /// Redis缓存操作类
