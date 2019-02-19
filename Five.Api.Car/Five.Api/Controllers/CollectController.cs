@@ -21,8 +21,8 @@ namespace Five.Api.Controllers
         [HttpGet]
         public List<Collection> ShowCollection(string Usersid)
         {
-            var collects = Collect.ShowCollection(Usersid);
-            return collects;
+            var Collects = Collect.ShowCollection(Usersid);
+            return Collects;
         }
         /// <summary>
         /// 发布车辆
@@ -43,8 +43,8 @@ namespace Five.Api.Controllers
             details.Details = HttpContext.Current.Request["Details"];
             details.Seat = Convert.ToInt32(HttpContext.Current.Request["Seat"]);
             image.Imgurl = HttpContext.Current.Request["Imgurl"];
-            int issue = Collect.AddCarDetails(details);
-            return issue;
+            int Issue = Collect.AddCarDetails(details);
+            return Issue;
         }
         /// <summary>
         /// 地址
@@ -54,8 +54,8 @@ namespace Five.Api.Controllers
         [HttpGet]
         public List<Address> ShowAddress()
         {
-            var address = Collect.Address();
-            return address;
+            var Address = Collect.Address();
+            return Address;
         }
 
         /// <summary>
@@ -66,8 +66,8 @@ namespace Five.Api.Controllers
         [HttpGet]
         public List<Collection> ShowOrders(string Usersid)
         {
-            var orders = Collect.ShowCollection(Usersid);
-            return orders;
+            var Orders = Collect.ShowCollection(Usersid);
+            return Orders;
         }
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Five.Api.Controllers
         [HttpGet]
         public List<CarTable> ShowCarDetails()
         {
-            var details =Collect.Details();
-            return details;
+            var Details =Collect.Details();
+            return Details;
         }
 
         /// <summary>
@@ -91,8 +91,8 @@ namespace Five.Api.Controllers
         [HttpGet]
         public List<CarColor> ShowCarColor()
         {
-            var color = Collect.Color();
-            return color;
+            var Color = Collect.Color();
+            return Color;
         }
     }
 }
