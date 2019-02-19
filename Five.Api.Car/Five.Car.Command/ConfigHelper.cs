@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 
-namespace Five.Car.Command
+namespace Five.Car.Cache
 {
     public class ConfigHelper
     {

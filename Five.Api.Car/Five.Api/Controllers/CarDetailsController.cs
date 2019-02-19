@@ -8,7 +8,7 @@ using Five.Car.IRepository;
 using Five.Car.Repository;
 using Five.Car.Model;
 using Newtonsoft.Json;
-using Five.Car.Command;
+using Five.Car.Cache;
 
 namespace Five.Api.Controllers
 {

@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Five.Car.Command\Five.Car.Common.csproj">
+    <ProjectReference Include="..\Five.Car.Command\Five.Car.Cache.csproj">
       <Project>{099194f9-4970-40b7-8f98-8fee9a49a081}</Project>
-      <Name>Five.Car.Common</Name>
+      <Name>Five.Car.Cache</Name>
     </ProjectReference>
     <ProjectReference Include="..\Five.Car.Model\Five.Car.Model.csproj">
       <Project>{d6b350c3-2b2c-4c81-ba0b-4ca14bb5f642}</Project>

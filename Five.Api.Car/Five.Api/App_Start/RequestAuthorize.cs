@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Web.Http;
 using System.Web.Http.Controllers;
-using CommonCache;
+using Cache;
 using System.Web.Http.Filters;
 
 namespace Five.Api.App_Start
