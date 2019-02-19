@@ -1,8 +1,8 @@
 {
   "pages": [ 
-    
-    "pages/Evaluation_details/Evaluation_details",
     "pages/Home_page/Home_page",
+    "pages/Evaluation_details/Evaluation_details",
+    
     "pages/Address_details/Address_details",
     "pages/Upt_address/Upt_address",
     "pages/Add_address/Add_address", 
