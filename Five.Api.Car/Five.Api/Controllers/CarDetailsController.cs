@@ -18,6 +18,8 @@ namespace Five.Api.Controllers
 
         public ICarDetailsRepository CarDetail { get; set; }
 
+        public ICollectionRepository collectionRepository { get; set; }
+
         [HttpGet]
         /// <summary>
         /// 显示轮播图
@@ -64,6 +66,19 @@ namespace Five.Api.Controllers
         {
             var CarBrands = CarBrand.GetCarTables(Pid, Brand);
             return CarBrands;
-        }       
+        }
+
+        /// <summary>
+        /// 修改商品是否收藏
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="isCollection"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public int UpdateCarCollection(int id, int isCollection)
+        {
+            var i = collectionRepository.UpdateCarCollection(id,isCollection);
+            return i;
+        }
     }
 }

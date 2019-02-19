@@ -58,6 +58,14 @@ namespace Five.Car.Repository.EvaluateDetails
             }
         }
 
-
+        public List<Evaluate> GetEvaluatesById(int id)
+        {
+            using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
+            {
+                string sql = "select * from Evaluate where CARDETAILSID=" + id;
+                List<Evaluate> getevaluates = conn.Query<Evaluate>(sql).ToList();
+                return getevaluates;
+            }
+        }
     }
 }

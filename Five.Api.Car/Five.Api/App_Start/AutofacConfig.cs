@@ -9,6 +9,7 @@ using System.Web.Http;
 using Autofac.Integration.Mvc;
 using Five.Car.IRepository.IEvaluateDetails;
 using Five.Car.IRepository.OrderDetails;
+using Five.Car.Repository.EvaluateDetails;
 
 namespace Five.Api
 {
@@ -39,11 +40,11 @@ namespace Five.Api
         public static void SetupResolveRules(ContainerBuilder container)
         {
             container.RegisterType<RotationChartRepository>().As<IRotationChartRepository>();
-            container.RegisterType<ICarBrandRepository>().As<ICarBrandRepository>();
+            container.RegisterType<CarBrandRepository>().As<ICarBrandRepository>();
             container.RegisterType<CarDetailsRepository>().As<ICarDetailsRepository>();
             container.RegisterType<CollectionRepository>().As<ICollectionRepository>();
-            container.RegisterType<IAddressDetailsRepository>().As<IAddressDetailsRepository>();
-            container.RegisterType<IEvaluateDetailsRepository>().As<IEvaluateDetailsRepository>();
+            container.RegisterType<AddressDetailsRepository>().As<IAddressDetailsRepository>();
+            container.RegisterType<EvaluateDetailsRepository>().As<IEvaluateDetailsRepository>();
             container.RegisterType<Collect>().As<ICollect>();
             container.RegisterType<UserInfo>().As<IUserInfo>();
 

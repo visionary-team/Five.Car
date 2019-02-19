@@ -54,5 +54,17 @@ namespace Five.Api.Controllers
             int i = evaluateDetails.Add(eval);
             return i;
         }
+
+        /// <summary>
+        /// 通过id获取评论
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<Evaluate> GetEvaluatesById(int id)
+        {
+            var evaluates = evaluateDetails.GetEvaluatesById(id);
+            return evaluates;
+        }
     }
 }

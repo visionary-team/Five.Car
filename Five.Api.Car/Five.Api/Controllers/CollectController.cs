@@ -33,11 +33,15 @@ namespace Five.Api.Controllers
         {
             CarDetails details = new CarDetails();
             Image image = new Image();
-            details.Brandid =Convert.ToInt32(HttpContext.Current.Request["Carbrand"]);
-            details.Carcolorid =Convert.ToInt32(HttpContext.Current.Request["Colorname"]);
+            details.Brandid =Convert.ToInt32(HttpContext.Current.Request["Brandid"]);
+            details.Carcolorid =Convert.ToInt32(HttpContext.Current.Request["Carcolorid"]);
             details.Displacement = HttpContext.Current.Request["Displacement"];
             details.Address = HttpContext.Current.Request["Address"];
             details.Price = Convert.ToInt32(HttpContext.Current.Request["Price"]);
+            details.Stock = Convert.ToInt32(HttpContext.Current.Request["Stock"]);
+            details.Times = HttpContext.Current.Request["Times"];
+            details.Details = HttpContext.Current.Request["Details"];
+            details.Seat = Convert.ToInt32(HttpContext.Current.Request["Seat"]);
             image.Imgurl = HttpContext.Current.Request["Imgurl"];
             int issue = Collect.AddCarDetails(details);
             return issue;

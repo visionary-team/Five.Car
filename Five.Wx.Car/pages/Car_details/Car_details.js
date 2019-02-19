@@ -30,10 +30,11 @@ Page({
       }
     })
     wx.request({
-      url: 'http://localhost:52631/api/CarDetails/GetEvaluates?id=' + pid,
+      url: 'http://localhost:52631/api/Evaluate/GetEvaluatesById?id=' + pid,
       method: "Get",
       data: {},
       success: function (res) {
+        console.log(res)
         that.setData({
           evaluates: res.data
         })

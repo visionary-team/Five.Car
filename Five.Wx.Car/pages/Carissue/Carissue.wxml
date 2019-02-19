@@ -48,6 +48,34 @@
       <input name="jiage" class="weui-input" />
     </view>
 
+    <view class='pinpai'>
+      车辆库存：
+    </view>
+    <view class='pinpai_bd'>
+      <input name="kucun" class="weui-input"  />
+    </view>
+
+    <view class='pinpai'>
+      发布时间：
+    </view>
+    <view class='pinpai_bd'>
+      <input name="time" class="weui-input"  />
+    </view>
+
+    <view class='pinpai'>
+      车辆详情：
+    </view>
+    <view class='pinpai_bd'>
+      <input name="details" class="weui-input"  />
+    </view>
+
+      <view class='pinpai'>
+      车辆座位：
+    </view>
+    <view class='pinpai_bd'>
+      <input name="seat" class="weui-input"  />
+    </view>
+
     
     <view class='footer'>
     <view>

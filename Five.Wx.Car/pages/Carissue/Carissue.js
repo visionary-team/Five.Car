@@ -11,8 +11,8 @@ Page({
     color:"",
     brandindex: 0,
     colorindex: 0,
-   brandid: 0,
-   colorid: 0,
+   brandid: 30,
+   colorid: 1,
   },
   
   /**
@@ -120,11 +120,16 @@ Page({
 
   //表单提交
   formSubmit: function (e) {
-    var brand = e.detail.value.brandindex;
-    var color = e.detail.value.colorindex;
+    var brand = this.data.brandid;
+    var color = this.data.colorid;
     var pailiang = e.detail.value.pailiang;
     var suozaidi = e.detail.value.suozaidi;
     var jiage = e.detail.value.jiage;
+    var kucun = e.detail.value.kucun;
+    var time = e.detail.value.time;
+    var details = e.detail.value.details;
+    var seat = e.detail.value.seat;
+    console.log(brand, color, pailiang, suozaidi, jiage, kucun, time, details, seat)
     wx.request({
       url: "http://localhost:52631/api/Collect/AddCarDetails", //仅为示例，并非真实的接口地址
       method: 'get',
@@ -133,7 +138,11 @@ Page({
         Carcolorid: color,
         Displacement: pailiang,
         Address: suozaidi,
-        Price: jiage
+        Price: jiage,
+        Stock: kucun,
+        Times: time,
+        Details: details,
+        Seat: seat,
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 默认值
@@ -153,19 +162,6 @@ Page({
             duration: 2000
           })
         }
-      }
-    })
-    var a = this.data.region;
-    console.log('sdf' + a);
-    wx.request({
-      url: 'http://localhost:52631/api/Collect/AddCarDetails',
-      method: "get",
-      data: {
-      },
-      success: function () {
-        wx.showToast({
-          title: '保存成功！',
-        })
       }
     })
   },
@@ -286,7 +282,6 @@ Page({
    */
   bindPickerChangebrand: function (e) {
     var that=this;
-    console.log(e);
     this.setData({ brandindex: e.detail.value })
     var objectArray = this.data.objectArray
     wx.getStorage({
