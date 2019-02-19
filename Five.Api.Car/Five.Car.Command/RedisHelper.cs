@@ -1,11 +1,12 @@
-﻿using ServiceStack.Redis;
+﻿using Five.Car.Command;
+using ServiceStack.Redis;
 using ServiceStack.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace CommonCache
+namespace Five.Car.Command
 {
     /// <summary>
     /// Redis缓存操作类

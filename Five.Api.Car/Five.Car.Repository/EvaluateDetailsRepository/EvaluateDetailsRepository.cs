@@ -48,11 +48,27 @@ namespace Five.Car.Repository.EvaluateDetails
         /// 评价显示
         /// </summary>
         /// <returns></returns>
-        public List<Evaluate> GetEvaluates()
+        public List<Evaluate> GetEvaluates(int num)
         {
             using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
-                string sql = "select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id";
+                string sql = "";
+                switch (num)
+                {
+                    case 0:
+                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id";
+                        break;
+                    case 1:
+                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.State='{"好评"}'";
+                        break;
+                    case 2:
+                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.State='{"中评"}'";
+                        break;
+                    case 3:
+                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.State='{"差评"}'";
+                        break;
+                }
+  
                 List<Evaluate> getevaluate = conn.Query<Evaluate>(sql).ToList();
                 return getevaluate;
             }

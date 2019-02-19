@@ -31,7 +31,8 @@
        <view class="weui-cell__bd">
             <textarea  name="delivery_street" class="weui-textarea"  style="height: 3.3em" value="{{item.Useraddress}}" />
        </view>
-   
+      
+
        <view class="footer">
              <button class="footer-add" formType="submit">保存</button>
        </view>

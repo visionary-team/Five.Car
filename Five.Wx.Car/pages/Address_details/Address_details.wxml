@@ -1,14 +1,24 @@
 <!--pages/Address_details/Address_details.wxml-->
 <button bindtap="addAddress">添加地址</button>
  <view class="user_addr_manage">
-    <block wx:for="{{lunbo}}" wx:key="item.Id" wx:if="{{item.State==0}}">
-      <view class="user_addr_item">
-        <text class="section_book" wx:if="{{item.CState==1}}"></text>
-        <text wx:else></text>
+    <block wx:for="{{lunbo}}" wx:key="item.Id">
+      <view class="user_addr_item" wx:if="{{item.State==0}}">
+      
         <text class="addr_sub">{{item.UName}} {{item.Phone}}</text>
         <text class="addr_address">{{item.Province}}{{item.Useraddress}}</text>
         <text class='addr-dele' bindtap="delnew" data-aid="{{item.Id}}">删除</text>
-        <view class="addr_edit" bindtap="editAddr" data-addrid="{{item.Id}}">编辑</view>
+        <view class="addr_edit" bindtap="editAddr" data-addrid="{{item.Id}}">编辑</view> 
+        <text class='addr_default' bindtap="defaultAddr" data-defaultid="{{item.Id}}">设为默认</text> 
       </view>
+      <view class="user_addr_item" wx:else>
+       
+        <text class="addr_sub">{{item.UName}} {{item.Phone}}</text>
+        <text class="addr_address">{{item.Province}}{{item.Useraddress}}</text>
+        <text class='addr-dele' bindtap="delnew" data-aid="{{item.Id}}">删除</text>
+        <view class="addr_edit" bindtap="editAddr" data-addrid="{{item.Id}}">编辑</view> 
+        <view class='addr_default'>默认</view>
+      </view>
+      
     </block>
+      
   </view>

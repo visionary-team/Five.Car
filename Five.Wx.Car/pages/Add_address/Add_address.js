@@ -90,6 +90,11 @@ Page({
         })
        }
      })
+    setTimeout(function () {
+      wx.reLaunch({
+        url: '../Address_details/Address_details',
+      })
+    }, 1000)
    },
 
   /**

@@ -31,7 +31,21 @@
 }
 .user_addr_item .addr_edit{
     width:50rpx;
-    background:url("../../Img/显示图片/address_edit_white.png");
     background-position: center;
     background-size:100%;  
+    color:blue;
+     margin-left: 10px;
+}
+
+.user_addr_item .addr-dele{
+    width:50rpx;
+    background-position: center;
+    background-size:100%;  
+    color:blue;
+    margin-left: 10px;
+}
+
+.user_addr_item .addr_default{
+      color: red;
+      margin-left: 10px;
 }
