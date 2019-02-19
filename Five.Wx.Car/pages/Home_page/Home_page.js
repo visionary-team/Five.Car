@@ -10,18 +10,18 @@ Page({
     duration: 1000
   },
 
-  jumppage:function(){
+  jumppage: function() {
     wx.navigateTo({
       url: '../Carissue/Carissue',
     })
   },
-  jump:function(e){
+  jump: function(e) {
     var pid = e.currentTarget.dataset.pid;
     wx.navigateTo({
-      url: '../Car_details/Car_details?Pid='+pid,
+      url: '../Car_details/Car_details?Pid=' + pid,
     })
   },
-  MyOrder:function(){
+  MyOrder: function() {
     wx.navigateTo({
       url: '../Order_form/order_form',
     })
@@ -30,16 +30,24 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    var that=this;
-    wx.request({
-      url: 'http://localhost:52631/api/CarDetails/GetRotationcharts',
-      method:"Get",
-      data:{},
-      success:function(res)
-      {
-        that.setData({         
-          lunbo:res.data
+  onLoad: function(options) {
+    var that = this;
+    wx.getStorage({
+      key: 'token',
+      success: function(res) {
+        wx.request({
+          url: 'http://localhost:52631/api/CarDetails/GetRotationcharts',
+          method: "Get",
+          data: {},
+          header: {
+            'content-type': 'application/json',
+            'Authorization': 'BasicAuth ' + res.data
+          },
+          success: function(res) {
+            that.setData({
+              lunbo: res.data
+            })
+          }
         })
       }
     })
@@ -48,49 +56,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })
