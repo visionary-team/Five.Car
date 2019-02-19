@@ -9,6 +9,7 @@ using Five.Car.Repository;
 using Five.Car.Model;
 using Newtonsoft.Json;
 using Five.Car.Command;
+using CommonCache;
 
 namespace Five.Api.Controllers
 {

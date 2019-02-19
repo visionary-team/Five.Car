@@ -12,7 +12,7 @@ App({
         console.log(res.code)
         if (res.code) {
           wx.request({
-            url: 'http://localhost:55345/api/Home/Login',
+            url: 'http://localhost:55345/api/Order/Login',
             data: {
               code: res.code
             },
