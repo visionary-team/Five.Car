@@ -70,12 +70,7 @@
       <Name>Five.Car.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Address\" />
-    <Folder Include="WH\" />
-    <Folder Include="XRL\" />
-    <Folder Include="ZBL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

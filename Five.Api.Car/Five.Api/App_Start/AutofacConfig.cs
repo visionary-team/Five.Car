@@ -50,7 +50,7 @@ namespace Five.Api
             container.RegisterType<AddressDetailsRepository>().As<IAddressDetailsRepository>();
             container.RegisterType<EvaluateDetailsRepository>().As<IEvaluateDetailsRepository>();
             container.RegisterType<Collect>().As<ICollect>();
-            container.RegisterType<UserInfo>().As<IUserInfoRepository>();
+            container.RegisterType<UserInfoRepository>().As<IUserInfoRepository>();
 
 
 

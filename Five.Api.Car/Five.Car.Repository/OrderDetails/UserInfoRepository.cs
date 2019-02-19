@@ -14,7 +14,7 @@ using Five.Car.Command;
 
 namespace Five.Car.Repository
 {
-    public class UserInfo : IUserInfoRepository
+    public class UserInfoRepository : IUserInfoRepository
     {
 
 
