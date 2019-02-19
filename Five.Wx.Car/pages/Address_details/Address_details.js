@@ -71,6 +71,11 @@ Page({
                  fail:function(res){ },
                  complete:function (res){ }
               })
+              setTimeout(function(){
+                 wx.reLaunch({
+                   url: '../Address_details/Address_details',
+                 })
+              },1000)
           }
           else if(sm.cancel)
           {
@@ -80,6 +85,33 @@ Page({
       })   
    },
 
+   //设置默认地址
+  defaultAddr:function(e)
+  {
+    var did = e.currentTarget.dataset.defaultid;
+    console.log(did);
+    var state = 1;
+    console.log(state);
+     wx.request({
+       url: 'http://localhost:52631/api/Address/Uptstate',
+      method: 'GET',
+      data:{
+        Id: did,
+        State: state,
+      },
+      success: function(res) {
+        wx.showToast({
+          title: '设置成功',
+        })
+      },
+     
+    })
+    setTimeout(function () {
+      wx.reLaunch({
+        url: '../Address_details/Address_details',
+      })
+    }, 1000)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

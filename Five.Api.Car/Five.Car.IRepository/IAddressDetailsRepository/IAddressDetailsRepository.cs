@@ -43,6 +43,14 @@ namespace Five.Car.IRepository
         /// <returns></returns>
         int UptAddress(Address addr);
 
+        
+        /// <summary>
+        /// 修改状态
+        /// </summary>
+        /// <param name="addr"></param>
+        /// <returns></returns>
+        int UptState(Address addr);
+
 
     }
 }

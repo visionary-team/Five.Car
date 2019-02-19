@@ -85,5 +85,19 @@ namespace Five.Api.Controllers
             int i = addressDetails.UptAddress(addr);
             return i;
         }
+
+        /// <summary>
+        /// 修改状态
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int Uptstate()
+        {
+            Address addr = new Address();
+            addr.Id = Convert.ToInt32(HttpContext.Current.Request["Id"]);
+            addr.State = Convert.ToInt32(HttpContext.Current.Request["State"]);
+            int i = addressDetails.UptState(addr);
+            return i;
+        }
     }
 }

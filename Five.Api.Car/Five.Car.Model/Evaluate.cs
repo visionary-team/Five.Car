@@ -64,5 +64,9 @@ namespace Five.Car.Model
         /// 价格
         /// </summary>
         public string Price { get; set; }
+
+
+
+        public int num { get; set; }
     }
 }

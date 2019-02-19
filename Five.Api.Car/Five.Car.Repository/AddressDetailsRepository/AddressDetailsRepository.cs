@@ -52,7 +52,7 @@ namespace Five.Car.Repository
         {
             using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
-                string sql = string.Format("select a.Id,a.UName,a.Phone,a.Province,a.Useraddress from Address a");
+                string sql = string.Format("select a.Id,a.UName,a.Phone,a.Province,a.Useraddress,a.State from Address a");
                 List<Address> addresslist = conn.Query<Address>(sql).ToList();
                 return addresslist;
             }
@@ -67,7 +67,7 @@ namespace Five.Car.Repository
         {
             using (IDbConnection conn= new OracleConnection(ConfigHelper.ConnString))
             {
-                string sql = $"select a.Id,a.UName,a.Phone,a.Province,a.Useraddress from Address a where a.Id={id} ";
+                string sql = $"select a.Id,a.UName,a.Phone,a.Province,a.Useraddress,a.State from Address a where a.Id={id} ";
                 List<Address> addresslist = conn.Query<Address>(sql).ToList();
                 return addresslist;
             }
@@ -84,6 +84,23 @@ namespace Five.Car.Repository
             {
                 string sql = $"update Address set UName='{addr.UName}',Phone='{addr.Phone}',Province='{addr.Province}',Useraddress='{addr.Useraddress}' Where Id='{addr.Id}'";
                 int i = conn.Execute(sql);
+                return i;
+            }
+        }
+
+        /// <summary>
+        /// 修改状态
+        /// </summary>
+        /// <param name="addr"></param>
+        /// <returns></returns>
+        public int UptState(Address addr)
+        {
+            using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
+            {
+                string sql = string.Format("update Address set State='{0}' where State=1",0);
+                conn.Execute(sql);
+                string sqlnew = $"update Address set State='{addr.State}' where Id='{addr.Id}'";
+                int i = conn.Execute(sqlnew);
                 return i;
             }
         }

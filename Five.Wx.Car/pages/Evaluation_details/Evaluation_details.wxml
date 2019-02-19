@@ -1,7 +1,35 @@
-<!--pages/Evaluation_details/Evaluation_details.wxml-->
 <view>
-    <!-- <view class="car_item_wrap" wx:for="{{lunbo}}" wx:if="{{item.carShow}}"> -->
-     <view class="car_item_wrap" wx:for="{{lunbo}}">
+   <scroll-view>
+      <view class="tab-item{{currentTab==0?'active':''}}" data-current="0" bindtap="switchNav">所有评价</view>
+      <view class="tab-item{{currentTab==1?'active':''}}" data-current="1" bindtap="switchNav">好评</view>
+      <view class="tab-item{{currentTab==2?'active':''}}" data-current="2" bindtap="switchNav">中评</view>
+      <view class="tab-item{{currentTab==3?'active':''}}" data-current="3" bindtap="switchNav">差评</view>
+   </scroll-view>
+   <swiper class='tab-content' current='{{currentTab}}' duration='300' bindchange='switchTab' style='height{         {winHeight}}rpx'> 
+    <swiper-item wx:for="{{[0,1,2,3]}}">
+       <scroll-view scroll-y="true" class='scoll-h'>
+         <block wx:for="{{lunbo}}" wx:key="*this">
+                    <view class="item-ans">
+                        <view class="avatar">
+                            <image class="img" src="{{item.Imgurl}}"></image>
+                        </view>
+                        <view class="expertInfo">
+                            <view class="name">{{item.Price}}</view>
+                            <view class="tag">颜色:{{item.Colorname}} 排量:{{item.Displacement}}</view>
+                            <view class="answerHistory"> {{item.Content}}</view>
+                        </view>
+                      
+                    </view>
+                </block>
+
+      </scroll-view>
+    </swiper-item>
+   
+   </swiper>
+</view>
+
+
+<!-- <view class="car_item_wrap" wx:for="{{lunbo}}">
         <view class="car_image_wrap">
             <image src="{{item.Imgurl}}" class="car_item_image"></image>
         </view>
@@ -17,5 +45,19 @@
         <text class="car_item_Content">{{item.Content}}</text>
        
         </view>
-    </view>
-</view>
+    </view> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
