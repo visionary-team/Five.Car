@@ -12,7 +12,7 @@ App({
         console.log(res.code)
         if (res.code) {
           wx.request({
-            url: 'http://localhost:55345/api/Home/Login',
+            url: 'http://localhost:55345/api/CarDetails/Login',
             data: {
               code: res.code
             },
@@ -21,7 +21,6 @@ App({
                 key: 'token',
                 data: res.data.session_key,
                 success: function (res) {
-
                 },
                 fail: function (res) { },
                 complete: function (res) { },
