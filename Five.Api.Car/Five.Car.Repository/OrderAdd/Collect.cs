@@ -29,7 +29,7 @@ namespace Five.Car.Repository
         }
         /// <summary>
         /// 发布车源
-        /// </summary>
+        /// </summary>  
         /// <param name="details"></param>
         /// <returns></returns>
         public int AddCarDetails(CarDetails details)
@@ -38,7 +38,7 @@ namespace Five.Car.Repository
             {
                 string sql = string.Format("insert into cardetails(brandid,carcolorid,displacement,seat,address,details,stock,price,times,iscollection) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}',0)", details.Brandid, details.Carcolorid,details.Displacement,details.Seat,details.Address,details.Details,details.Stock,details.Price,details.Times);
 
-                //int i = 1;
+                //int i = 1;1232
 
                 var Idetails = conn.Execute(sql);
                 return Idetails;
