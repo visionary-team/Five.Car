@@ -1,4 +1,4 @@
-/* pages/Add_address/Add_address.wxss */
+/* pages/Upt_address/Upt_address.wxss */
 .footer-add {
   width: 100%;
   height: 50px;
@@ -17,6 +17,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .weui-input {
   height: 30px;
   width: 90%;

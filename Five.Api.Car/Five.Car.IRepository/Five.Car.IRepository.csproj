@@ -65,13 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Address\" />
-    <Folder Include="bin\Release\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\Five.Car.IRepository.dll" />
-    <Content Include="bin\Debug\Five.Car.IRepository.pdb" />
-    <Content Include="bin\Debug\Five.Car.Model.dll" />
-    <Content Include="bin\Debug\Five.Car.Model.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

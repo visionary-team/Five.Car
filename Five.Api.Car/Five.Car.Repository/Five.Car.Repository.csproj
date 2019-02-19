@@ -51,7 +51,6 @@
     <Compile Include="CarDetails\CollectionRepository.cs" />
     <Compile Include="CarDetails\RotationChartRepository.cs" />
     <Compile Include="EvaluateDetailsRepository\EvaluateDetailsRepository.cs" />
-    <Compile Include="OrderAdd\Carissue.cs" />
     <Compile Include="OrderAdd\Collect.cs" />
     <Compile Include="OrderDetails\UserInfoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
