@@ -12,10 +12,11 @@ App({
         console.log(res.code)
         if (res.code) {
           wx.request({
-            url: 'http://localhost:55345/api/Order/Login',
+            url: 'http://localhost:52631/api/CarDetails/Login',
             data: {
               code: res.code
             },
+            method: "Get",
             success: function (res) {
               var set = wx.setStorage({
                 key: 'token',

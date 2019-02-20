@@ -18,12 +18,18 @@ namespace Five.Car.Cache
             }
         }
 
-        private static string _redisServiceUrl = string.Empty;
-
+        /// <summary>
+        /// 自定义获取配置文件中的值
+        /// </summary>
+        /// <param name="strConfigKey">节点名称</param>
+        /// <returns>节点值</returns>
         private static string GetConfigValue(string strConfigKey)
         {
             return ConfigurationManager.AppSettings[strConfigKey];
         }
+
+
+        private static string _redisServiceUrl = string.Empty;
 
         /// <summary>
         /// Redis服务器地址 

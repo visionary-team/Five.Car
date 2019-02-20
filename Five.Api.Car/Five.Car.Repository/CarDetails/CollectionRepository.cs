@@ -8,7 +8,7 @@ using Five.Car.IRepository;
 using System.Data;
 using System.Data.OracleClient;
 using Dapper;
-using Five.Car.Command;
+using Five.Car.Cache;
 
 namespace Five.Car.Repository
 {

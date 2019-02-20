@@ -8,12 +8,7 @@ using Five.Car.IRepository;
 using Five.Car.Repository;
 using Five.Car.Model;
 using Newtonsoft.Json;
-<<<<<<< HEAD
 using Five.Car.Cache;
-=======
-using Five.Car.Command;
-using CommonCache;
->>>>>>> a1c4c31dc3fa34a1623150d4ee5fbf0856ced5f3
 
 namespace Five.Api.Controllers
 {
@@ -27,6 +22,7 @@ namespace Five.Api.Controllers
 
         public ICollectionRepository collectionRepository { get; set; }
 
+        [RequestAuthorize]
         [HttpGet]
         /// <summary>
         /// 显示轮播图

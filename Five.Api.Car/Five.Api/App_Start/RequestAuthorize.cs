@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 using System.Web.Http;
 using System.Web.Http.Controllers;
-using Cache;
 using System.Web.Http.Filters;
+using Five.Car.Cache;
+using Five.Car.Model;
 
-namespace Five.Api.App_Start
+namespace Five.Api
 {
     public class RequestAuthorize : AuthorizeAttribute
     {

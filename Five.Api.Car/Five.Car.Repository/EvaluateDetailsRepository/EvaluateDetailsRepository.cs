@@ -9,7 +9,7 @@ using Dapper;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.OracleClient;
-using Five.Car.Command;
+using Five.Car.Cache;
 
 namespace Five.Car.Repository.EvaluateDetails
 {

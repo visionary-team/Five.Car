@@ -234,15 +234,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <ProjectReference Include="..\Five.Car.Command\Five.Car.Command.csproj">
-      <Project>{099194f9-4970-40b7-8f98-8fee9a49a081}</Project>
-      <Name>Five.Car.Command</Name>
-=======
     <ProjectReference Include="..\Five.Car.Command\Five.Car.Cache.csproj">
       <Project>{099194f9-4970-40b7-8f98-8fee9a49a081}</Project>
       <Name>Five.Car.Cache</Name>
->>>>>>> f3c5d77fd7866a7d9e95fa90021dada5b3b5ad18
     </ProjectReference>
     <ProjectReference Include="..\Five.Car.IRepository\Five.Car.IRepository.csproj">
       <Project>{389ee964-e0dc-4ad0-b3c2-6f15832a6708}</Project>

@@ -121,6 +121,7 @@ namespace Five.Car.Cache
             /// redis配置文件信息
             /// </summary>
             private readonly string _redisServiceUrl = ConfigHelper.RedisServiceUrl;
+
             private readonly int _redisServicePortNum = ConfigHelper.RedisServicePortNum;
 
             //redis缓存对象
@@ -344,5 +345,6 @@ namespace Five.Car.Cache
 
         }
     }
+
 
 }

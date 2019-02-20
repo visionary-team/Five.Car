@@ -11,13 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Repository", "Five
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.IRepository", "Five.Car.IRepository\Five.Car.IRepository.csproj", "{389EE964-E0DC-4AD0-B3C2-6F15832A6708}"
 EndProject
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Command", "Five.Car.Command\Five.Car.Command.csproj", "{099194F9-4970-40B7-8F98-8FEE9A49A081}"
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Cache", "Five.Car.Command\Five.Car.Cache.csproj", "{099194F9-4970-40B7-8F98-8FEE9A49A081}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Common", "Five.Car.Common\Five.Car.Common.csproj", "{F913AF40-B04F-4A5A-BA06-8215A0879C9C}"
->>>>>>> f3c5d77fd7866a7d9e95fa90021dada5b3b5ad18
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
