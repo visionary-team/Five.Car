@@ -11,7 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Repository", "Five
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.IRepository", "Five.Car.IRepository\Five.Car.IRepository.csproj", "{389EE964-E0DC-4AD0-B3C2-6F15832A6708}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Cache", "Five.Car.Command\Five.Car.Cache.csproj", "{099194F9-4970-40B7-8F98-8FEE9A49A081}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Command", "Five.Car.Command\Five.Car.Command.csproj", "{099194F9-4970-40B7-8F98-8FEE9A49A081}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Cache", "Five.Car.Command\Five.Car.Cache.csproj", "{AC2280C5-260E-43B0-9BE4-176CCDD9A44E}"
+>>>>>>> 425c41fe33700e961f286aa7bb6b29d45bf37d10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Five.Car.Common", "Five.Car.Common\Five.Car.Common.csproj", "{F913AF40-B04F-4A5A-BA06-8215A0879C9C}"
 EndProject
@@ -41,6 +47,10 @@ Global
 		{099194F9-4970-40B7-8F98-8FEE9A49A081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{099194F9-4970-40B7-8F98-8FEE9A49A081}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{099194F9-4970-40B7-8F98-8FEE9A49A081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2280C5-260E-43B0-9BE4-176CCDD9A44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2280C5-260E-43B0-9BE4-176CCDD9A44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2280C5-260E-43B0-9BE4-176CCDD9A44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2280C5-260E-43B0-9BE4-176CCDD9A44E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F913AF40-B04F-4A5A-BA06-8215A0879C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F913AF40-B04F-4A5A-BA06-8215A0879C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F913AF40-B04F-4A5A-BA06-8215A0879C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
