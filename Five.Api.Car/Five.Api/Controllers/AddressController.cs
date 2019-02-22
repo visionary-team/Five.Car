@@ -30,6 +30,8 @@ namespace Five.Api.Controllers
             addr.Phone = HttpContext.Current.Request["Phone"];
             addr.Province = HttpContext.Current.Request["Province"];
             addr.Useraddress = HttpContext.Current.Request["UserAddress"];
+            addr.Userid = HttpContext.Current.Request["Userid"];
+
             int i = addressDetails.IAdd(addr);
             return i;
         }
@@ -40,9 +42,9 @@ namespace Five.Api.Controllers
         /// <returns></returns>
         [HttpGet]
         [ActionName("GetAddress")]
-        public List<Address> GetAddress()
+        public List<Address> GetAddress(string userId)
         {
-            var addresslist = addressDetails.GetAddress();
+            var addresslist = addressDetails.GetAddress(userId);
             return addresslist;
         }
 

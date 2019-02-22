@@ -20,7 +20,7 @@ namespace Five.Car.IRepository
         /// 显示地址
         /// </summary>
         /// <returns></returns>
-        List<Address> GetAddress();
+        List<Address> GetAddress(string userId);
 
         /// <summary>
         /// 删除地址

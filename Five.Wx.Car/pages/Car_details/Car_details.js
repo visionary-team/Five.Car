@@ -7,9 +7,10 @@ Page({
   data: {
 
   },
-  GoPay:function(){
+  GoPay:function(e){
+    var carid = e.currentTarget.dataset.carid
     wx.navigateTo({
-      url: '../CarOrder/CarOrder',
+      url: '../CarOrder/CarOrder?cid='+carid,
     })
   },
 
@@ -24,6 +25,7 @@ Page({
       method: "Get",
       data: {},
       success: function (res) {
+        console.log(res);
         that.setData({
           CarDetail: res.data
         })
@@ -34,7 +36,6 @@ Page({
       method: "Get",
       data: {},
       success: function (res) {
-        console.log(res)
         that.setData({
           evaluates: res.data
         })
@@ -45,13 +46,19 @@ Page({
     var id = e.currentTarget.dataset.id;
     var collection = e.currentTarget.dataset.collection;
     console.log(id, collection);
-    wx.request({
-      url: 'http://localhost:52631/api/Collect/UpdateCarCollection',
-      method: "Get",
-      data: { id: id, isCollection: collection},
-      success: function (res) {
-      }
+    wx.getStorage({
+      key: 'uName',
+      success: function(res) {
+        wx.request({
+          url: 'http://localhost:52631/api/CarDetails/UpdateCarCollection',
+          method: "Get",
+          data: { id: id, isCollection: collection, userid:res.data },
+          success: function (res) {
+          }
+        })
+      },
     })
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

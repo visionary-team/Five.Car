@@ -74,21 +74,28 @@ Page({
     else {
       console.log(e.detail.value)
     }
-    
-     wx.request({
-       url: 'http://localhost:52631/api/Address/AddressDetails',
-       method: "get",
-       data: {
-         UName: name,
-         Phone: phone,
-         Province: this.data.region,
-         UserAddress: street
+    var province=this.data.region
+     wx.getStorage({
+       key: 'uName',
+       success: function(res) {
+         var    uname = res.data
+         wx.request({
+           url: 'http://localhost:52631/api/Address/AddressDetails',
+           method: "get",
+           data: {
+             UName: name,
+             Phone: phone,
+             Province: province ,
+             UserAddress: street,
+             Userid: uname
+           },
+           success: function () {
+             wx.showToast({
+               title: '添加成功',
+             })
+           }
+         })
        },
-       success: function () {
-        wx.showToast({
-          title: '添加成功',
-        })
-       }
      })
     setTimeout(function () {
       wx.reLaunch({

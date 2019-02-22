@@ -13,13 +13,13 @@ namespace Five.Car.IRepository.IOrderDetails
         /// 汽车订单表
         /// </summary>
         /// <returns></returns>
-        List<OrderCarDetails> GetCarOrdreById(int id);
+        List<OrderCarDetails> GetCarOrdreById(int id,string userId);
 
         /// <summary>
         /// 汽车订单表全部
         /// </summary>
         /// <returns></returns>
-        List<OrderCarDetails> GetCarOrdreAll();
+        List<OrderCarDetails> GetCarOrdreAll(string userId);
 
         /// <summary>
         /// 根据ID显示车辆详情
@@ -38,5 +38,12 @@ namespace Five.Car.IRepository.IOrderDetails
         /// <param name="id"></param>
         /// <returns></returns>
         List<CarShop> GetOrdersById(int id);
+
+        /// <summary>
+        /// 添加订单
+        /// </summary>
+        /// <param name="orders"></param>
+        /// <returns></returns>
+        int Add(Orders orders);
     }
 }

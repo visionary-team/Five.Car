@@ -11,12 +11,11 @@ Page({
    */
   onLoad: function(options) {
     var that = this
-    var id = parseInt(options.pay)
+    var id = parseInt(options.cid)
     wx.request({
       url: 'http://localhost:52631/api/Order/GetOrdersById?id=' + id,
       method: 'get',
       success: function(res) {
-        console.log(res.data) -
           that.setData({
             CarDetail: res.data
           })
@@ -25,9 +24,7 @@ Page({
   },
 
   go: function(e) {
-    var that = this
     var id = e.currentTarget.dataset.aid
-    console.log(id);
     wx.showModal({
       title: '提示付款',
       content: '确定要付款吗？',
@@ -40,7 +37,6 @@ Page({
             method: "get",
             data:{id:id},
             success: function(res) {
-              console.log(res.data)
               wx.showToast({
                 title: '付款成功!',//提示付款成功，状态成功修改
                 icon:"success",

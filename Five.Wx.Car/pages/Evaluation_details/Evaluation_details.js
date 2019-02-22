@@ -25,22 +25,29 @@ Page({
       currentTab: e.detail.current
     });
     this.checkCor();
-    console.log("bb"+this.data.currentTab)
      
     var that = this;
     var a = that.data.currentTab;
-    console.log("sdfd" + a);
-    wx.request({
-      url: 'http://localhost:52631/api/Evaluate/GetEvaluates?num=' + that.data.currentTab,
-      method: "get",
-      data: {},
-      success: function (res) {
-        console.log(res);
-        that.setData({
-          lunbo: res.data
+    wx.getStorage({
+      key: 'uName',
+      success: function(res) {
+        wx.request({
+          url: 'http://localhost:52631/api/Evaluate/GetEvaluates',
+          method: "get",
+          data: { 
+            num: that.data.currentTab,
+            userId:res.data
+          },
+          success: function (res) {
+            that.setData({
+              lunbo: res.data
+            })
+          }
         })
-      }
+        
+      },
     })
+    
 
   },
   // 点击标题切换当前页时改变样式
@@ -72,16 +79,21 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    wx.request({ 
-      url: 'http://localhost:52631/api/Evaluate/GetEvaluates?num=' + that.data.currentTab,
-      method: "get",
-      data: {},
+    wx.getStorage({
+      key: 'uName',
       success: function (res) {
-        console.log(res);
-        that.setData({
-          lunbo: res.data
+        wx.request({
+          url: 'http://localhost:52631/api/Evaluate/GetEvaluates',
+          method: "get",
+          data: { num: that.data.currentTab, userId: res.data },
+          success: function (res) {
+            that.setData({
+              lunbo: res.data
+            })
+          }
         })
-      }
+
+      },
     })
 
     //  高度自适应

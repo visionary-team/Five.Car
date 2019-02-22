@@ -1,0 +1,26 @@
+<!--pages/Car searching/Car searching.wxml-->
+<view class="car">
+  <view class="find-list" wx:for="{{CarAllDetail}}" wx:key="carName" wx:for-item="items" bindtap="jumppage" data-pid="{{items.Id}}">
+    <view class="find-items">
+      <image src="/Img/显示图片/icon_find_car@2x.png" mode="scollFill center" class="find-icon"></image>
+      <text class="series">{{items.Carbrand}} {{items.Price}}元</text>
+      <text class="find-type"></text>
+    </view>
+    <view class="find-items">
+      <text class="font-type">{{items.Series}}</text>
+      <text class="font-type-1">{{items.Displacement}} {{items.Address}}</text>
+    </view>
+    <view class="find-items">
+      <view class="font-type">
+        <text wx:if="{{items.channel == 1}}" class="channel"></text>
+        <text>{{items.Colorname}}</text>
+      </view>
+      <view class="font-type-1">
+        <text>剩:{{items.Stock}}</text>
+      </view>
+    </view>
+    <view class="find-items">
+      <text wx:if="{{items.earnest_money > 0}}" class="earnest-money"></text>
+    </view>
+  </view>
+</view>

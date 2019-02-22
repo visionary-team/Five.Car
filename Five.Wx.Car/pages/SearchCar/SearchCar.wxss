@@ -1,0 +1,53 @@
+/* pages/Car searching/Car searching.wxss */
+page{
+  background: #f2f2f2;
+}
+.car {
+  font-size: 30rpx;
+  color:#333;
+}
+.find-list{
+  background: #fff; 
+  margin-top: 20rpx; 
+  height: 10%;
+  width: 100%;
+  padding: 20rpx 30rpx 10rpx 20px;
+}
+.find-items{
+  display: flex;
+  flex: 1;
+  margin-bottom: 15rpx;
+  flex-direction: row;
+  position: relative;
+}
+.find-icon{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-right: 10rpx;
+}
+.series{
+  padding-top: 5rpx;
+}
+.find-type{
+  color:#ec5c30;
+  padding-top: 5rpx;
+  position: absolute;
+  right:0;
+  text-align: right;
+}
+.font-type{
+  color:#aaa;
+}
+.font-type-1{
+  position: absolute;
+  right:0;
+  margin-right: 10%;
+  text-align: right;
+}
+.channel{
+  margin-right: 10rpx;
+}
+.earnest-money{
+  color:#ec5c30;
+}

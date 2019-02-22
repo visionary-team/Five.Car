@@ -6,7 +6,7 @@
       <view class="tab-item{{currentTab==3?'active':''}}" data-current="3" bindtap="switchNav">差评</view>
    </scroll-view>
    <swiper class='tab-content' current='{{currentTab}}' duration='300' bindchange='switchTab' style='height{         {winHeight}}rpx'> 
-    <swiper-item wx:for="{{[0,1,2,3]}}">
+    <swiper-item wx:for="{{[0,1,2,3]}}" wx:key="1">
        <scroll-view scroll-y="true" class='scoll-h'>
          <block wx:for="{{lunbo}}" wx:key="*this">
                     <view class="item-ans">

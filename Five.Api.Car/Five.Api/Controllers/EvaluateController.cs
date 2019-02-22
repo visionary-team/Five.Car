@@ -21,9 +21,9 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public List<Evaluate> GetEvaluates(int num)
+        public List<Evaluate> GetEvaluates(int num,string userId)
         {
-            List<Evaluate> Evaluatelist = evaluateDetails.GetEvaluates(num);
+            List<Evaluate> Evaluatelist = evaluateDetails.GetEvaluates(num, userId);
             return Evaluatelist;
         }
 
@@ -32,9 +32,9 @@ namespace Five.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public List<CarDetails> GetCarDetails()
+        public List<CarDetails> GetCarDetails(int id)
         {
-            List<CarDetails> CarDetailsList = evaluateDetails.GetCarDetails();
+            List<CarDetails> CarDetailsList = evaluateDetails.GetCarDetails(id);
             return CarDetailsList;
     
         }
@@ -48,6 +48,7 @@ namespace Five.Api.Controllers
         {
             Evaluate eval = new Evaluate();//实例化
             eval.Content = HttpContext.Current.Request["Content"];
+            eval.Userid= HttpContext.Current.Request["Userid"];
             eval.Isdelete = Convert.ToInt32(HttpContext.Current.Request["Isdelete"]);
             eval.State = HttpContext.Current.Request["State"];
             eval.CarDetailsId = Convert.ToInt32(HttpContext.Current.Request["CarDetailsId"]);

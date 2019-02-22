@@ -5,6 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {},
+  addEval:function(e){
+    var bid = e.currentTarget.dataset.pay;
+    wx.navigateTo({
+      url: '../Add_Evaluation/Add_Evaluation?cid='+bid,
+    })
+  },
   onLoad() {},
   /**
    * 生命周期函数--监听页面加载
@@ -68,40 +74,54 @@ Page({
     })
   },
   Pay:function(e){
-    var bid=e.currentTarget.dataset.pay
-    console.log(bid);
+    var bid=e.currentTarget.dataset.pay 
+    var cid = e.currentTarget.dataset.carid
     wx.navigateTo({
-      url: '../Confirm_Pay/Confirm_Pay?pay='+bid,
+      url: '../Confirm_Pay/Confirm_Pay?pay='+bid+'&cid='+cid,
     })
   },
   getAllorders: function(options) {
     var that = this;
-    wx.request({
-      url: 'http://localhost:52631/api/Order/GetCarOrdreAll',
-      method: 'get',
+    wx.getStorage({
+      key: 'uName',
       success: function(res) {
-        console.log(res.data)
-        that.setData({
-          items: res.data
+        wx.request({
+          url: 'http://localhost:52631/api/Order/GetCarOrdreAll',
+          method: 'get',
+          data:{
+            userId:res.data
+          },
+          success: function (res) {
+            that.setData({
+              items: res.data
+            })
+          }
         })
-      }
+      },
     })
+    
   },
   getstates: function(e) {
     var that = this;
     var getid = e.currentTarget.dataset.ids;
-    wx.request({
-      url: 'http://localhost:52631/api/Order/GetCarOrdreById',
-      method: 'get',
-      data: {
-        id: getid
-      },
+    wx.getStorage({
+      key: 'uName',
       success: function(res) {
-        console.log(res)
-        that.setData({
-          items: res.data
+        wx.request({
+          url: 'http://localhost:52631/api/Order/GetCarOrdreById',
+          method: 'get',
+          data: {
+            id: getid,
+            userId:res.data
+          },
+          success: function (res) {
+            console.log(res)
+            that.setData({
+              items: res.data
+            })
+          }
         })
-      }
+      },
     })
   },
 })

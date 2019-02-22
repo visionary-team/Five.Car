@@ -29,6 +29,21 @@ namespace Five.Car.Repository
         }
 
         /// <summary>
+        /// 根据汽车品牌获取详情
+        /// </summary>
+        /// <param name="cid"></param>
+        /// <returns></returns>
+        public List<CarShop> GetCarShopsByCid(int cid)
+        {
+            using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
+            {
+                string sql = "select a.id,a.displacement,a.address,a.price,a.stock,c.colorname,d.series,e.carbrand,a.brandid from Cardetails a join Image b on a.Id=b.carid join Carcolor c on a.carcolorid=c.id join Cartable d on a.brandid=d.id join Cartable e on d.pid=e.id where brandid="+cid;
+                var CarDetail = conn.Query<CarShop>(sql).ToList();
+                return CarDetail;
+            }
+        }
+
+        /// <summary>
         /// 根据Id显示单个的汽车详情
         /// </summary>
         /// <param name="Pid"></param>

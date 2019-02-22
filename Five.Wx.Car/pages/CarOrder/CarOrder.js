@@ -6,30 +6,62 @@ Page({
    */
   data: {
   },
+  addOrder:function(e){
+    var that=this;
+    var price = e.currentTarget.dataset.price;
+    var cid = e.currentTarget.dataset.cid;
+    wx.getStorage({
+      key: 'uName',
+      success: function(res) {
+        wx.request({
+          url: 'http://localhost:52631/api/Order/Add',
+          method: "get",
+          data: {
+            Price: price,
+            Carid: cid,
+            Useid:res.data
+          },
+          success: function (res) {
+            wx.navigateTo({
+              url: '../Confirm_Pay/Confirm_Pay?cid='+cid,
+            })
+          }
+        })
+      },
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var that = this;
-    wx.request({
-      url: 'http://localhost:52631/api/Collect/ShowAddress',
-      method: "get",
-      success: function (res) {
-        console.log(res);
-        that.setData({
-          lunbo: res.data
+    wx.getStorage({
+      key: 'uName',
+      success: function(res) {
+        wx.request({
+          url: 'http://localhost:52631/api/Collect/ShowAddress',
+          method: "get",
+          data:{
+            userId:res.data
+          },
+          success: function (res) {
+          
+            that.setData({
+              lunbo: res.data
+            })
+          }
         })
-      }
+      },
     })
-
+   
+    var carid=parseInt(options.cid)
     var thats = this;
     wx.request({
       url: 'http://localhost:52631/api/Collect/ShowOrders',
       method: "get",
-      data: { Usersid: 2 },
+      data: { id: carid },
       success: function (col) {
-        console.log(col);
         thats.setData({
           lunbos: col.data
         })

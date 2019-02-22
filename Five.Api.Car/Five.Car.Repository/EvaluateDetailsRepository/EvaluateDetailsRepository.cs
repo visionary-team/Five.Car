@@ -19,11 +19,11 @@ namespace Five.Car.Repository.EvaluateDetails
         /// 显示详情
         /// </summary>
         /// <returns></returns>
-        public List<CarDetails> GetCarDetails()
+        public List<CarDetails> GetCarDetails(int id)
         {
             using (IDbConnection conn= new OracleConnection(ConfigHelper.ConnString))
             {
-                string sql = "select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price from Carcolor a,cardetails b,Image c,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and b.Id=1";
+                string sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price from Carcolor a,cardetails b,Image c,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and b.Id={id}";
                 List<CarDetails> getcardetails = conn.Query<CarDetails>(sql).ToList();
                 return getcardetails;
             }
@@ -38,7 +38,7 @@ namespace Five.Car.Repository.EvaluateDetails
         {
             using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
-                string sql = $"insert into Evaluate(Content,Isdelete,State,CarDetailsId) values('{eval.Content}','{eval.Isdelete}','{eval.State}','{eval.CarDetailsId}')";
+                string sql = $"insert into Evaluate(Content,Isdelete,State,CarDetailsId,UserId) values('{eval.Content}','{eval.Isdelete}','{eval.State}','{eval.CarDetailsId}','{eval.Userid}')";
                 int i = conn.Execute(sql);
                 return i;
             }
@@ -48,7 +48,7 @@ namespace Five.Car.Repository.EvaluateDetails
         /// 评价显示
         /// </summary>
         /// <returns></returns>
-        public List<Evaluate> GetEvaluates(int num)
+        public List<Evaluate> GetEvaluates(int num,string userId)
         {
             using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
@@ -56,16 +56,16 @@ namespace Five.Car.Repository.EvaluateDetails
                 switch (num)
                 {
                     case 0:
-                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id";
+                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State,d.userid from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.userid='{userId}'";
                         break;
                     case 1:
-                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.State='{"好评"}'";
+                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State,d.userid from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.userid='{userId}'and d.State='{"好评"}'";
                         break;
                     case 2:
-                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.State='{"中评"}'";
+                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State,d.userid from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.userid='{userId}' and d.State='{"中评"}'";
                         break;
                     case 3:
-                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.State='{"差评"}'";
+                        sql = $"select b.Id,c.imgurl,e.carbrand,a.colorname,b.displacement,b.price,d.content,d.State,d.userid from Carcolor a,cardetails b,Image c,Evaluate d,CarTable e where a.id=b.carcolorid and c.CarId=b.id and e.Id=b.brandid and d.CarDetailsId=b.Id and d.userid='{userId}'and d.State='{"差评"}'";
                         break;
                 }
   

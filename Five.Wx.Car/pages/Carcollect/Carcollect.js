@@ -29,17 +29,20 @@ Page({
    */
   onLoad: function (options) {
       var that=this;
-      wx.request({
-        url: 'http://localhost:52631/api/Collect/ShowCollection',
-        method: "Get",
-        data: {Usersid:123},
-        success:function(col)
-        {
-          console.log(col);
-          that.setData({
-            lunbo: col.data
+      wx.getStorage({
+        key: 'uName',
+        success: function(res) {
+          wx.request({
+            url: 'http://localhost:52631/api/Collect/ShowCollection',
+            method: "Get",
+            data: { Usersid: res.data },
+            success: function (col) {
+              that.setData({
+                lunbo: col.data
+              })
+            }
           })
-        }
+        },
       })
   },
 

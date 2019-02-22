@@ -27,8 +27,9 @@
                     <view class="section_cont_price">选购时间:{{item.Times}}</view>
                 </view>
                 <!--book-->
-                <view class="section_book"   bindtap="delorder" data-ids="{{item.Id}}">查看详情</view>
-                <view class="section_book" wx:if="{{item.State==1}}" bindtap='Pay' data-pay="{{item.Id}}">付款</view>
+                <view class="section_book"   bindtap="delorder" data-ids="{{item.CarId}}">查看详情</view>
+                <view class="section_book" wx:if="{{item.State==1}}" bindtap='Pay' data-carid="{{item.Id}}" data-pay="{{item.CarId}}">付款</view>
+                <view class="section_book" wx:if="{{item.State==0}}" bindtap='addEval' data-pay="{{item.Id}}">评论</view>
                 <view wx:else=""></view>
                 
             </view>

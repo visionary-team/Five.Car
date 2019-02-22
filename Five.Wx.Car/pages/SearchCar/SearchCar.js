@@ -1,43 +1,37 @@
-// pages/Vehicle_system/Vehicle_system.js
+// pages/Car searching/Car searching.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    car_brand:[{
-      name:"奔驰A6"
-    },{
-      name: "奔驰A5"
-      },{
-      name: "奔驰A5"
-      }]
-  },
 
+  },
+  jumppage: function (e) {
+    var pid = e.currentTarget.dataset.pid;
+    wx.navigateTo({
+      url: '../Car_details/Car_details?Pid=' + pid,
+    })
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var pid=parseInt(options.Pid);
-    var name = options.name;
-    var that=this;
+    var cid =parseInt(options.cid);
+    var that = this;
     wx.request({
-      url: 'http://localhost:52631/api/CarDetails/CarBrandShow',
+      url: 'http://localhost:52631/api/CarDetails/GetCarShopsByCid',
       method: "Get",
-      data: { Pid: pid, Brand:''},
+      data:{
+        cid:cid
+      },
       success: function (res) {
         that.setData({
-          hotCar: res.data
+          CarAllDetail: res.data
         })
       }
-    })
-  },
-  jumpDetails:function(e){
-    var id = e.currentTarget.dataset.id
-    console.log(id)
-    wx.navigateTo({
-      url: '../SearchCar/SearchCar?cid=' + id,
-    })
+    })   
   },
 
   /**

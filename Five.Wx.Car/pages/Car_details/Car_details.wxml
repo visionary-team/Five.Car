@@ -65,7 +65,7 @@
     <view>
       <view class="goods_one">
       </view>
-      <view class="goods_half_half green" bindtap='GoPay'>前往付款</view>
+      <view class="goods_half_half green" data-carid="{{item.Id}}" bindtap='GoPay'>前往付款</view>
     </view>
   </view>
 </view>

@@ -1,25 +1,28 @@
 <!--pages/CarOrder/CarOrder.wxml-->
 <block wx:for="{{lunbo}}" wx:key="item.Id">
-      <view class="user_addr_item">
-        <text class="section_book" wx:if="{{item.CState==1}}"></text>
-        <text wx:else></text>
-        <text class="addr_sub">{{item.UName}} {{item.Phone}}</text>
-        <text class="addr_address">{{item.Province}}{{item.Useraddress}}</text>
-      </view>
-    </block>
-   
-<view class='imgs' wx:for="{{lunbos}}" wx:key="item.Id">
-<image src="../../img/奔驰/奔驰2.jpg" mode="aspectFill"> 
-</image> 
-<view><text>车辆名称：{{item.CARBRAND}}</text> </view>
-<view><text>颜色：{{item.ColorName}}</text> </view>
-<view><text>排量：{{item.DISPLACEMENT}}</text> </view>
-<view><text>数量：{{item.Number1}}</text> </view>
-<view><text>价格：{{item.Price}}</text> </view>
+  <view class="user_addr_item">
+    <text class="section_book" wx:if="{{item.CState==1}}"></text>
+    <text wx:else></text>
+    <text class="addr_sub">{{item.UName}} {{item.Phone}}\n</text>
+    <text class="addr_address">{{item.Province}}   {{item.Useraddress}}</text>
+  </view>
+  <view class='imgs' wx:for="{{lunbos}}" wx:for-item="cell" wx:key="item.Id">
+  <image src="{{cell.Imgurl}}" mode="aspectFill"></image>
+  <view>
+    <text>车辆名称：{{cell.Carbrand}} {{cell.Series}}</text> </view>
+  <view>
+    <text>颜色：{{cell.Colorname}}</text> </view>
+  <view>
+    <text>排量：{{cell.Displacement}}</text> </view>
+  <view>
+    <text>数量：1</text> </view>
+  <view>
+    <text>价格：{{cell.Price}}</text> </view>
 
-<view><button class='footer-add' form-type='submit'>提交订单</button></view>
+  <view>
+    <button class='footer-add' data-price="{{cell.Price}}" data-cid="{{cell.Id}}" bindtap='addOrder' >提交订单</button>
+  </view>
 
 </view>
+</block>
 
-
-  

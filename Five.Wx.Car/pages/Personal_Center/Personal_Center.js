@@ -37,14 +37,6 @@ Page({
       })
     }
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
 
    /*跳转全部订单页面*/ 
   OrderAll: function (e) {

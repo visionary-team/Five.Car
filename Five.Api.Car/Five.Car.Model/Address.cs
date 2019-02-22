@@ -37,7 +37,7 @@ namespace Five.Car.Model
         /// <summary>
         /// 相关用户
         /// </summary>
-        public int Userid { get; set; }
+        public string Userid { get; set; }
 
         /// <summary>
         /// 地址状态

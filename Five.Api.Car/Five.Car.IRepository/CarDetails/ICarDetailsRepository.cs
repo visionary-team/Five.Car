@@ -20,5 +20,12 @@ namespace Five.Car.IRepository
         /// </summary>
         /// <returns></returns>
         List<CarShop> GetCarShops();
+
+        /// <summary>
+        /// 根据汽车品牌获取内容
+        /// </summary>
+        /// <param name="cid"></param>
+        /// <returns></returns>
+        List<CarShop> GetCarShopsByCid(int cid);
     }
 }

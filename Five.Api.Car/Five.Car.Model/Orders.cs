@@ -37,7 +37,7 @@ namespace Five.Car.Model
         /// <summary>
         /// 用户id
         /// </summary>
-        public int Useid { get; set; }
+        public string Useid { get; set; }
 
         /// <summary>
         /// 支付方式

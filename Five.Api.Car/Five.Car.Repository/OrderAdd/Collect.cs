@@ -18,6 +18,7 @@ namespace Five.Car.Repository
         /// 数据库连接字符串
         /// </summary>
         private static string strcon = "Data Source=orcl;User ID=zhubaoliang;pwd=666666";
+
         public List<Collection> ShowCollection(string Usersid)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
@@ -48,11 +49,11 @@ namespace Five.Car.Repository
         /// 显示地址
         /// </summary>
         /// <returns></returns>
-        public List<Address> Address()
+        public List<Address> Address(string userId)
         {
             using (IDbConnection conn = new OracleConnection(strcon))
             {
-                string sql = "select Id,UName,Phone,Province,Useraddress from Address";
+                string sql = $"select * from Address where state=1 and userId='{userId}'";
                 var Address = conn.Query<Address>(sql).ToList();
                 return Address;
             }

@@ -13,6 +13,9 @@ namespace Five.Api.Controllers
     public class CollectController : ApiController
     {
         public ICollect Collect { get; set; }
+
+        public ICarDetailsRepository carDetailsRepository { get; set; }
+
         /// <summary>
         /// 我的收藏
         /// </summary>
@@ -52,9 +55,9 @@ namespace Five.Api.Controllers
         /// <returns></returns>
         [ActionName("ShowAddress")]
         [HttpGet]
-        public List<Address> ShowAddress()
+        public List<Address> ShowAddress(string userId)
         {
-            var Address = Collect.Address();
+            var Address = Collect.Address(userId);
             return Address;
         }
 
@@ -64,9 +67,9 @@ namespace Five.Api.Controllers
         /// <param name="Usersid"></param>
         /// <returns></returns>
         [HttpGet]
-        public List<Collection> ShowOrders(string Usersid)
+        public List<CarShop> ShowOrders(int id)
         {
-            var Orders = Collect.ShowCollection(Usersid);
+            var Orders = carDetailsRepository.GetCarShopsById(id);
             return Orders;
         }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Security;
 using Five.Car.IRepository;
 using Five.Car.Repository;
 using Five.Car.Model;
@@ -78,10 +79,18 @@ namespace Five.Api.Controllers
         /// <param name="isCollection"></param>
         /// <returns></returns>
         [HttpGet]
-        public int UpdateCarCollection(int id, int isCollection)
+        public int UpdateCarCollection(int id, int isCollection, string userid)
         {
-            var i = collectionRepository.UpdateCarCollection(id,isCollection);
+            var i = collectionRepository.UpdateCarCollection(id,isCollection,userid);
             return i;
+        }
+
+        [HttpGet]
+        public List<CarShop> GetCarShopsByCid(int cid)
+        {
+
+            var carDetails = CarDetail.GetCarShopsByCid(cid);
+            return carDetails;
         }
 
         /// <summary>
@@ -121,7 +130,7 @@ namespace Five.Api.Controllers
                 var results = JsonConvert.DeserializeObject<ClientInfo>(result);
                 clientinfo.OpenId = results.OpenId;//用户唯一标识
                 clientinfo.session_key = results.session_key;//密钥
-                RedisHelper.Set<ClientInfo>(clientinfo.session_key, clientinfo, DateTime.Now.AddHours(10));
+                RedisHelper.Set<ClientInfo>(clientinfo.session_key, clientinfo, DateTime.Now.AddHours(12));
                 return clientinfo;
         }
     }

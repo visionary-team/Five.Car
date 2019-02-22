@@ -2,6 +2,6 @@
 <view class="Subject">
   <text class="title_text"></text>
   <view class="data_show" wx:for="{{hotCar}}" wx:key="1">
-    <text>{{item.Carbrand}}</text>
+    <text data-id="{{item.Id}}" bindtap='jumpDetails'>{{item.Carbrand}}</text>
   </view>
 </view>

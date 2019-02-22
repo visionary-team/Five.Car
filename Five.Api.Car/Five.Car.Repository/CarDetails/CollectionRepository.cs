@@ -19,7 +19,7 @@ namespace Five.Car.Repository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public int UpdateCarCollection(int id,int isCollection)
+        public int UpdateCarCollection(int id,int isCollection, string userid)
         {
             int i = 0;
             using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
@@ -34,7 +34,7 @@ namespace Five.Car.Repository
                 else if(isCollection==0){
                     string sql = $"update CarDetails set ISCOLLECTION=1 where Id={id}";
                     i = conn.Execute(sql);
-                    sql = $"insert into Collection(Carid,Userid,Number1) values({id},'1',1)";
+                    sql = $"insert into Collection(Carid,Userid,Number1) values({id},'{userid}',1)";
                     i = conn.Execute(sql);
                 }
             }

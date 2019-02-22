@@ -10,13 +10,13 @@ using Five.Car.Model;
 using Five.Car.IRepository.IOrderDetails;
 using Newtonsoft.Json;
 using Five.Car.Cache;
+using System.Web;
 
 namespace Five.Api.Controllers
 {
     public class OrderController : ApiController
     {
         public IUserInfoRepository Iuser { get; set; }
-
 
         /// <summary>
         /// 根据ID显示汽车详情
@@ -37,9 +37,9 @@ namespace Five.Api.Controllers
         /// <returns></returns>
         [HttpGet]
         [ActionName("GetCarOrdreById")]
-        public List<OrderCarDetails> GetCarOrdreById(int id)
+        public List<OrderCarDetails> GetCarOrdreById(int id,string userId)
         {
-            var orderCar = Iuser.GetCarOrdreById(id);
+            var orderCar = Iuser.GetCarOrdreById(id, userId);
             return orderCar;
         }
 
@@ -49,9 +49,9 @@ namespace Five.Api.Controllers
         /// <returns></returns>
         [HttpGet]
         [ActionName("GetCarOrdreAll")]
-        public List<OrderCarDetails> GetCarOrdreAll()
+        public List<OrderCarDetails> GetCarOrdreAll(string userId)
         {
-            var orderCar = Iuser.GetCarOrdreAll();
+            var orderCar = Iuser.GetCarOrdreAll(userId);
             return orderCar;
         }
 
@@ -75,6 +75,22 @@ namespace Five.Api.Controllers
         {
             var getOrderById = Iuser.GetOrdersById(id);
             return getOrderById;
+        }
+
+        /// <summary>
+        /// 添加订单
+        /// </summary>
+        /// <param name="orders"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public int Add()
+        {
+            Orders orders = new Orders();
+            orders.Price =Convert.ToInt32(HttpContext.Current.Request["Price"]);
+            orders.Carid = Convert.ToInt32(HttpContext.Current.Request["Carid"]);
+            orders.Useid = HttpContext.Current.Request["Useid"];
+            var add = Iuser.Add(orders);
+            return add;
         }
 
         /// <summary>

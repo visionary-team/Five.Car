@@ -36,11 +36,11 @@ namespace Five.Car.Repository
         /// 实现我的单个订单方法
         /// </summary>
         /// <returns></returns>
-        public List<OrderCarDetails> GetCarOrdreById(int id)
+        public List<OrderCarDetails> GetCarOrdreById(int id,string userId)
         {
             using (IDbConnection conn= new OracleConnection(ConfigHelper.ConnString))
             {
-                string str = "select * from Orders join CarDetails on Orders.Carid=CarDetails.Id join Image on CarDetails.Id=Image.Carid where State="+id;
+                string str = $"select orders.Id,cardetails.address,image.imgurl,cardetails.price,Orders.State,cardetails.times,orders.carid from Orders join CarDetails on Orders.Carid=CarDetails.Id join Image on CarDetails.Id=Image.Carid where State='{id}' and USEID='{userId}'";
                 var getcarOrdre = conn.Query<OrderCarDetails>(str).ToList();
                 return getcarOrdre;
             }
@@ -49,11 +49,11 @@ namespace Five.Car.Repository
         /// 实现全部订单
         /// </summary>
         /// <returns></returns>
-        public List<OrderCarDetails> GetCarOrdreAll()
+        public List<OrderCarDetails> GetCarOrdreAll(string userId)
         {
             using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
-                string str = "select * from Orders join CarDetails on Orders.Carid=CarDetails.Id join Image on CarDetails.Id=Image.Carid";
+                string str = $"select * from Orders join CarDetails on Orders.Carid=CarDetails.Id join Image on CarDetails.Id=Image.Carid where Orders.Useid='{userId}'";
                 var getcarOrdre = conn.Query<OrderCarDetails>(str).ToList();
                 return getcarOrdre;
             }
@@ -85,6 +85,16 @@ namespace Five.Car.Repository
                 var updateOrders = conn.Execute(str);
                 return updateOrders;
             }  
+        }
+
+        public int Add(Orders orders)
+        {
+            using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
+            {
+                string str = string.Format("insert into Orders(Numbers,Price,Carid,State,Paymentid,Useid) values('{0}','{1}','{2}','{3}','{4}','{5}')",1,orders.Price,orders.Carid,1,4,orders.Useid);
+                var add = conn.Execute(str);
+                return add;
+            }
         }
     }
 }

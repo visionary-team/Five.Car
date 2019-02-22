@@ -37,5 +37,10 @@ namespace Five.Car.Model
         /// 车辆所在地
         /// </summary>
         public string Address { get; set; }
+
+        /// <summary>
+        /// 汽车id
+        /// </summary>
+        public int CarId { get; set; }
     }
 }

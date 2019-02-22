@@ -22,7 +22,7 @@ namespace Five.Car.Model
         /// <summary>
         /// 用户外键
         /// </summary>
-        public int Userid { get; set; }
+        public string Userid { get; set; }
 
         /// <summary>
         /// 数量

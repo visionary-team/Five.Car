@@ -19,17 +19,21 @@ Page({
    */
   onLoad: function (options) {
        var that = this;
-       wx.request({
-         url: 'http://localhost:52631/api/Address/GetAddress',
-         method:"get",
-         data:{},
-         success:function(res)
-         {
-           console.log(res);
-           that.setData({
-             lunbo: res.data
+       wx.getStorage({
+         key: 'uName',
+         success: function(res) {
+           wx.request({
+             url: 'http://localhost:52631/api/Address/GetAddress',
+             method: "get",
+             data: { userId:res.data},
+             success: function (res) {
+               console.log(res);
+               that.setData({
+                 lunbo: res.data
+               })
+             }
            })
-         }
+         },
        })
   },
   addAddress:function(e){

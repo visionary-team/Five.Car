@@ -38,7 +38,7 @@ namespace Five.Car.Repository
         {
             using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
-                string sql = string.Format("insert into Address(UName,Phone,Province,UserAddress) values ('{0}','{1}','{2}','{3}')", addr.UName, addr.Phone, addr.Province,addr.Useraddress);
+                string sql = string.Format("insert into Address(UName,Phone,Province,UserAddress,UserId) values ('{0}','{1}','{2}','{3}','{4}')", addr.UName, addr.Phone, addr.Province,addr.Useraddress,addr.Userid);
                 int i = conn.Execute(sql);
                 return i;
             }
@@ -48,11 +48,11 @@ namespace Five.Car.Repository
         /// 显示地址
         /// </summary>
         /// <returns></returns>
-        public List<Address> GetAddress()
+        public List<Address> GetAddress(string userId)
         {
             using (IDbConnection conn = new OracleConnection(ConfigHelper.ConnString))
             {
-                string sql = string.Format("select a.Id,a.UName,a.Phone,a.Province,a.Useraddress,a.State from Address a");
+                string sql = string.Format("select a.Id,a.UName,a.Phone,a.Province,a.Useraddress,a.State,a.userid from Address a where userId='{0}'",userId);
                 List<Address> addresslist = conn.Query<Address>(sql).ToList();
                 return addresslist;
             }

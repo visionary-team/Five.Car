@@ -13,7 +13,7 @@ namespace Five.Car.IRepository.IEvaluateDetails
         /// 评论显示
         /// </summary>
         /// <returns></returns>
-        List<Evaluate> GetEvaluates(int num);
+        List<Evaluate> GetEvaluates(int num,string userId);
 
         /// <summary>
         /// 添加评论
@@ -27,7 +27,7 @@ namespace Five.Car.IRepository.IEvaluateDetails
         /// 获取汽车详情
         /// </summary>
         /// <returns></returns>
-        List<CarDetails> GetCarDetails();
+        List<CarDetails> GetCarDetails(int id);
 
         /// <summary>
         /// 根据汽车Id获取评论

@@ -27,7 +27,7 @@ namespace Five.Car.IRepository
         /// 地址
         /// </summary>
         /// <returns></returns>
-        List<Address> Address();
+        List<Address> Address(string userId);
 
         /// <summary>
         /// 订单

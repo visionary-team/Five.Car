@@ -38,11 +38,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var cid = parseInt(options.cid);
     var that = this;
        wx.request({
          url: 'http://localhost:52631/api/Evaluate/GetCarDetails',
          method:'get',
-         data:{},
+         data: { id:cid},
          success:function(res)
          {
            console.log(res),
@@ -57,32 +58,39 @@ Page({
   {
     var content = e.detail.value.delivery_content;
     var isdelete=0;
-    var state = this.data.selectPerson;
+    var state =this.data.firstPerson;
     var cardetailsid=1;
 
-    wx.request({
-      url: 'http://localhost:52631/api/Evaluate/Add',
-      data: {
-        Content: content,
-        Isdelete: isdelete,
-        State: state,
-        CarDetailsId: cardetailsid
-      },
-      method: 'GET',
-      success: function() {
-          wx.showModal({
-            title: '提示',
-            content: '添加成功',
-          })
-      },
-      fail: function() {
-        wx.showModal({
-          title: '提示',
-          content: '添加失败',
+    wx.getStorage({
+      key: 'uName',
+      success: function(res) {
+        wx.request({
+          url: 'http://localhost:52631/api/Evaluate/Add',
+          data: {
+            Content: content,
+            Isdelete: isdelete,
+            State: state,
+            Userid: res.data,
+            CarDetailsId: cardetailsid
+          },
+          method: 'GET',
+          success: function () {
+            wx.showModal({
+              title: '提示',
+              content: '添加成功',
+            })
+          },
+          fail: function () {
+            wx.showModal({
+              title: '提示',
+              content: '添加失败',
+            })
+          },
+
         })
       },
-      
     })
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
